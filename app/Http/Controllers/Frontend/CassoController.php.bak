@@ -1,0 +1,126 @@
+<?php
+
+namespace App\Http\Controllers\Frontend;
+
+use Auth;
+use Carbon\Carbon;
+use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use GuzzleHttp\Client;
+use App\Http\Controllers\Controller;
+use App\Models\NDV01CharacState;
+use App\Models\NDV01Charac;
+use App\Models\GameConnect;
+use App\Models\MemLog;
+use App\Models\TimeSetting;
+use App\Models\TransactionHistory;
+use App\Models\CassoTransactionHistory;
+use App\Http\Controllers\Admin\TransactionHistoryController;
+use Illuminate\Support\Facades\Log;
+
+class CassoController extends Controller
+{
+    public function getTransactions(Request $request)
+    {
+        $userId = Auth::id(); // Lấy userId từ người dùng đã đăng nhập
+        \Log::info("Received request for userId: {$userId}");
+
+        $url = "https://script.googleusercontent.com/macros/echo?user_content_key=E7fqXy3SfxYx2_RfjVv4GW8B30RTSKRRsKLYTp5Bqr6pmsvFDP1bf5OXDtg-AwdZoi_J1FUHFbiS-dKUsKJaJX8px1io9ejGm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnO-deIOlrc-jjDEHP4YWDsmng7Hf3D8qeyse_Cz3AxmdCzIYDpHC2aAnMKLTqvBQeE66pIib2IbWq7QSstV1SkxU5cn9eDF-Lg&lib=MR1O9ebuZLWiSlSK-1Y3k2Z4TUwLxVb_A";
+        
+        $curl = curl_init();
+    
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_MAXREDIRS => 5,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+        ));
+    
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+    
+        curl_close($curl);
+    
+        if ($err) {
+            \Log::error("Curl error: " . $err);
+            return response()->json(['success' => false, 'error' => $err], 500);
+        } else {
+            $transactions = json_decode($response, true);
+            \Log::info("Raw data from Google Script: " . $response);
+            \Log::info("Decoded transactions: " . json_encode($transactions));
+    
+            if (!isset($transactions['data']) || empty($transactions['data'])) {
+                \Log::info("No transactions found in the response");
+                return response()->json(['success' => false, 'message' => 'Không có giao dịch nào']);
+            }
+    
+            \Log::info("Number of transactions received: " . count($transactions['data']));
+    
+            foreach ($transactions['data'] as $index => $transaction) {
+                \Log::info("Checking transaction {$index}: " . json_encode($transaction));
+                $result = $this->checkTransaction($transaction, $userId);
+                if ($result['success']) {
+                    \Log::info("Matching transaction found: " . json_encode($result));
+                    return $this->processTransaction($result, $userId);
+                }
+            }
+    
+            \Log::info("No matching transaction found for userId: {$userId}");
+            return response()->json(['success' => false, 'message' => 'Không tìm thấy giao dịch phù hợp']);
+        }
+    }
+
+    private function checkTransaction($transaction, $userId)
+    {
+        $pattern = "/NAP9D{$userId}/i";
+        \Log::info("Checking transaction for userId: {$userId}");
+        \Log::info("Transaction content: " . $transaction['content']);
+        \Log::info("Pattern to match: " . $pattern);
+    
+        if (preg_match($pattern, $transaction['content'])) {
+            \Log::info("Match found for userId: {$userId}");
+            return [
+                'success' => true,
+                'transaction_id' => $transaction['Mã GD'],
+                'amount' => $transaction['price'],
+                'description' => $transaction['content'],
+                'when' => $transaction['Ngày diễn ra'],
+            ];
+        }
+    
+        \Log::info("No match found for userId: {$userId}");
+        return ['success' => false];
+    }
+
+    private function processTransaction($transactionData, $userId)
+    {
+        $existingTransaction = TransactionHistory::where('code', $transactionData['transaction_id'])->first();
+
+        if (!$existingTransaction) {
+            $newTransaction = new TransactionHistory([
+                'user_id' => $userId,
+                'code' => $transactionData['transaction_id'],
+                'coin' => $transactionData['amount'],
+                'type' => 1,
+                'created_at' => Carbon::createFromFormat('Y-m-d H:i:s', $transactionData['when']),
+                'updated_at' => Carbon::now(),
+            ]);
+            $newTransaction->save();
+
+            $transactionHistoryController = new TransactionHistoryController();
+            $result = $transactionHistoryController->addCoinForUser($userId, $transactionData['amount']);
+
+            if ($result) {
+                return response()->json(['success' => true, 'message' => 'Giao dịch đã được xử lý và xu đã được thêm', 'amount' => $transactionData['amount']]);
+            } else {
+                return response()->json(['success' => false, 'message' => 'Có lỗi xảy ra khi thêm xu']);
+            }
+        } else {
+            return response()->json(['success' => false, 'message' => 'Giao dịch đã được xử lý trước đó']);
+        }
+    }
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from cuuam.gosu.vn/home/home/popup/register.html?return_url=http://cuuam.gosu.vn/home/intro/tiemlongloanthe.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Feb 2018 16:21:54 GMT -->
+<head>
+    <title>Cửu Âm Chân Kinh - Tuyệt phẩm Kiếm Hiệp 3D - Đăng ký</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Game Online Được Mong Chờ Nhất 2013. Phiên Bản Mới - Máy Chủ Mới - Nhiều VIP Code Giá Trị Khủng Tặng Game Thủ"></meta>
+	<meta name="keywords" content="cuu am, cack, cuu am chan kinh, chan kinh cuu am, cửu âm chân kinh, game cửu âm, trang chủ cửu âm, cách chơi cửu âm, game online hay, game online mới, game hay nhat, play free game online, online free games, games online for free, free games online to play, free fun games online, best free games online, best free online game, free onlines games, games free online play"></meta>
+	<meta name="robots" content="index,follow" />
+    <link href="https://static.gosu.vn/home/cack2/register/css/popupmy.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://cuuam.gosu.vn/home/third_party/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="http://cuuam.gosu.vn/home/static/templates/frontend/homepage/js/register-popup.js"></script>
+    <title>Đ</title>
+    <style type="text/css">
+        .error_msg
+        {
+            color: Red;
+            font-weight: bold;
+            font-size: 10pt;
+            color: Red;
+            position: relative;
+            top: -5px;
+        }
+    </style>
+    <script type="text/javascript">
+    	var formValid = false;
+        function EmailValidate(email) {
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if (reg.test(email) == false) {
+                alert("Địa chỉ email bạn cung cấp không hợp lệ!");
+                formValid = false;
+                return false;
+            }
+            else {
+                formValid = true;
+                return true;
+            }
+        }
+        function CheckAvailability() {
+            $.post("http://cuuam.gosu.vn/home/home/validate_username.html",
+                {
+                    username: $("#UserName").val()
+                },
+                function(data) {
+                    if (data == 1) {
+                    	formValid = true;
+                        $("#usernamelookupresult").html("<font color='green'>- Tài khoản được chấp nhận.</font>")
+                    }
+                    else if (data == 0) {
+                    	formValid = false;
+                        $("#usernamelookupresult").html("<font color='red'>- Tên tài khoản này đã được sử dụng.</font>")
+                    }
+                    else {
+                    	formValid = false;
+                        $("#usernamelookupresult").html("<font color='red'>- Định dạng tên tài khoản không đúng.</font>")
+                    }
+                });
+        }
+
+	function CheckPassAvailability() {
+            $.post("http://cuuam.gosu.vn/home/home/validate_password.html",
+            {
+                password: $("#Password1").val()
+            },
+            function(data) {
+                if (data == 1) {
+                	formValid = true;
+                    $("#passwordlookupresult").html("<font color='green'>- Mật khẩu được chấp nhận</font>");
+                }
+                else if (data == -1) {
+                	formValid = false;
+                    $("#passwordlookupresult").html("<font color='red'>- Mật khẩu không hợp lệ </font>");
+                }
+                else if (data == -3) {
+                	formValid = false;
+                    $("#passwordlookupresult").html("<font color='red'>- Mật khẩu tối thiểu có 6 ký tự </font>");
+                }
+                else {
+                	formValid = false;
+                    $("#passwordlookupresult").html("<font color='red'>- Mật khẩu không an toàn</font>");
+                }
+
+            });
+        }
+
+		function CheckGamePassAvailability() {
+			$("span.p-message-error").hide();
+						
+	        $.post("http://cuuam.gosu.vn/home/home/validate_gamer_password.html",
+	        {
+	            password: $("#GamePassword").val()
+	        },
+	        function(data) {
+	            if (data == 1) {
+	            	formValid = true;
+	                $("#gamepasswordlookupresult").html("<font color='green'>- Mật khẩu được chấp nhận</font>");
+	            }
+	            else if (data == -1) {
+	            	formValid = false;
+	                $("#gamepasswordlookupresult").html("<font color='red'>- Mật khẩu game phải là ký tự hoặc số</font>");
+	            }
+	            else if (data == -3) {
+	            	formValid = false;
+	                $("#gamepasswordlookupresult").html("<font color='red'>- Mật khẩu tối thiểu có 6 ký tự</font>");
+	            }
+	            else {
+	            	formValid = false;
+	                $("#gamepasswordlookupresult").html("<font color='red'>- Mật khẩu không an toàn</font>");
+	            }
+	
+	        });
+	    }
+
+        function CheckEmail() {
+            $.post("http://cuuam.gosu.vn/home/home/validate_email.html",
+            {
+                email: $("#Email").val()
+            },
+            function(data) {
+                if (data == 1) {
+                	formValid = true;
+                    $("#emaillookupresult").html("<font color='green'>- Email được chấp nhận.</font>")
+                }
+                else {
+                	formValid = false;
+                    $("#emaillookupresult").html("<font color='red'>- Email không đúng hoặc đã sử dụng.</font>")
+                }
+            });
+        }
+        function validateForm() {
+			if($("#Password").val() != $("#Password1").val()) {
+				formValid = false;
+				$("#passwordlookupresult").html("<font color='red'>- Mật khẩu không giống nhau</font>");
+				return false;
+			}
+
+			if($("#GamePassword").val() != $("#GameConfirmPassword").val()) {
+				formValid = false;
+				$("#gamepasswordlookupresult").html("<font color='red'>- Mật khẩu game không giống nhau</font>");
+				return false;
+			}
+            
+            if (EmailValidate(document.getElementById('Email').value) == false)
+                return false;
+
+			if(!formValid) {
+				alert('Dữ liệu chưa hợp lệ xin vui lòng kiểm tra lại');
+				return false;
+			}
+            
+            return true;
+        }      
+    </script>
+
+</head>
+<body>
+    <!--  BEGIN popup -->
+    <input id="choosetab" name="choosetab" type="hidden" value="#contenttabxx1" />
+    <input id="chooseTurn" name="chooseTurn" type="hidden" value="1" />
+    
+        
+    <a href="#login-box" class="login-window"></a>
+    <div id="login-box" class="login-popup">
+        <div id="content-popup">
+            <ul>
+                <li class="activexx1"></li>               
+            </ul>
+            <div id="contentTabxx">
+                <div id="contenttabxx1" class="subTabxx">
+                    <div id="titleDangKy"></div>
+                    <form action="#" method="post" onsubmit="return validateForm()">
+                    <table id="tablePopup" class="form-register" width="" cellspacing="0" cellpadding="0" border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" onfocus="myFocus(this);" onblur="myBlur(this);" onchange="CheckAvailability();" value="Tên đăng nhập" name="username" id="UserName" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="usernamelookupresult">
+                                    	                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="password" onchange="CheckPassAvailability();" onfocus="myFocus(this);" onblur="myBlur(this);" value="Mật khẩu" name="password" id="Password1" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+									<div id="passwordlookupresult">
+																			</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="password" onfocus="myFocus(this);" onblur="myBlur(this);" value="Mật khẩu" name="passconf" id="Password" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" onfocus="myFocus(this);" onblur="myBlur(this);" onchange="CheckEmail()" value="Địa chỉ email" name="email" id="Email" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <div id="emaillookupresult"></div>
+                                    
+<input type="hidden" name="return_url" value="http://cuuam.gosu.vn/home/home/popup/http%3A%2F%2Fcuuam.gosu.vn%2Fhome%2Fintro%2Ftiemlongloanthe.html" />
+                                </td>
+                            </tr>
+						</tbody> 
+                    </table>
+                    
+                    <table id="tablePopup" class="form-password" width="" cellspacing="0" cellpadding="0" border="0" align="center">
+							<tr>
+                                <td>
+                                    <div id="titleDangKyMkGame"> </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="usernamelookupresult"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mk-game">                                	 
+                                    <input type="password" onchange="CheckGamePassAvailability();" onfocus="myFocus(this);" onblur="myBlur(this);" value="Mật khẩu" name="game_password" id="GamePassword" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+									<div id="gamepasswordlookupresult"><font color='red'></font></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mk-game">
+                                    <input type="password" onfocus="myFocus(this);" onblur="myBlur(this);" value="Mật khẩu" name="game_passconf" id="GameConfirmPassword" />
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                <div id="emaillookupresult"><font color='red'></font></div>
+                                    
+<input type="hidden" name="return_url" value="http://cuuam.gosu.vn/home/home/popup/http%3A%2F%2Fcuuam.gosu.vn%2Fhome%2Fintro%2Ftiemlongloanthe.html" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="margin-left:-20px; width:280px; font-style:italic; font-size:13px; height:75px;"><center><b>Lưu ý:</b> Mật khẩu game không được trùng với mật khẩu ID GOSU</center></div><br/>
+                                </td>
+                            </tr>
+                    </table>
+                   
+                    <input style="    height: 70px;" id="btnSubmitPopup" class="" type="submit" name="submitForm" value="" />
+                    </form> 
+                    <p style="float: left;margin-left: 50px;text-align: center;">Bạn đã có tài khoản GOSU, <b><a style="color:#000;" id="login_now" href="#">Đăng Nhập Ngay</a></b></p>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <!--  END popup -->
+
+    <script>
+        $('#login_now').on('click',function(){
+            var return_url = getParameterByName('return_url') || null;
+            if(return_url==null ){
+                if(parent){
+                    return_url = parent.window.location.href;
+                } else {
+                    return_url = 'http://cuuam.gosu.vn/home/';
+                }
+            }
+            var auth="https://id.gosu.vn/auth/authorize?response_type=code&client_id=cack.Rbvyoow386a86jbCCaLLHo35i3rsFR&redirect_uri=http://cuuam.gosu.vn/home/authenticate.html&popup=true&state="+return_url;
+            window.location.replace(auth);
+            console.log(auth);
+
+        });
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+    </script>
+</body>
+
+<!-- Mirrored from cuuam.gosu.vn/home/home/popup/register.html?return_url=http://cuuam.gosu.vn/home/intro/tiemlongloanthe.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Feb 2018 16:21:54 GMT -->
+</html>

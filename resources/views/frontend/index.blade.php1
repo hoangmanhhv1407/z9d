@@ -1,0 +1,624 @@
+@extends('frontend.layout.main')
+@section('css')
+    <style type="text/css">
+        .boxTop tr td {
+            color: #fff;
+            font-family: 'UVNThanhPho_R';
+        }
+
+        .boxTop {
+            width: 200px;
+            margin-left: 32px;
+        }
+
+        .infoAcc {
+            margin-bottom: 15px;
+        }
+
+        .infoAcc td {
+            color: #fff;
+            font-family: 'UVNThanhPho_R';
+            margin-bottom: 26px;
+            margin-top: 35px;
+            font-size: 17px;
+            text-align: center;
+            padding-bottom: 12px;
+        }
+
+        .infoAcc table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .infoAcc td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .infoAcc tr:nth-child(1) {
+            background-color: #dddddd;
+        }
+
+        .infoAcc tr:nth-child(1) td {
+            color: black;
+        }
+
+        .posts__list>ul {
+            overflow: hidden;
+            width: 100%;
+            margin-left: -10px;
+            padding-top: 10px;
+            padding-bottom: 12px;
+        }
+
+        .posts__list>ul li {
+            background: url(/frontend/images/base/icon.gif) 20px 13px no-repeat;
+            padding: 5px 0 2px 0;
+            overflow: hidden;
+            padding-left: 25px;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 14px;
+            color: #000;
+            line-height: 25px;
+        }
+
+        .posts__list>ul li a.posts__post-title {
+            width: 100%;
+            display: block;
+            text-indent: 15px;
+            line-height: 20px;
+            color: #000;
+        }
+
+        .posts__list>ul li a.posts__post-title time {
+            font-size: 12px;
+            position: absolute;
+            right: 10px;
+            font-weight: normal;
+        }
+
+        .box-tab-user li a.active {
+            background: #638b6e;
+        }
+
+        .box-tab-user li a.active i {
+            color: #fff !important;
+        }
+
+        .nav {
+            width: inherit !important;
+            height: inherit !important;
+            overflow: inherit !important;
+            position: relative;
+            margin: inherit !important;
+            z-index: inherit !important;
+            /* -webkit-transition: height 0.1s ease-in-out; */
+            /*-moz-transition: height 0.1s ease-in-out;*/
+            /*-ms-transition: height 0.1s ease-in-out;*/
+            /*-o-transition: height 0.1s ease-in-out;*/
+            /* transition: height 0.1s ease-in-out; */
+        }
+
+    </style>
+@endsection
+@section('content')
+    <div id="sessions-1">
+        <div class="button_link">
+            <div class="block-user-account">
+                @if (Auth::guard('web')->check())
+                    <a href="{{ route('frontend.download') }}"> <img src="frontend/images/download1.png" alt=""
+                            class="img-btn"></a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#myGiftCode">
+                        <img src="frontend/images/gift_code.png" alt="" class="img-btn">
+                    </a>
+                    <a href="{{ route('frontend.rechargeCard') }}"><img src="frontend/images/napthe.png" alt=""
+                            class="img-btn"></a>
+                    <a href="{{ route('frontend.productCate') }}"> <img src="frontend/images/ky_tran_cac.png" alt=""
+                            class="img-btn"></a>
+                @else
+                    <a href="{{ route('frontend.download') }}"> <img src="frontend/images/download1.png" alt=""
+                            class="img-btn"></a>
+                    <img src="frontend/images/dangky.png" alt="" style="" class="img-btn" data-bs-toggle="modal"
+                        data-bs-target="#myModal">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModalLogin"><img src="frontend/images/napthe.png"
+                            alt="" class="img-btn"></a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModalLogin">
+                        <img src="frontend/images/Gift_code.png" alt="" class="img-btn">
+                    </a>
+                @endif
+                {{-- </div> --}}
+            </div>
+        </div><!-- button-link end -->
+        <div class="slider-link">
+            <div id="boxEvent">
+                <ul id="img">
+                    @foreach ($blog as $key => $item)
+                        <li class=" {{ $key === 0 ? 'ActiveBanner' : '' }}">
+                            <a href="{{ route('frontend.blogDetail', $item->id) }}" alt="">
+                                <span class="BorderEvent"></span>
+                                <img width="535" height="253" title="" alt=""
+                                    src="{{ asset('/uploads/imgBlog/' . $item->b_thunbar) }}">
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+                <ul id="imgControl">
+                    @foreach ($blog as $key => $item)
+                        <li id="item1">
+                            <a href="{{ route('frontend.blogDetail', $item->id) }}" alt="">{{ $key + 1 }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div><!-- slider-link end -->
+        <div class="event-link" style="padding-top: 5px;width: 225px;">
+            {{-- <p style="color: red">{{111,Session::has('checkResetPass')}}</p> --}}
+            @if (Auth::check())
+                <div style="padding: 0" class="container">
+                    <ul class="row box-tab-user nav " style="    height: 44px !important;">
+                        <li class=" col-md-3 text-center" style="padding: 0">
+                            <a data-bs-toggle="tab" href="#home1"
+                                class="{{ Session::has('checkResetPass') ? '' : 'active show' }}"
+                                style="padding: 10px 20px;border-radius: 3px;">
+                                <i style="margin-top: 11px;color: #638b6e;font-size: 21px;" class="fa fa-user"></i>
+                            </a>
+                        </li>
+                        <li class=" col-md-3 text-center" style="padding: 0">
+                            <a data-bs-toggle="tab" href="#menu1" style="padding: 10px 20px;border-radius: 3px;"
+                                class="{{ Session::has('checkResetPass') ? 'active show' : '' }}">
+                                <i style="margin-top: 11px;color: #638b6e;font-size: 21px;" class="fa fa-refresh"></i>
+                            </a>
+                        </li>
+                        <li class=" col-md-3 text-center" style="padding: 0;   ">
+                            <a data-bs-toggle="tab" href="#menu2" style="padding: 10px 20px;border-radius: 3px;">
+                                <i style="margin-top: 11px;color: #638b6e;font-size: 21px;" class="fa fa-history"></i>
+                            </a>
+                        </li>
+                        <!--  <li class=" col-md-3 text-center" style="padding: 0;   ">
+                                        <a data-bs-toggle="tab" href="#menu3" style="padding: 10px 20px;border-radius: 3px;">
+                                            <i style="margin-top: 11px;color: #638b6e;font-size: 21px;"
+                                               class="fa fa-life-bouy"></i>
+                                        </a>
+                                    </li> -->
+                    </ul>
+                </div>
+                <div style="padding: 0" class="container">
+                    <div class="tab-content">
+                        <div id="home1"
+                            class="tab-pane fade in {{ Session::has('checkResetPass') ? '' : 'active show' }} ">
+                            <div class="infoAcc" style="overflow: auto">
+                                <table style="width:100%">
+                                    <tr>
+                                        <td></td>
+                                        <td style="text-align: center;
+                                font-size: 21px;">Thông tin tài khoản
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tài khoản</td>
+                                        <td>{{ Auth::user()->userid }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td>{{ Auth::user()->email }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Coin</td>
+                                        <td>{{ Auth::user()->coin }} <b class="icon-price"></b></td>
+                                    </tr>
+                                </table>
+                                {{-- <span style="font-size: 20px">{{Auth::user()->userid}}</span> <br> --}}
+                                {{-- <span style="font-size: 20px">Coin: {{Auth::user()->coin}}<b class="icon-price"></b></span> --}}
+                            </div>
+                        </div>
+                        <div id="menu1" class="tab-pane fade" {{ Session::has('checkResetPass') ? 'active show' : '' }}>
+                            <form method="POST" action="{{ route('resetPass2') }}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <div class="form-group {{ $errors->has('u_name') ? ' has-error' : '' }}">
+                                    <input class="form-control input-md" name="u_name" placeholder="Tài khoản"
+                                        autocomplete="off" type="text" value="{{ old('u_name') }}">
+                                    {{-- @if ($errors->first('u_name')) --}}
+                                    {{-- <span class="text-danger">{{ $errors->first('u_name') }}</span> --}}
+                                    {{-- @endif --}}
+                                </div>
+                                <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
+                                    <input class="form-control input-md" name="password" placeholder="Mật khẩu"
+                                        autocomplete="off" type="password">
+                                    {{-- @if ($errors->first('password')) --}}
+                                    {{-- <span class="text-danger">{{ $errors->first('password') }}</span> --}}
+                                    {{-- @endif --}}
+                                </div>
+                                <div class="form-group {{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+                                    <input class="form-control input-md" name="password_confirmation" autocomplete="off"
+                                        placeholder="Xác nhận mật khẩu" type="password">
+                                    {{-- @if ($errors->first('password_confirmation')) --}}
+                                    {{-- <span class="text-danger">{{ $errors->first('password_confirmation') }}</span> --}}
+                                    {{-- @endif --}}
+                                </div>
+                                <div class="send-messages1 text-center">
+                                    <div style="text-align: center">
+                                        <button style="   color: #fff;
+                                                            font-family: 'UVNThanhPho_R';
+                                                            background: #982a17;
+                                                            border: 0;
+                                                            font-size: 18px;
+                                                            padding: 3px 13px;" type="submit">Đổi mật khẩu
+                                        </button>
+                                        <a style="    color: #fff;
+                                                            font-family: 'UVNThanhPho_R';
+                                                            background: #982a17;
+                                                            border: 0;
+                                                            font-size: 18px;
+                                                            padding: 5px 13px;" href="{{ url('backResetPass') }}">Quay
+                                            lại</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="menu2" class="tab-pane fade" style=" text-align: center;">
+                            <div style=" background: #982a17;border: 0;font-size: 18px;margin-top: 25px;padding: 5px 13px;">
+                                <a style="color: #fff;font-family: 'UVNThanhPho_R';"
+                                    href="{{ route('frontend.history') }}">
+                                    Lịch sử giao dịch
+                                </a>
+                            </div>
+                            <div style=" background: #982a17;border: 0;font-size: 18px;margin-top: 15px;padding: 5px 13px;">
+                                <a style="color: #fff;font-family: 'UVNThanhPho_R';" href="{{ url('logout') }}">
+                                    Đăng xuất
+                                </a>
+                            </div>
+                        </div>
+                        <div id="menu3" class="tab-pane fade" style=" text-align: center;">
+                            <div style="position: relative">
+                                <a class="iconRotationluck" href="{{ route('frontend.lucky') }}">
+                                    <img src="/luckyWheel.gif" alt="IconRotationluck" style="width: 150px;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- @if (Session::has('checkResetPass')) --}}
+                {{-- <form method="POST" action="{{route('resetPass2')}}"> --}}
+                {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
+                {{-- <div class="form-group {{ $errors->has('u_name') ? ' has-error' : '' }}"> --}}
+                {{-- <input class="form-control input-md" name="u_name" placeholder="Tài khoản" --}}
+                {{-- autocomplete="off" --}}
+                {{-- type="text" value="{{old('u_name')}}"> --}}
+                {{-- @if ($errors->first('u_name')) --}}
+                {{-- <span class="text-danger">{{ $errors->first('u_name') }}</span> --}}
+                {{-- @endif --}}
+                {{-- </div> --}}
+                {{-- <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}"> --}}
+                {{-- <input class="form-control input-md" name="password" placeholder="Mật khẩu" --}}
+                {{-- autocomplete="off" --}}
+                {{-- type="password"> --}}
+                {{-- @if ($errors->first('password')) --}}
+                {{-- <span class="text-danger">{{ $errors->first('password') }}</span> --}}
+                {{-- @endif --}}
+                {{-- </div> --}}
+                {{-- <div class="form-group {{ $errors->has('password_confirmation') ? ' has-error' : '' }}"> --}}
+                {{-- <input class="form-control input-md" name="password_confirmation" --}}
+                {{-- autocomplete="off" --}}
+                {{-- placeholder="Xác nhận mật khẩu" type="password"> --}}
+                {{-- @if ($errors->first('password_confirmation')) --}}
+                {{-- <span class="text-danger">{{ $errors->first('password_confirmation') }}</span> --}}
+                {{-- @endif --}}
+                {{-- </div> --}}
+                {{-- <div class="send-messages1 text-center"> --}}
+                {{-- <div style="text-align: center"> --}}
+                {{-- <button style="   color: #fff; --}}
+                {{-- font-family: 'UVNThanhPho_R'; --}}
+                {{-- background: #982a17; --}}
+                {{-- border: 0; --}}
+                {{-- font-size: 18px; --}}
+                {{-- padding: 3px 13px;" type="submit">Đổi mật khẩu --}}
+                {{-- </button> --}}
+                {{-- <a style="    color: #fff; --}}
+                {{-- font-family: 'UVNThanhPho_R'; --}}
+                {{-- background: #982a17; --}}
+                {{-- border: 0; --}}
+                {{-- font-size: 18px; --}}
+                {{-- padding: 5px 13px;" href="{{url('backResetPass')}}">Quay lại</a> --}}
+                {{-- </div> --}}
+                {{-- </div> --}}
+                {{-- </form> --}}
+                {{-- @else --}}
+                {{-- <div class="infoAcc"> --}}
+                {{-- <table style="width:100%"> --}}
+                {{-- <tr> --}}
+                {{-- <td>Email</td> --}}
+                {{-- <td style="text-align: center; --}}
+                {{-- font-size: 21px;">Thông tin tài khoản --}}
+                {{-- </td> --}}
+                {{-- </tr> --}}
+                {{-- <tr> --}}
+                {{-- <td>Email</td> --}}
+                {{-- <td>Tài khoản: {{Auth::user()->userid}}</td> --}}
+                {{-- </tr> --}}
+                {{-- <tr> --}}
+                {{-- <td>Tài khoản</td> --}}
+                {{-- <td>{{Auth::user()->email}}</td> --}}
+                {{-- </tr> --}}
+                {{-- <tr> --}}
+                {{-- <td>Coin</td> --}}
+                {{-- <td>Coin: {{Auth::user()->coin}} <b class="icon-price"></b></td> --}}
+                {{-- </tr> --}}
+                {{-- </table> --}}
+                {{-- <span style="font-size: 20px">{{Auth::user()->userid}}</span> <br> --}}
+                {{-- <span style="font-size: 20px">Coin: {{Auth::user()->coin}}<b class="icon-price"></b></span> --}}
+                {{-- </div> --}}
+                {{-- <div style="text-align: center" class="clearfix"> --}}
+                {{-- <div style="margin-bottom: 3px;float: left;    padding-left: 4px;"> --}}
+                {{-- <a style="    color: #fff; --}}
+                {{-- font-family: 'UVNThanhPho_R'; --}}
+                {{-- background: #982a17; --}}
+                {{-- border: 0; --}}
+                {{-- font-size: 18px; --}}
+                {{-- padding: 3px 13px;" href="{{url('logout')}}">Đăng xuất</a> --}}
+                {{-- </div> --}}
+                {{-- <div style="float: left;padding-left: 12px;"> --}}
+                {{-- <a style="   color: #fff; --}}
+                {{-- font-family: 'UVNThanhPho_R'; --}}
+                {{-- background: #982a17; --}}
+                {{-- border: 0; --}}
+                {{-- font-size: 18px; --}}
+                {{-- padding: 3px 13px;" href="{{route('putResetPass')}} ">Đổi mật --}}
+                {{-- khẩu</a> --}}
+                {{-- </div> --}}
+                {{-- </div> --}}
+                {{-- <div style="margin-bottom: 3px;padding-left: 4px;margin-top:10px;    text-align: center;"> --}}
+                {{-- <a style="    color: #fff; --}}
+                {{-- font-family: 'UVNThanhPho_R'; --}}
+                {{-- background: #982a17; --}}
+                {{-- border: 0; --}}
+                {{-- font-size: 18px; --}}
+                {{-- padding: 3px 13px;" href="{{route('frontend.history')}}">Lịch sử --}}
+                {{-- giao dịch</a> --}}
+                {{-- </div> --}}
+                {{-- @endif --}}
+            @else
+                <form method="POST" action="{{ route('loginHome') }}">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="form-group {{ $errors->has('u_name') ? ' has-error mr-bot4' : '' }}">
+                        <input class="form-control input-md" name="u_name" placeholder="Tài khoản" autocomplete="off"
+                            type="text" value="{{ old('u_name') }}" style="border-radius: 0">
+                        @if ($errors->first('u_name'))
+                            <span class="text-danger">{{ $errors->first('u_name') }}</span>
+                        @endif
+                    </div>
+                    <div class="form-group {{ $errors->has('password') ? ' has-error mr-bot4' : '' }}">
+                        <input class="form-control input-md" name="password" placeholder="Mật khẩu" autocomplete="off"
+                            type="password" style="border-radius: 0">
+                        @if ($errors->first('password'))
+                            <span class="text-danger">{{ $errors->first('password') }}</span>
+                        @endif
+                    </div>
+                    <div class="send-messages1 text-center">
+                        {{-- <button class="button bd-radius-50 btn-setting bd-color-setting register login-btn" --}}
+                        {{-- style=" "></button> --}}
+                        <div style="text-align: center">
+                            <button style="padding: 0;border: 0;background: transparent; color: #fff; font-size: 18px"
+                                type="submit"> <img src="frontend/images/dangnhap.png" alt=""
+                                    style="cursor: pointer;margin-top: 6px"></button>
+                            <a style="padding: 0;border: 0; color: #fff; font-size: 18px"
+                                href="{{ url('getSendMail') }}">
+                                <img src="frontend/images/QUENMATKHAU.png" alt="" style="cursor: pointer;margin-top: 6px">
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            @endif
+        </div><!-- event-link end -->
+    </div><!-- session 1 -->
+    <?php
+    $topServer = \App\Models\NDV01CharacState::orderBy('inner_level', 'desc')
+        ->with('NDV01Charac')
+        ->limit(10)
+        ->get();
+    //        \App\Models\NDV01CharacState::where('unique_id',4)->update(['inner_level' => 5]);
+    //        dd($topServer);
+    ?>
+    <div id="sessions-2">
+        <div class="session-left">
+            {{-- <div class="guide-link"> --}}
+            {{-- <div class="guide-blog"><a href="http://cuuam.gosu.vn/cuu-am-lenh" target="_blank"></a></div> --}}
+            {{-- <div class="guide-vip"><a href="http://vip.gosu.vn/" target="_blank"></a></div> --}}
+            {{-- <div class="guide-setup"><a href="cuu-am-bao-dien/tan-thu/co-ban/tai-va-cai-dat-game.html" --}}
+            {{-- target="_blank"></a></div> --}}
+            {{-- </div> --}}
+            <div class="news-link" style="background: #fff">
+                <ul class='tabs-news' style="padding-left: 125px;">
+                    @foreach ($categoryBlogList as $key => $item)
+                        <li class="tab-news">
+                            <h2><a class="tbnews" href='#tab-news{{ $key }}'>{{ $item->cpo_name }}</a>
+                            </h2>
+                        </li>
+                    @endforeach
+                </ul>
+                @foreach ($categoryBlogList as $key => $item)
+                    <?php
+                    $blog = \App\Models\Blog::where('b_category_id', $item->id)
+                        ->where('b_status', 1)
+                        ->paginate(10);
+                    ?>
+                    <div class="news-content-tab" id='tab-news{{ $key }}'>
+                        <div class="posts__list" style="position: relative;">
+                            <ul>
+                                @foreach ($blog as $key2 => $value)
+                                    <li>
+                                        <a class="posts__post-title Hot"
+                                            href="{{ route('frontend.blogDetail', $value->id) }}"
+                                            title="{{ $value->b_name }}" target="_blank" nofollow="">
+                                            <span>{{ $value->b_name }}</span>
+                                            <time datetime="{{ $value->created_at }}">{{ $value->created_at }}</time>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @if ($blog->total() > 10)
+                            <div style="position: relative;margin-top: 25px;height: 60px;">
+                                <div style=" position: absolute;top: 50%; right: 50%;transform: translate(50%,-50%);">
+                                    {{ $blog->links() }}
+                                </div>
+                            </div>
+                        @endif
+                    </div><!-- END Tin mới -->
+                @endforeach
+            </div>
+            <div class="news-link">
+                <ul class='tabs-news' style="text-align: center;
+                            font-family: 'UVNThanhPho_R';
+                            font-size: 36px;
+                            color: #fff;
+                            width: 100%;
+                            background-size: cover;
+                            margin-left: 0;">
+                    Bảng xếp hạng Top Level
+                </ul>
+                {{-- <li class="details_news"><a class="tbnews" href='news/tin-moi2679.html' target="_blank">+</a> --}}
+                {{-- </li> --}}
+                <div class="news-content-tab" style="background: #fff;    padding: 20px 10px;">
+                    {{-- <div class="posts__list" style="position: relative;"> --}}
+                    {{-- <ul> --}}
+                    {{-- @foreach ($topServer as $key => $value) --}}
+                    {{-- <li> --}}
+                    {{-- <a class="posts__post-title Hot" nofollow=""> --}}
+                    {{-- <span>{{$value->NDV01Charac->chr_name}}</span> --}}
+                    {{-- <time >{{$value->inner_level}}</time> --}}
+                    {{-- </a> --}}
+                    {{-- </li> --}}
+                    {{-- @endforeach --}}
+                    {{-- </ul> --}}
+                    {{-- </div> --}}
+                    <table style="width:100%">
+                        <tr>
+                            <td style="font-family: Tahoma,Geneva,sans-serif;    font-size: 14px;
+            color: #000;
+            line-height: 25px;font-weight: 700">STT
+                            </td>
+                            <td style="font-family: Tahoma,Geneva,sans-serif;font-size: 14px;
+            color: #000;
+            text-align: center;
+            line-height: 25px;font-weight: 700">Tên nhân vật
+                            </td>
+                            <td style="font-family: Tahoma,Geneva,sans-serif;    font-size: 14px;
+            color: #000;
+                text-align: center;
+            line-height: 25px;font-weight: 700">Level
+                            </td>
+                            @foreach ($topServer as $key => $value)
+                        <tr>
+                            <td style="font-family: Tahoma,Geneva,sans-serif;    font-size: 14px;
+                                         color: #000;
+                                            line-height: 25px;">{{ $key + 1 }}</td>
+                            <td style="font-family: Tahoma,Geneva,sans-serif;font-size: 14px;
+                                         color: #000;
+                                        text-align: center;
+                                        line-height: 25px;">{{ $value->NDV01Charac->chr_name }}</td>
+                            <td style="font-family: Tahoma,Geneva,sans-serif;    font-size: 14px;
+                                        color: #000;
+                                        text-align: center;
+                                        line-height: 25px;">{{ $value->inner_level }}</td>
+                        </tr>
+                        @endforeach
+                    </table>
+                </div>
+            </div>
+            <!-- <div class="news-link">
+                            <ul class='tabs-news' style="text-align: center;
+            font-family: 'UVNThanhPho_R';
+            font-size: 36px;
+            color: #fff;
+            width: 100%;
+            background-size: cover;
+            margin-left: 0;">
+                                Bảng xếp hạng Top phú hộ
+                            </ul>
+                            {{-- <li class="details_news"><a class="tbnews" href='news/tin-moi2679.html' target="_blank">+</a> --}}
+                            {{-- </li> --}}
+                            <div class="news-content-tab" style="background: #fff;    padding: 20px 10px;">
+                                {{-- <div class="posts__list" style="position: relative;"> --}}
+                                {{-- <ul> --}}
+                                {{-- @foreach ($topServer as $key => $value) --}}
+                                {{-- <li> --}}
+                                {{-- <a class="posts__post-title Hot" nofollow=""> --}}
+                                {{-- <span>{{$value->NDV01Charac->chr_name}}</span> --}}
+                                {{-- <time >{{$value->inner_level}}</time> --}}
+                                {{-- </a> --}}
+                                {{-- </li> --}}
+                                {{-- @endforeach --}}
+                                {{-- </ul> --}}
+                                {{-- </div> --}}
+                                <table style="width:100%">
+                                    <tr>
+                                        <td style="font-family: Tahoma,Geneva,sans-serif;    font-size: 14px;
+            color: #000;
+            line-height: 25px;font-weight: 700">STT
+                                        </td>
+                                        <td style="font-family: Tahoma,Geneva,sans-serif;font-size: 14px;
+            color: #000;
+            text-align: center;
+            line-height: 25px;font-weight: 700">Tên nhân vật
+                                        </td>
+                                        <td style="font-family: Tahoma,Geneva,sans-serif;    font-size: 14px;
+            color: #000;
+                text-align: center;
+            line-height: 25px;font-weight: 700">Nạp
+                                        </td>
+                                    @foreach ($collection as $key => $value)
+                                        <tr>
+                                            <td style="font-family: Tahoma,Geneva,sans-serif;    font-size: 14px;
+            color: #000;
+            line-height: 25px;">{{ $key + 1 }}</td>
+                                            <td style="font-family: Tahoma,Geneva,sans-serif;font-size: 14px;
+            color: #000;
+            text-align: center;
+            line-height: 25px;">{{ $value['userid'] }}</td>
+                                            <td style="font-family: Tahoma,Geneva,sans-serif;    font-size: 14px;
+            color: #000;
+                text-align: center;
+            line-height: 25px;">
+                                                @if (100 <= (int) $value['total'] && (int) $value['total'] < 199)
+                                                    VIP 1
+                                                    <img src="frontend/images/premium-quality.png" alt="premium-quality" style="width: 20px;position: relative;top: -2px;">
+                                        @elseif(200 <= (int)$value['total'] && (int)$value['total'] < 499)
+                                                    VIP 2
+                                                    <img src="frontend/images/premium-quality.png" alt="premium-quality" style="width: 20px;position: relative;top: -2px;">
+                                        @elseif(500 <= (int)$value['total'] && (int)$value['total'] < 999)
+                                                    VIP 3
+                                                    <img src="frontend/images/premium-quality.png" alt="premium-quality" style="width: 20px;position: relative;top: -2px;">
+                                        @elseif(1000 <= (int)$value['total'] && (int)$value['total'] < 1999)
+                                                    VIP 4
+                                                    <img src="frontend/images/premium-quality.png" alt="premium-quality" style="width: 20px;position: relative;top: -2px;">
+                                        @elseif(2000 <= (int)$value['total'] && (int)$value['total'] < 4999)
+                                                    VIP 5
+                                                    <img src="frontend/images/premium-quality.png" alt="premium-quality" style="width: 20px;position: relative;top: -2px;">
+                                        @elseif(5000 <= (int)$value['total'] && (int)$value['total'] < 9999)
+                                                    VIP 6
+                                                    <img src="frontend/images/premium-quality.png" alt="premium-quality" style="width: 20px;position: relative;top: -2px;">
+                                        @elseif((int)$value['total'] >= 10000)
+                                                    VIP 7
+                                                    <img src="frontend/images/premium-quality.png" alt="premium-quality" style="width: 20px;position: relative;top: -2px;">
+                                        @else
+                                                    VIP 0
+                                                    <img src="frontend/images/premium-quality.png" alt="premium-quality" style="width: 20px;position: relative;top: -2px;">
+                                                @endif
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </table>
+                            </div>
+                        </div>
+                        -->
+        </div><!-- session-left -->
+        <div class="session-right">
+            @include('frontend.layout.session-right')
+        </div>
+    </div><!-- session 2 -->
+    </div>
+    </div>
+@endsection

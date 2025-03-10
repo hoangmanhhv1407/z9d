@@ -1,0 +1,1234 @@
+/* =Reset default browser CSS.
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+:focus {
+  outline: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+a img {
+  border: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* -------------------------------------------------------------- */
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+@font-face {
+  font-family: "UTMGods";
+  src: url("http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/fonts/UTM Gods WordR_0.ttf");
+}
+
+@font-face {
+  font-family: "UVNHAIBATRUNG";
+  src: url("http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/fonts/UVNHAIBATRUNG.TTF");
+}
+
+@font-face {
+  font-family: "MyriadPro";
+  src: url("http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/fonts/MyriadPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "UVNLACLONGQUAN";
+  src: url("http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/fonts/UVNLACLONGQUAN_R.TTF");
+}
+
+h1 {
+  font-size: 20pt;
+}
+
+h2 {
+  font-size: 18pt;
+}
+
+h3 {
+  font-size: 16pt;
+}
+
+@keyframes changeWidth {
+  0% {
+    width: 0px;
+  }
+  25% {
+    width: 20px;
+  }
+  50% {
+    width: 50px;
+  }
+  75% {
+    width: 120px;
+  }
+  100% {
+    width: 163px;
+  }
+}
+
+.changeWidth {
+  -webkit-animation-name: changeWidth;
+  animation-name: changeWidth;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+@keyframes changeHeight {
+  0% {
+    height: 10%;
+  }
+  25% {
+    height: 25%;
+  }
+  50% {
+    height: 50%;
+  }
+  75% {
+    height: 75%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.changeHeight {
+  -webkit-animation-name: changeHeight;
+  animation-name: changeHeight;
+  -webkit-transform-origin: top bottom;
+  transform-origin: top bottom;
+}
+
+@keyframes zoomTxt {
+  0% {
+    opacity: 1.0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.3);
+  }
+  75% {
+    opacity: 1.0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1.0;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomTxtslogan {
+  0% {
+    opacity: 1.0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(2);
+  }
+  75% {
+    opacity: 1.0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1.0;
+    transform: scale(1);
+  }
+}
+
+@keyframes showtime {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveMouse {
+  0% {
+    top: 7px;
+  }
+  25% {
+    top: 10px;
+  }
+  50% {
+    top: 17px;
+  }
+  75% {
+    top: 10px;
+  }
+  100% {
+    top: 7px;
+  }
+}
+
+@keyframes moveTab {
+  0% {
+    margin-top: -80px;
+  }
+  25% {
+    margin-top: -60px;
+  }
+  50% {
+    margin-top: -80px;
+  }
+  75% {
+    margin-top: -60px;
+  }
+  100% {
+    margin-top: -80px;
+  }
+}
+
+@keyframes moveTab1 {
+  0% {
+    margin-top: -40px;
+  }
+  25% {
+    margin-top: -20px;
+  }
+  50% {
+    margin-top: -40px;
+  }
+  75% {
+    margin-top: -20px;
+  }
+  100% {
+    margin-top: -40px;
+  }
+}
+
+@keyframes moveTab3 {
+  0% {
+    margin-top: 0px;
+  }
+  25% {
+    margin-top: 20px;
+  }
+  50% {
+    margin-top: 0px;
+  }
+  75% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@keyframes showTab {
+  0% {
+    margin-left: 1000px;
+    opacity: 0;
+  }
+  60% {
+    margin-left: -800px;
+    opacity: 0;
+  }
+  80% {
+    margin-left: -500px;
+    opacity: 1;
+  }
+  90% {
+    margin-left: -250px;
+    opacity: 1;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes changbackground {
+  0% {
+    background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/miniclient-btn.png) no-repeat center top;
+  }
+  25% {
+    background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/choinga-btn.png) no-repeat center top;
+  }
+  50% {
+    background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/miniclient-btn.png) no-repeat center top;
+  }
+  75% {
+    background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/choinga-btn.png) no-repeat center top;
+  }
+  100% {
+    background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/miniclient-btn.png) no-repeat center top;
+  }
+}
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+.swing {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+}
+
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
+@keyframes movedown {
+  0% {
+    top: 30px;
+  }
+  25% {
+    top: 25px;
+  }
+  50% {
+    top: 30px;
+  }
+  75% {
+    top: 25px;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+@keyframes khung {
+  0% {
+    opacity: 1.0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+  75% {
+    opacity: 0.4;
+    transform: scale(1.3);
+  }
+  87% {
+    opacity: 0.1;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 0.0;
+    transform: scale(1.5);
+  }
+}
+
+body {
+  font-family: tahoma;
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  display: block;
+}
+
+a:hover {
+  color: #f7bb00;
+}
+
+div {
+  text-align: left;
+}
+
+input, textarea {
+  border: solid 1px #CCC;
+  padding: 2px;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  font-weight: bold;
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  padding: 5px;
+}
+
+.image_respon {
+  max-width: 100%;
+}
+
+.block {
+  padding: 10px 0px;
+}
+
+.block .block_left, .block .block_right {
+  width: 45%;
+  float: left;
+  position: relative;
+}
+
+.block .title {
+  width: 230px;
+  height: 46px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/block_topbg.png) no-repeat center top;
+  margin-left: -17px;
+  text-align: center;
+  line-height: 2.4;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.banner_slide {
+  overflow: hidden;
+}
+
+.banner_slide li {
+  display: inline-block;
+}
+
+.pagination {
+  width: 100%;
+  text-align: right;
+  overflow: hidden;
+}
+
+.pagination ul {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.pagination ul li {
+  float: left;
+  margin-left: 5px;
+}
+
+.pagination ul li a {
+  display: block;
+  min-width: 39px;
+  height: 28px;
+  background-color: #dfe1e6;
+  background-position: bottom;
+  color: #000;
+  text-align: center;
+  line-height: 27px;
+  font-size: 14px;
+}
+
+.pagination ul li a:hover {
+  background-color: #8ac42f;
+  color: #fff;
+}
+
+.pagination ul strong {
+  float: left;
+  display: block;
+  min-width: 39px;
+  height: 28px;
+  background-color: #8ac42f;
+  color: #fff;
+  text-align: center;
+  line-height: 27px;
+  font-size: 14px;
+}
+
+.popup {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+
+.popup .content_popup {
+  display: block;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/bg-popup.png) no-repeat center top;
+}
+
+.popup .content_popup .wrapper_popup .content {
+  font-family: Gods;
+}
+
+.popup .content_popup .close_content {
+  position: absolute;
+  top: 0px;
+  right: 4px;
+  width: 25px;
+  height: 24px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/close.png) no-repeat center top;
+  cursor: pointer;
+}
+
+.block_detail {
+  width: 92%;
+  line-height: 32px;
+  font-family: tahoma;
+  font-size: 16px;
+  border-bottom: 1px solid #a9a9a9;
+}
+
+.block_detail table {
+  border-collapse: collapse;
+  font-size: 15px;
+  font-family: Tahoma;
+  margin: 10px 0px;
+}
+
+.block_detail table tr td {
+  border: 1px solid #7d2a1d;
+  vertical-align: middle;
+  color: #4e4029;
+  font-weight: normal;
+  text-align: center;
+  padding: 4px;
+}
+
+.block_detail table tr td p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.block_detail table tr td img {
+  margin: 0px 0px -10px;
+}
+
+.block_detail table tr:first-child td {
+  background-color: #9c3828;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.block_detail table tr:first-child td strong {
+  color: #fff;
+}
+
+.block_detail fieldset {
+  border: 1px solid #7d2a1d;
+  margin: 20px 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.block_detail fieldset legend {
+  color: #fff;
+  background-color: #7d2a1d;
+  padding: 0px 10px;
+  font-weight: bold;
+}
+
+.block_detail ul {
+  margin: 0px 0px 0px 40px;
+  padding: 0px;
+}
+
+.block_detail ul li {
+  list-style-type: disc;
+}
+
+.block_detail a {
+  text-decoration: none;
+  color: #9c3828;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.block_detail a:hover {
+  color: red;
+}
+
+.block_detail img {
+  padding: 1px;
+  border: 1px solid #7d2a1d;
+  max-width: 100%;
+}
+
+.block_detail .box-none img {
+  border: none;
+}
+
+.block_detail h1 {
+  color: #9c3828;
+  font-size: 20px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/icon-h1.png) no-repeat left top;
+  margin: 20px 0px 10px;
+  padding: 10px 0px 10px 60px;
+  font-weight: bold;
+}
+
+.block_detail h2 {
+  font-size: 18px;
+  padding-left: 40px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/icon-h2.png) no-repeat 0px -5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #000;
+  font-weight: 600;
+}
+
+.block_detail strong {
+  font-weight: bold;
+}
+
+.block_detail .content-event-first {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.block_detail p {
+  padding: 10px 0px 0px;
+}
+
+.block_detail em {
+  font-style: italic;
+}
+
+.wrapper {
+  width: 100%;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/bg1.jpg) no-repeat -100px top fixed;
+  background-color: #e8dfc2;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper .wrapper_main {
+  width: 1100px;
+}
+
+.wrapper .sidebar {
+  width: 225px;
+  height: 100%;
+  min-height: 800px;
+  background-color: #25201c;
+  float: left;
+}
+
+.wrapper .sidebar .header .logo {
+  width: 206px;
+  height: 110px;
+  margin: 0px auto;
+  margin-top: 5px;
+}
+
+.wrapper .sidebar .header .logo a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/logo.png) no-repeat center top;
+  background-size: contain;
+}
+
+.wrapper .sidebar .header .menu_header {
+  width: 100%;
+  margin: 0px auto;
+}
+
+.wrapper .sidebar .header .menu_header li {
+  width: 65px;
+  float: left;
+  list-style-type: none;
+  border-left: 1px solid #f6e9db;
+  margin-top: 5px;
+}
+
+.wrapper .sidebar .header .menu_header li:first-child {
+  border-left: none;
+  width: 80px;
+}
+
+.wrapper .sidebar .header .menu_header li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-family: MyriadPro;
+  font-size: 14px;
+  text-transform: inherit;
+}
+
+.wrapper .sidebar .header .menu_header li a:hover {
+  color: #f7bb00;
+}
+
+.wrapper .sidebar .main {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.wrapper .sidebar .main .play {
+  width: 218px;
+  height: 143px;
+}
+
+.wrapper .sidebar .main .play a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/play.jpg) no-repeat;
+  position: relative;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/play.jpg) no-repeat;
+  background-position: top;
+}
+
+.wrapper .sidebar .main .play a:hover {
+  background-position: bottom;
+}
+
+.wrapper .sidebar .main .play a span {
+  position: absolute;
+  display: block;
+}
+
+.wrapper .sidebar .main .play a span:nth-child(1) {
+  width: 73px;
+  height: 83px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/khung-btn-play.png) no-repeat center top;
+  top: 14px;
+  left: 74px;
+  -webkit-animation: khung 0.9s linear infinite;
+  animation: khung 0.9s linear infinite;
+}
+
+.wrapper .sidebar .main .play a span:nth-child(2) {
+  width: 45px;
+  height: 41px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/muiten-btn-play.png) no-repeat center top;
+  top: 30px;
+  left: 89px;
+  -webkit-animation: movedown 1s linear infinite;
+  animation: movedown 1s linear infinite;
+}
+
+.wrapper .sidebar .main .play a span:nth-child(3) {
+  width: 57px;
+  height: 15px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/gach-btn-play.png) no-repeat center top;
+  top: 66px;
+  left: 87px;
+}
+
+.wrapper .sidebar .main .play a span:nth-child(4) {
+  width: 102px;
+  height: 24px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/txt-taigame.png) no-repeat center top;
+  top: 98px;
+  left: 58px;
+}
+
+.wrapper .sidebar .main .login {
+  overflow: hidden;
+  margin: 0px auto;
+}
+
+.wrapper .sidebar .main .login li {
+  width: 33.33333%;
+  float: left;
+  list-style-type: none;
+}
+
+.wrapper .sidebar .main .login li a {
+  width: 100%;
+  height: 96px;
+  display: block;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/login.jpg) no-repeat;
+  position: relative;
+}
+
+.wrapper .sidebar .main .login li a span {
+  display: block;
+  position: absolute;
+}
+
+.wrapper .sidebar .main .login li a:hover span {
+  -webkit-animation: tada 1.2s infinite;
+  animation: tada 1.2s infinite;
+}
+
+.wrapper .sidebar .main .login li:nth-child(1) a {
+  background-position: 2px 0px;
+}
+
+.wrapper .sidebar .main .login li:nth-child(1) a:hover {
+  background-position: 2px -96px;
+}
+
+.wrapper .sidebar .main .login li:nth-child(1) a span {
+  width: 45px;
+  height: 32px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/text1-login.png) no-repeat;
+  top: 30px;
+  left: 15px;
+}
+
+.wrapper .sidebar .main .login li:nth-child(2) a {
+  background-position: -73px 0px;
+}
+
+.wrapper .sidebar .main .login li:nth-child(2) a:hover {
+  background-position: -73px -96px;
+}
+
+.wrapper .sidebar .main .login li:nth-child(2) a span {
+  width: 41px;
+  height: 29px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/text2-login.png) no-repeat;
+  top: 32px;
+  left: 17px;
+}
+
+.wrapper .sidebar .main .login li:nth-child(3) a {
+  background-position: -148px 0px;
+}
+
+.wrapper .sidebar .main .login li:nth-child(3) a:hover {
+  background-position: -148px -96px;
+}
+
+.wrapper .sidebar .main .login li:nth-child(3) a span {
+  width: 58px;
+  height: 33px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/text3-login.png) no-repeat;
+  top: 29px;
+  left: 6px;
+}
+
+.wrapper .sidebar .menu_sidebar {
+  position: relative;
+  margin-top: 10px;
+}
+
+.wrapper .sidebar .menu_sidebar li {
+  list-style-type: none;
+}
+
+.wrapper .sidebar .menu_sidebar li a {
+  width: 225px;
+  height: 73px;
+  display: block;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/btn_button.jpg) no-repeat;
+  background-position: top;
+  font-family: UTMGodsWordR;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.wrapper .sidebar .menu_sidebar li a:hover {
+  background-position: bottom;
+}
+
+.wrapper .sidebar .menu_sidebar li a:hover .title_new .number {
+  color: #bf3c2f;
+}
+
+.wrapper .sidebar .menu_sidebar li a:hover .title_new .txt p {
+  -webkit-animation: zoomTxt 1.5s linear;
+  animation: zoomTxt 1.5s linear;
+}
+
+.wrapper .sidebar .menu_sidebar li a .title_new .number {
+  font-family: UVNHAIBATRUNG;
+  font-size: 44px;
+  color: #474135;
+  display: block;
+  float: left;
+  text-align: center;
+  width: 20%;
+  margin-left: 14px;
+}
+
+.wrapper .sidebar .menu_sidebar li a .title_new .txt {
+  float: left;
+  width: 60%;
+  height: 73px;
+  margin-left: 10px;
+  line-height: 25px;
+  font-family: UTMGods;
+  color: #f8e1ac;
+  font-size: 18px;
+  text-align: left;
+  display: table;
+}
+
+.wrapper .sidebar .menu_sidebar li a .title_new .txt p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.wrapper .sidebar .menu_sidebar li.active a {
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/btn_button.jpg) no-repeat;
+  background-position: bottom;
+}
+
+.wrapper .sidebar .menu_sidebar li.active a .title_new .number {
+  color: #bf3c2f;
+}
+
+.wrapper .content {
+  width: 75%;
+  float: left;
+  margin: 0px 0px 40px 40px;
+  display: block;
+  overflow: hidden;
+}
+
+.wrapper .content .header_content {
+  margin: 20px 0px 50px;
+}
+
+.wrapper .content .header_content .verson {
+  width: 430px;
+  height: 175px;
+  float: left;
+  position: relative;
+  margin: 10px 0px;
+}
+
+.wrapper .content .header_content .verson span {
+  display: block;
+  position: absolute;
+}
+
+.wrapper .content .header_content .verson .text_verson {
+  width: 410px;
+  height: 145px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/title.png) no-repeat center top;
+  margin: 0px auto;
+}
+
+.wrapper .content .header_content .verson .date_verson {
+  width: 395px;
+  height: 24px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/date-pbm.png) no-repeat center top;
+  bottom: 0px;
+  left: 15px;
+  -webkit-animation: showtime 1.5s linear;
+  animation: showtime 1.5s linear;
+}
+
+.wrapper .content .header_content .verson .title_verson {
+  width: 163px;
+  height: 17px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/slogan-pbm.png) no-repeat center top;
+  top: 10px;
+  right: 40px;
+  -webkit-animation: changeWidth 1.5s linear;
+  animation: changeWidth 1.5s linear;
+}
+
+.wrapper .content .header_content .slide {
+  width: 359px;
+  height: 220px;
+  overflow: hidden;
+}
+
+.wrapper .content .header_content .slide li {
+  display: inline-block;
+}
+
+.wrapper .content .header_content .slide li img {
+  max-width: 100%;
+}
+
+.wrapper .content .detail_new {
+  width: 742px;
+}
+
+.wrapper .content .detail_new .block_title {
+  padding: 0px 0px 25px;
+}
+
+.wrapper .content .detail_new .block_title h1 {
+  text-transform: uppercase;
+  color: #99201e;
+  font-family: UVNLACLONGQUAN;
+  font-size: 42px;
+}
+
+.wrapper .content .detail_new .block_detail {
+  border-bottom: none;
+}
+
+.wrapper .active {
+  display: block;
+}
+
+/***** Footer *****/
+footer {
+  width: 100%;
+  height: 81px;
+  padding: 18px 0;
+  float: left;
+  background: #000;
+  position: relative;
+  z-index: 55;
+}
+
+footer .container {
+  width: 980px;
+  margin: 0px auto;
+}
+
+footer .container .logo {
+  display: block;
+  height: 39px;
+  float: left;
+  margin-top: 18px;
+}
+
+footer .container .logo.gosu {
+  width: 162px;
+  height: 42px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/logo_gosu.png) no-repeat center center;
+  background-size: contain;
+  margin-left: 2px;
+}
+
+footer .container .logo.cubinet {
+  width: 238px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/logo_cubinet.png) no-repeat center center;
+  background-size: contain;
+}
+
+footer .container .address {
+  width: 550px;
+  height: 81px;
+  float: left;
+  padding-top: 0px;
+}
+
+footer .container .address .menu_footer {
+  text-align: center;
+}
+
+footer .container .address .menu_footer li {
+  float: left;
+  margin: 1px 3px;
+  border-left: 1px solid #fff;
+}
+
+footer .container .address .menu_footer li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+footer .container .address .menu_footer li:nth-child(1) {
+  border-left: none;
+}
+
+footer .container .address p {
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  font-family: Tahoma;
+  float: left;
+  color: #fff;
+  margin-top: 6px;
+}
+
+footer .container .address a {
+  color: #fff;
+  font-size: 14px;
+  font-family: Tahoma;
+  padding: 0 2px 0 5px;
+  border-left: 1px solid #fff;
+  line-height: 1;
+}
+
+footer .container .address a:first-child {
+  border-left: none;
+}
+
+footer .container .address a:hover {
+  color: #ff9427;
+}
+
+.active {
+  display: block;
+  transition: all ease 1s;
+}
+
+.fancybox-close {
+  right: 0px !important;
+  top: -5px !important;
+}
+
+.btn_gotop {
+  width: 47px;
+  height: 83px;
+  background: url(http://cuuam.gosu.vn/home/static/templates/frontend/event/intro/2017/tiemlongloanthe/images/gotop.png) no-repeat center top;
+  position: fixed;
+  z-index: 69;
+  bottom: 117px;
+  right: 20px;
+  top: inherit !important;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 500ms ease;
+}
+
+.btn_gotop.show {
+  opacity: 0.87;
+}
+
+.btn_gotop:hover {
+  opacity: 1;
+}

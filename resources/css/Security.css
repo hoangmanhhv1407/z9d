@@ -1,0 +1,129 @@
+.sec-container {
+    @apply w-full max-w-4xl mx-auto;
+  }
+  
+  .sec-content {
+    @apply bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8 border border-gray-200;
+  }
+  
+  .sec-header {
+    @apply flex items-center space-x-4 mb-8;
+  }
+  
+  .sec-header__icon {
+    @apply w-10 h-10 text-blue-600;
+  }
+  
+  .sec-header__title {
+    @apply text-3xl font-bold text-gray-900;
+  }
+  
+  .sec-warning {
+    @apply mb-8 p-4 bg-amber-50 border-l-4 border-amber-400 rounded-lg;
+  }
+  
+  .sec-warning__content {
+    @apply flex items-start space-x-3;
+  }
+  
+  .sec-warning__icon {
+    @apply w-5 h-5 text-amber-400 flex-shrink-0;
+  }
+  
+  .sec-warning__text {
+    @apply text-sm text-amber-700;
+  }
+  
+  .sec-form {
+    @apply space-y-6;
+  }
+  
+  .sec-form__group {
+    @apply space-y-2;
+  }
+  
+  .sec-form__label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+  
+  .sec-form__input-wrapper {
+    @apply relative flex items-center;
+  }
+  
+  .sec-form__icon {
+    @apply absolute left-4 text-gray-400 w-5 h-5;
+  }
+  
+  .sec-form__input {
+    @apply w-full pl-12 pr-12 py-3 bg-white border border-gray-300 rounded-xl
+           text-gray-900 placeholder-gray-400
+           focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+           disabled:bg-gray-100 disabled:cursor-not-allowed
+           transition-all duration-200;
+  }
+  
+  .sec-form__toggle {
+    @apply absolute right-4 p-1 text-gray-400 hover:text-gray-600
+           focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg
+           transition-colors duration-200;
+  }
+  
+  .sec-form__submit {
+    @apply w-full flex items-center justify-center space-x-2
+           py-3 px-6 bg-blue-600 hover:bg-blue-700
+           text-white font-medium rounded-xl
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed
+           transition-all duration-200
+           transform hover:scale-[1.02] active:scale-[0.98];
+  }
+  
+  .sec-form__submit-icon {
+    @apply w-5 h-5;
+  }
+  
+  .sec-form__submit-icon--spinning {
+    @apply animate-spin;
+  }
+  
+  /* Hiệu ứng hover cho input */
+  .sec-form__input:hover:not(:disabled) {
+    @apply border-gray-400;
+  }
+  
+  /* Hiệu ứng focus cho các nút */
+  .sec-form__toggle:focus,
+  .sec-form__submit:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+  
+  /* Animation khi load form */
+  .sec-content {
+    animation: secSlideIn 0.5s ease-out;
+  }
+  
+  @keyframes secSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 640px) {
+    .sec-content {
+      @apply p-4;
+    }
+  
+    .sec-header__title {
+      @apply text-2xl;
+    }
+  
+    .sec-form__input {
+      @apply text-sm py-2;
+    }
+  }

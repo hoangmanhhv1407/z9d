@@ -1,0 +1,435 @@
+/* Base styles */
+.trangchu-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  
+  .trangchu-main {
+    position: relative;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding-top: 330px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Left Sidebar */
+  .sidebar {
+    background-color: #0e111d;
+    width: 250px;
+  }
+  
+  .sidebar-content {
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-button {
+    width: 100%;
+    height: 78px;
+    font-family: 'Merriweather-Bold';
+    color: #f8b874;
+    text-transform: uppercase;
+    background-size: 100% 100%;
+  }
+  
+  .community-section {
+    margin-top: 1rem;
+  }
+  
+  .community-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .download-button {
+    width: 100%;
+    height: 67px;
+    animation: bounce 1s infinite;
+  }
+  
+  .nav-button {
+    width: 100%;
+    height: 48px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Server Info Section */
+  .server-info {
+    padding: 1rem;
+    background-color: #0e111d;
+    color: white;
+  }
+  
+  .server-info-list {
+    margin-top: 0.5rem;
+    space-y: 0.5rem;
+  }
+  
+  /* Carousel */
+  .carousel {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+  
+  .carousel-slide {
+    position: absolute;
+    width: 100%;
+    transition: opacity 500ms;
+  }
+  
+  .carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .indicator-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 9999px;
+    border: 2px solid #c39150;
+    transition: background-color 300ms;
+  }
+  
+  .indicator-dot.active {
+    background-color: #c39150;
+  }
+  
+  /* News Section */
+  .news-section {
+    padding: 1.5rem;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .search-input {
+    width: 16rem;
+    padding: 0.5rem 1rem;
+    background-color: #2f354c;
+    color: white;
+    border-radius: 0.5rem;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .news-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .news-item {
+    display: flex;
+    background-color: #2f354c;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: background-color 300ms;
+  }
+  
+  .news-item:hover {
+    background-color: #3a4056;
+  }
+  
+  .news-image {
+    width: 10rem;
+    height: 8rem;
+    object-fit: cover;
+  }
+  
+  .news-content {
+    padding: 1rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 739px) {
+    .trangchu-main {
+      padding-top: 24px;
+    }
+    
+    .carousel-slide img {
+      height: 150px;
+    }
+  }
+  
+  @media (min-width: 740px) and (max-width: 1023px) {
+    .carousel-slide img {
+      height: 200px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .carousel-slide img {
+      height: 370px;
+    }
+  }
+  /* trangchu.module.css - thêm vào cuối file */
+
+/* Ranking Container */
+.rankingContainer {
+  @apply w-full bg-cover bg-center py-8;
+}
+
+.rankingWrapper {
+  @apply container mx-auto px-4;
+}
+
+.rankingBox {
+  @apply bg-[#0e111d] rounded-lg p-6;
+}
+
+/* Header Section */
+.rankingHeader {
+  @apply flex justify-between items-center mb-6;
+}
+
+.rankingTitle {
+  @apply text-2xl font-bold text-white;
+}
+
+.serverSelector {
+  @apply flex items-center space-x-2;
+}
+
+.serverLabel {
+  @apply text-white;
+}
+
+.serverSelect {
+  @apply bg-[#444c65] text-[#1f2333] h-7 px-2 font-bold;
+}
+
+/* Content Section */
+.rankingContent {
+  @apply bg-[#0e111d] p-4;
+}
+
+/* Tab Buttons */
+.tabButtons {
+  @apply flex space-x-4 mb-6;
+}
+
+.tabButton {
+  @apply px-6 py-2 rounded border-2 border-[#404e80] transition-colors;
+}
+
+.tabButtonActive {
+  @apply bg-[#0e111d] text-[#495057];
+}
+
+.tabButtonInactive {
+  @apply bg-[#2f354c] text-[#a1a8c4] hover:bg-[#3a4056];
+}
+
+/* Table Styles */
+.tableContainer {
+  @apply bg-[#0e111d] rounded-lg mb-6;
+}
+
+.rankingTable {
+  @apply w-full;
+}
+
+.tableHeader {
+  @apply bg-[#294039] h-11;
+}
+
+.headerCell {
+  @apply text-[#6ca896] border-r border-[#7e859d];
+}
+
+.headerCellLast {
+  @apply text-[#6ca896];
+}
+
+.tableRow {
+  @apply even:bg-[#49516b] odd:bg-[#394057];
+}
+
+.tableCell {
+  @apply border-r border-[#7e859d] text-center text-[#a1a8c4];
+}
+
+.tableCellLast {
+  @apply text-center text-[#a1a8c4];
+}
+
+.rankCell {
+  @apply border-r border-[#7e859d] text-center;
+}
+
+/* Pagination */
+.pagination {
+  @apply flex justify-center items-center space-x-4;
+}
+
+.paginationButton {
+  @apply p-1 hover:bg-[#3a4056] rounded transition-colors;
+}
+
+.paginationButtonDisabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.pageButton {
+  @apply w-8 h-8 rounded transition-colors;
+}
+
+.pageButtonActive {
+  @apply bg-[#0e111d] text-white;
+}
+
+.pageButtonInactive {
+  @apply text-[#a1a8c4] hover:bg-[#3a4056];
+}
+
+.paginationIcon {
+  @apply w-5 h-5 text-[#a1a8c4];
+}
+
+/* trangchu.module.css - thêm vào cuối file */
+
+/* Ranking Container */
+.rankingContainer {
+    @apply w-full bg-cover bg-center py-8;
+  }
+  
+  .rankingWrapper {
+    @apply container mx-auto px-4;
+  }
+  
+  .rankingBox {
+    @apply bg-[#0e111d] rounded-lg p-6;
+  }
+  
+  /* Header Section */
+  .rankingHeader {
+    @apply flex justify-between items-center mb-6;
+  }
+  
+  .rankingTitle {
+    @apply text-2xl font-bold text-white;
+  }
+  
+  .serverSelector {
+    @apply flex items-center space-x-2;
+  }
+  
+  .serverLabel {
+    @apply text-white;
+  }
+  
+  .serverSelect {
+    @apply bg-[#444c65] text-[#1f2333] h-7 px-2 font-bold;
+  }
+  
+  /* Content Section */
+  .rankingContent {
+    @apply bg-[#0e111d] p-4;
+  }
+  
+  /* Tab Buttons */
+  .tabButtons {
+    @apply flex space-x-4 mb-6;
+  }
+  
+  .tabButton {
+    @apply px-6 py-2 rounded border-2 border-[#404e80] transition-colors;
+  }
+  
+  .tabButtonActive {
+    @apply bg-[#0e111d] text-[#495057];
+  }
+  
+  .tabButtonInactive {
+    @apply bg-[#2f354c] text-[#a1a8c4] hover:bg-[#3a4056];
+  }
+  
+  /* Table Styles */
+  .tableContainer {
+    @apply bg-[#0e111d] rounded-lg mb-6;
+  }
+  
+  .rankingTable {
+    @apply w-full;
+  }
+  
+  .tableHeader {
+    @apply bg-[#294039] h-11;
+  }
+  
+  .headerCell {
+    @apply text-[#6ca896] border-r border-[#7e859d];
+  }
+  
+  .headerCellLast {
+    @apply text-[#6ca896];
+  }
+  
+  .tableRow {
+    @apply even:bg-[#49516b] odd:bg-[#394057];
+  }
+  
+  .tableCell {
+    @apply border-r border-[#7e859d] text-center text-[#a1a8c4];
+  }
+  
+  .tableCellLast {
+    @apply text-center text-[#a1a8c4];
+  }
+  
+  .rankCell {
+    @apply border-r border-[#7e859d] text-center;
+  }
+  
+  /* Pagination */
+  .pagination {
+    @apply flex justify-center items-center space-x-4;
+  }
+  
+  .paginationButton {
+    @apply p-1 hover:bg-[#3a4056] rounded transition-colors;
+  }
+  
+  .paginationButtonDisabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+  
+  .pageButton {
+    @apply w-8 h-8 rounded transition-colors;
+  }
+  
+  .pageButtonActive {
+    @apply bg-[#0e111d] text-white;
+  }
+  
+  .pageButtonInactive {
+    @apply text-[#a1a8c4] hover:bg-[#3a4056];
+  }
+  
+  .paginationIcon {
+    @apply w-5 h-5 text-[#a1a8c4];
+  }

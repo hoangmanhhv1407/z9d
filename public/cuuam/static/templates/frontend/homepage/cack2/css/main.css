@@ -1,0 +1,7 @@
+@import url('reset.css');
+@import url('font.css');
+@import url('banner-event.css');
+@font-face {
+    font-family: 'glyphicons';
+    src: url('../fonts/glyphicons-halflings-regular.woff2');
+}

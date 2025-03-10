@@ -1,0 +1,388 @@
+/* MainShop.css */
+
+/* Container and Layout */
+.mshop-container {
+  @apply p-6 bg-gray-50 min-h-screen flex;
+}
+
+/* Sidebar */
+.mshop-sidebar {
+  @apply w-1/4 pr-6;
+}
+
+.mshop-sidebar__title {
+  @apply text-2xl font-semibold mb-6 text-gray-800 border-b pb-2;
+}
+
+.mshop-sidebar__list {
+  @apply space-y-2;
+}
+
+.mshop-sidebar__item {
+  @apply cursor-pointer flex items-center p-3 rounded-lg transition-all duration-300 
+         bg-white text-gray-700 hover:bg-gradient-to-r hover:from-gray-100 hover:to-gray-200 hover:shadow-md;
+}
+
+.mshop-sidebar__item--active {
+  @apply bg-gradient-to-r from-blue-400 to-blue-600 text-white shadow-lg;
+}
+
+.mshop-sidebar__icon {
+  @apply w-5 h-5 mr-2 text-blue-600;
+}
+
+/* Content Grid */
+.mshop-content {
+  @apply w-3/4;
+}
+
+.mshop-grid {
+  @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4;
+}
+
+/* Loading State */
+.mshop-loading {
+  @apply col-span-full flex justify-center items-center;
+}
+
+.mshop-loading__spinner {
+  @apply w-8 h-8 border-4 border-blue-200 border-t-blue-500 rounded-full animate-spin;
+}
+
+.mshop-loading__text {
+  @apply ml-4 text-blue-500 font-semibold;
+}
+
+/* Empty State */
+.mshop-empty {
+  @apply col-span-full text-center text-gray-500 py-8;
+}
+
+/* Item Card */
+.mshop-item {
+  @apply bg-white rounded-lg p-3 border border-gray-200 hover:shadow-md 
+         transition-shadow duration-300 flex flex-col items-center cursor-pointer relative;
+}
+
+.mshop-item__limit {
+  @apply absolute top-2 right-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full;
+}
+
+.mshop-item__image-container {
+  @apply w-full h-16 mb-2 flex justify-center items-center relative;
+}
+
+.mshop-item__image {
+  @apply w-16 h-16 object-cover rounded;
+}
+
+.mshop-item__info {
+  @apply text-center w-full;
+}
+
+/* Thêm style cho badge "MỚI" */
+.mshop-item__new-badge {
+  @apply absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-bl-lg z-10;
+}
+
+/* Item Info (tiếp) */
+.mshop-item__name {
+  @apply text-sm font-medium text-gray-800 mb-1 whitespace-nowrap overflow-hidden overflow-ellipsis;
+}
+
+.mshop-item__price {
+  @apply flex justify-center items-center text-blue-600 mb-2;
+}
+
+.mshop-item__price-icon {
+  @apply w-4 h-4 mr-1;
+}
+
+.mshop-item__buy-button {
+  @apply w-full py-1 text-sm rounded-md font-medium bg-blue-500 text-white 
+         hover:bg-blue-600 transition-colors duration-300;
+}
+
+/* Pagination */
+.mshop-pagination {
+  @apply flex justify-center items-center space-x-4 mt-6;
+}
+
+.mshop-pagination__button {
+  @apply text-gray-500 hover:text-blue-500 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.mshop-pagination__number {
+  @apply text-lg font-medium text-gray-500 hover:text-blue-500;
+}
+
+.mshop-pagination__number--active {
+  @apply text-blue-600;
+}
+
+/* Popup Dialog */
+.mshop-popup {
+  @apply fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50;
+}
+
+.mshop-popup__container {
+  @apply bg-white rounded-lg p-6 w-[500px] max-h-[90vh] overflow-y-auto relative;
+}
+
+.mshop-popup__close {
+  @apply absolute top-2 right-2 text-gray-400 hover:text-gray-600;
+}
+
+.mshop-popup__content {
+  @apply flex flex-col items-center;
+}
+
+/* Cập nhật container cho hình ảnh trong popup */
+.mshop-popup__image-container {
+  @apply relative mb-4;
+}
+
+.mshop-popup__image {
+  @apply w-32 h-32 object-cover rounded-lg shadow-md;
+}
+
+/* Thêm badge "MỚI" cho popup */
+.mshop-popup__new-badge {
+  @apply absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-bl-lg z-10;
+}
+
+/* Thêm hiển thị ngày thêm sản phẩm */
+.mshop-popup__date {
+  @apply flex items-center gap-2 mb-4 text-gray-500 text-sm w-full justify-center;
+}
+
+.mshop-popup__title {
+  @apply text-xl font-bold text-gray-800 mb-4;
+}
+
+.mshop-popup__limit {
+  @apply bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-4 w-full;
+}
+
+.mshop-popup__limit-row {
+  @apply flex justify-between items-center;
+  @apply text-yellow-700 first:mb-1;
+}
+
+.mshop-popup__description,
+.mshop-popup__details {
+  @apply w-full mb-6;
+}
+
+.mshop-popup__section {
+  @apply bg-gray-50 rounded-lg p-4;
+}
+
+.mshop-popup__section h4 {
+  @apply text-lg font-semibold text-gray-800 mb-2;
+}
+
+.mshop-popup__section p {
+  @apply text-gray-600 text-sm leading-relaxed mb-2;
+}
+
+.mshop-popup__section ul {
+  @apply list-disc list-inside text-gray-600 text-sm space-y-1 mb-2;
+}
+
+.mshop-popup__section ol {
+  @apply list-decimal list-inside text-gray-600 text-sm space-y-1 mb-2;
+}
+
+.mshop-popup__section a {
+  @apply text-blue-600 hover:text-blue-700 underline;
+}
+
+.mshop-popup__section strong,
+.mshop-popup__section b {
+  @apply font-semibold;
+}
+
+.mshop-popup__section em,
+.mshop-popup__section i {
+  @apply italic;
+}
+
+.mshop-popup__section code {
+  @apply bg-gray-100 rounded px-1 font-mono text-sm;
+}
+
+.mshop-popup__section blockquote {
+  @apply border-l-4 border-gray-200 pl-4 italic text-gray-600;
+}
+
+.mshop-popup__section img {
+  @apply max-w-full h-auto rounded-lg my-2;
+}
+
+.mshop-popup__price {
+  @apply flex items-center text-blue-600 mb-4;
+}
+
+.mshop-popup__price-icon {
+  @apply w-5 h-5 mr-1;
+}
+
+.mshop-popup__quantity {
+  @apply w-full mb-4;
+}
+
+.mshop-popup__quantity label {
+  @apply text-sm text-gray-600 mb-1 block;
+}
+
+.mshop-popup__quantity-controls {
+  @apply flex items-center justify-center space-x-4;
+}
+
+.mshop-popup__quantity-controls button {
+  @apply w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center
+         disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.mshop-popup__total {
+  @apply w-full border-t border-gray-200 pt-4 mb-4;
+}
+
+.mshop-popup__total-row {
+  @apply flex justify-between items-center mb-2;
+}
+
+.mshop-popup__error {
+  @apply text-red-500 text-sm flex items-center;
+}
+
+.mshop-popup__buy-button {
+  @apply w-full py-2 rounded-lg font-semibold text-white bg-blue-500 
+         hover:bg-blue-600 transition-colors duration-300;
+}
+
+.mshop-popup__buy-button--disabled {
+  @apply bg-gray-400 cursor-not-allowed;
+}
+
+.mshop-popup__loading {
+  @apply flex items-center justify-center;
+}
+
+.mshop-popup__spinner {
+  @apply animate-spin h-5 w-5 mr-2;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+}
+
+/* Hiệu ứng đặc biệt cho sản phẩm mới */
+.mshop-item:has(.mshop-item__new-badge) {
+  @apply border-red-500 shadow-md;
+}
+
+.mshop-item:has(.mshop-item__new-badge):hover {
+  @apply shadow-lg border-red-500 transform scale-105;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mshop-container {
+    @apply flex-col;
+  }
+
+  .mshop-sidebar,
+  .mshop-content {
+    @apply w-full;
+  }
+
+  .mshop-sidebar {
+    @apply mb-6 pr-0;
+  }
+
+  .mshop-grid {
+    @apply grid-cols-2 sm:grid-cols-3;
+  }
+}
+
+@media (max-width: 640px) {
+  .mshop-grid {
+    @apply grid-cols-2;
+  }
+
+  .mshop-popup__container {
+    @apply w-[90%] mx-4;
+  }
+
+  .mshop-pagination {
+    @apply flex-wrap justify-center;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation cho badge "MỚI" */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.mshop-item__new-badge, .mshop-popup__new-badge {
+  animation: pulse 2s infinite;
+}
+
+.mshop-popup__container {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Hover Effects */
+.mshop-item:hover {
+  @apply transform scale-105 transition-transform duration-200;
+}
+
+.mshop-item__buy-button:hover {
+  @apply shadow-lg;
+}
+
+/* Focus States */
+.mshop-popup button:focus,
+.mshop-item__buy-button:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-opacity-50;
+}
+
+/* Custom Scrollbar */
+.mshop-popup__container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.mshop-popup__container::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.mshop-popup__container::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.mshop-popup__container::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full hover:bg-gray-500;
+}

@@ -1,0 +1,407 @@
+/* RankingEventRewards.css */
+.rer-overlay {
+  @apply fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50;
+  animation: rerFadeIn 0.3s ease-out;
+}
+
+.rer-container {
+  @apply bg-white w-full max-w-7xl h-[90vh] rounded-2xl shadow-2xl flex overflow-hidden;
+  animation: rerScaleIn 0.4s ease-out;
+}
+
+/* Sidebar Styles */
+.rer-sidebar {
+  @apply w-96 bg-gradient-to-b from-gray-900 to-gray-800 text-white p-8 rounded-l-2xl;
+  box-shadow: inset -10px 0 20px -10px rgba(0, 0, 0, 0.3);
+}
+
+.rer-sidebar-header {
+  @apply text-center mb-8;
+}
+
+.rer-trophy-wrapper {
+  @apply w-24 h-24 mx-auto mb-4 rounded-2xl flex items-center justify-center;
+  background: linear-gradient(45deg, #2d3748, #1a202c);
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
+}
+
+.rer-trophy-icon {
+  @apply w-12 h-12 text-yellow-400;
+  filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.4));
+}
+
+.rer-ranking-title {
+  @apply text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Timer Section */
+.rer-event-timer {
+  @apply mt-8 bg-gray-800/50 rounded-2xl p-6 backdrop-blur-xl shadow-lg;
+}
+
+.rer-timer-content {
+  @apply space-y-4;
+}
+
+.rer-timer-title {
+  @apply text-lg font-semibold flex items-center gap-2;
+}
+
+.rer-timer-icon {
+  @apply w-5 h-5 text-blue-400;
+}
+
+.rer-time-box {
+  @apply bg-gray-700/50 rounded-lg p-3 mb-3;
+}
+
+.rer-time-label {
+  @apply text-sm text-gray-400;
+}
+
+.rer-time-value {
+  @apply text-sm font-medium mt-1;
+}
+
+/* Main Content */
+.rer-main {
+  @apply flex-1 flex flex-col bg-gray-50;
+}
+
+.rer-header {
+  @apply p-6 border-b border-gray-200 flex justify-between items-center bg-white shadow-sm;
+}
+
+.rer-title {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.rer-close {
+  @apply p-2 rounded-full hover:bg-gray-100 transition-colors duration-300;
+}
+
+/* Rewards Section */
+.rer-rewards {
+  @apply flex-1 overflow-y-auto p-6 space-y-6;
+}
+
+.rer-reward-card {
+  @apply bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300;
+  animation: rerSlideUp 0.5s ease-out;
+}
+
+.rer-reward-header {
+  @apply px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-gradient-to-r from-white to-gray-50;
+}
+
+.rer-rank {
+  @apply flex items-center gap-4;
+}
+
+/* Rank Icons */
+.rer-rank-icon {
+  @apply w-8 h-8;
+}
+
+.rer-rank-gold {
+  @apply text-yellow-400;
+  filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.4));
+}
+
+.rer-rank-silver {
+  @apply text-gray-400;
+  filter: drop-shadow(0 0 6px rgba(156, 163, 175, 0.4));
+}
+
+.rer-rank-bronze {
+  @apply text-amber-600;
+  filter: drop-shadow(0 0 6px rgba(217, 119, 6, 0.4));
+}
+
+.rer-rank-normal {
+  @apply text-blue-400;
+  filter: drop-shadow(0 0 6px rgba(96, 165, 250, 0.4));
+}
+
+/* Items Grid */
+.rer-items-grid {
+  @apply grid grid-cols-3 gap-4 p-4;
+}
+
+.rer-item {
+  @apply flex items-start p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-all duration-300;
+}
+
+.rer-item-image {
+  @apply w-16 h-16 object-cover rounded-lg;
+}
+
+.rer-item-details {
+  @apply ml-4;
+}
+
+.rer-item-name {
+  @apply font-medium text-gray-900;
+}
+
+.rer-item-desc {
+  @apply text-sm text-gray-500 mt-1 line-clamp-2;
+}
+
+/* Button Styles */
+.rer-button {
+  @apply px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300;
+}
+
+.rer-button-content {
+  @apply flex items-center gap-2;
+}
+
+.rer-button-icon {
+  @apply w-4 h-4;
+}
+
+.rer-button-claimed {
+  @apply bg-gray-100 text-gray-400 cursor-not-allowed;
+}
+
+.rer-button-waiting {
+  @apply bg-gray-500 text-white cursor-not-allowed;
+}
+
+.rer-button-not_eligible {
+  @apply bg-red-500 text-white cursor-not-allowed;
+}
+
+.rer-button-can_claim {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 shadow-lg shadow-blue-500/30;
+}
+
+/* Loading State */
+.rer-loading {
+  @apply bg-white p-8 rounded-2xl shadow-xl text-center relative;
+}
+
+.rer-loading-icon {
+  @apply w-8 h-8 mx-auto text-blue-500;
+}
+
+.rer-loading-text {
+  @apply mt-4 text-gray-600;
+}
+
+.rer-spin {
+  animation: rerSpin 1s linear infinite;
+}
+
+/* Scrollbar Styles */
+.rer-rewards::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.rer-rewards::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+.rer-rewards::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
+}
+
+.rer-tabs {
+  @apply flex flex-col space-y-2 mb-6;
+}
+
+.rer-tab {
+  @apply flex items-center w-full px-4 py-3 rounded-xl transition-all duration-300;
+  @apply text-left text-gray-400 hover:text-white hover:bg-gray-800/50;
+}
+
+.rer-tab-active {
+  @apply bg-yellow-500/20 text-yellow-400;
+  @apply hover:bg-yellow-500/30 hover:text-yellow-300;
+}
+
+.rer-tab-icon {
+  @apply w-5 h-5 mr-3;
+}
+
+.rer-tab-label {
+  @apply font-medium;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .rer-tabs {
+    @apply flex-row space-y-0 space-x-2 overflow-x-auto pb-4;
+  }
+
+  .rer-tab {
+    @apply flex-shrink-0;
+  }
+}
+
+@media (max-width: 640px) {
+  .rer-tab-label {
+    @apply text-sm;
+  }
+  
+  .rer-tab {
+    @apply px-3 py-2;
+  }
+}
+
+
+/* Animations */
+@keyframes rerFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rerScaleIn {
+  from { 
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rerSlideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rerSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Styles */
+@media (max-width: 1280px) {
+  .rer-container {
+    @apply max-w-6xl mx-4;
+  }
+
+  .rer-sidebar {
+    @apply w-80;
+  }
+
+  .rer-items-grid {
+    @apply grid-cols-2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rer-container {
+    @apply flex-col;
+  }
+
+  .rer-sidebar {
+    @apply w-full rounded-t-2xl rounded-b-none p-6;
+  }
+
+  .rer-trophy-wrapper {
+    @apply w-16 h-16;
+  }
+
+  .rer-ranking-title {
+    @apply text-2xl;
+  }
+
+  .rer-timer-content {
+    @apply flex justify-between gap-4;
+  }
+}
+
+@media (max-width: 768px) {
+  .rer-container {
+    @apply m-0 rounded-none h-screen;
+  }
+
+  .rer-items-grid {
+    @apply grid-cols-1;
+  }
+
+  .rer-reward-header {
+    @apply flex-col gap-4 items-start;
+  }
+
+  .rer-button {
+    @apply w-full justify-center;
+  }
+
+  .rer-item {
+    @apply flex-col items-center text-center;
+  }
+
+  .rer-item-details {
+    @apply ml-0 mt-4;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .rer-container {
+    @apply bg-gray-900;
+  }
+
+  .rer-main {
+    @apply bg-gray-900;
+  }
+
+  .rer-header {
+    @apply bg-gray-800 border-gray-700;
+  }
+
+  .rer-title {
+    @apply text-gray-100;
+  }
+
+  .rer-close {
+    @apply hover:bg-gray-700;
+  }
+
+  .rer-reward-card {
+    @apply bg-gray-800;
+  }
+
+  .rer-item {
+    @apply bg-gray-800 hover:bg-gray-700;
+  }
+
+  .rer-item-name {
+    @apply text-gray-100;
+  }
+
+  .rer-item-desc {
+    @apply text-gray-400;
+  }
+
+  .rer-loading {
+    @apply bg-gray-800;
+  }
+
+  .rer-loading-text {
+    @apply text-gray-300;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .rer-container,
+  .rer-reward-card,
+  .rer-button,
+  .rer-close,
+  .rer-item {
+    @apply transform-none transition-none;
+    animation: none !important;
+  }
+}

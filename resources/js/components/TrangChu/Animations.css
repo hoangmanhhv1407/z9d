@@ -1,0 +1,48 @@
+/* File: animations.css */
+
+@keyframes floatUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .float-up-down {
+    animation: floatUpDown 3s ease-in-out infinite;
+  }
+  
+  /* Đảm bảo ảnh giữ nguyên kích thước */
+  .character-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+/* File: animations.css */
+
+.opacity-0 {
+    opacity: 0;
+    transform: translateY(30px); /* Trượt xuống khỏi vị trí ban đầu */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .opacity-100 {
+    opacity: 1;
+    transform: translateY(0); /* Trở lại vị trí ban đầu */
+  }
+
+/* File: animations.css */
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(30px); /* Bắt đầu trượt từ dưới lên */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .slide-up-visible {
+    opacity: 1;
+    transform: translateY(0); /* Khi hiển thị, vị trí sẽ trở lại bình thường */
+  }
+  

@@ -1,0 +1,2216 @@
+@font-face {
+    font-family: "BeVietnam-ExtraBold";
+    src: url("https://cdnmedia.vtcgame.vn/vtcgame/header/fonts/BeVietnam-ExtraBold.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BeVietnam-Medium";
+    src: url("https://cdnmedia.vtcgame.vn/vtcgame/header/fonts/BeVietnam-Medium.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BeVietnam-LightItalic";
+    src: url("https://cdnmedia.vtcgame.vn/vtcgame/header/fonts/BeVietnam-LightItalic.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BeVietnam-Light";
+    src: url("https://cdnmedia.vtcgame.vn/vtcgame/header/fonts/BeVietnam-Light.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "NotoSans-Regular";
+    src: url("https://cdnmedia.vtcgame.vn/vtcgame/header/fonts/NotoSans-Regular.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "NotoSans-SemiBold";
+    src: url("https://cdnmedia.vtcgame.vn/vtcgame/header/fonts/NotoSans-SemiBold.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BeVietnam-Bold";
+    src: url("https://cdnmedia.vtcgame.vn/vtcgame/header/fonts/BeVietnam-Bold.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BeVietnamPro-Regular";
+    src: url("https://cdnmedia.vtcgame.vn/vtcgame/header/fonts/BeVietnamPro-Regular.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "NotoSans-SemiBold";
+    src: url("https://cdnmedia.vtcgame.vn/vtcgame/header/fonts/NotoSans-SemiBold.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BeVietnam-SemiBold";
+    src: url("https://cdnmedia.vtcgame.vn/vtcgame/header/fonts/BeVietnam-SemiBold.ttf");
+    font-display: swap;
+}
+
+.dcmmanh_popup-pa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.5);
+    z-index: 9999
+}
+
+.dcmmanh_popup-container {
+    padding-bottom: 38px;
+    width: 500px;
+    background: #fff;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px
+}
+
+.dcmmanh_popup-header {
+    padding: 0 38px
+}
+
+.dcmmanh_popup-header__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.dcmmanh_popup-header__btn1 img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: brightness(0.5);
+    cursor:pointer;
+}
+
+.dcmmanh_popup-header__btn2 img {
+    margin-top: 29px;
+    width: 184px;
+    object-fit: contain;
+    cursor: pointer
+}
+
+.dcmmanh_popup-header__btn3 img {
+    width: 19px;
+    height: 19px;
+    object-fit: contain;
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+
+.dcmmanh_popup-body__ul {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column
+}
+
+.dcmmanh_popup-body__ul-li0 {
+    font-size: 26px;
+    line-height: 38px;
+    text-align: center;
+    font-family: "BeVietnam-Bold";
+    color: #0060af;
+    margin-bottom: 24px
+}
+
+.dcmmanh_popup-body__ul-li1 {
+    display: flex;
+    flex-direction: column
+}
+
+.dcmmanh_popup-body__ul-li1__body {
+    box-shadow: 0px 0px 8px rgba(0,0,0,.25);
+    display: flex;
+    align-items: center;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+    width: 100%;
+    height: 56px;
+    padding-left: 28px
+}
+
+.dcmmanh_popup-body__ul-li1__img {
+    margin-right: 18px
+}
+
+.dcmmanh_popup-body__ul-li1__input {
+    color: #474747;
+    font-size: 16px;
+    line-height: 23px;
+    font-family: "NotoSans-Regular";
+    height: calc(100% - 2px);
+    width: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border: none;
+    outline: none
+}
+
+    .dcmmanh_popup-body__ul-li1__input::placeholder {
+        font-size: 16px;
+        line-height: 23px;
+        font-family: "NotoSans-Regular";
+        color: #828282
+    }
+
+.dcmmanh_popup-body__ul-li2 {
+    display: flex;
+    flex-direction: column
+}
+
+    .dcmmanh_popup-body__ul-li2:focus-within .dcmmanh_popup-body__ul-li2__imgp2 {
+        display: block
+    }
+
+.dcmmanh_popup-body__ul-li2__body {
+    position: relative;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.25);
+    display: flex;
+    align-items: center;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+    width: 100%;
+    height: 56px;
+    padding-left: 28px
+}
+
+.dcmmanh_popup-body__ul-li2:focus-within .dcmmanh_popup-body__ul-li2__imgp {
+    cursor: pointer;
+    display: block;
+    background: url("../images/p18.svg") center/contain no-repeat
+}
+
+.dcmmanh_popup-body__ul-li2__img {
+    margin-right: 18px
+}
+
+.dcmmanh_popup-body__ul-li2__input {
+    color: #474747;
+    font-size: 16px;
+    line-height: 23px;
+    font-family: "NotoSans-Regular";
+    border: none;
+    outline: none;
+    height: calc(100% - 2px);
+    width: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px
+}
+
+    .dcmmanh_popup-body__ul-li2__input::placeholder {
+        font-size: 16px;
+        line-height: 23px;
+        font-family: "NotoSans-Regular";
+        color: #828282
+    }
+
+.dcmmanh_popup-body__ul-li2__imgp {
+    position: absolute;
+    right: 28px;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%)
+}
+
+    .dcmmanh_popup-body__ul-li2__imgp:hover {
+        transform: scale(1) translateY(-50%);
+        -webkit-transform: scale(1) translateY(-50%);
+        -moz-transform: scale(1) translateY(-50%);
+        -ms-transform: scale(1) translateY(-50%);
+        -o-transform: scale(1) translateY(-50%)
+    }
+
+.dcmmanh_popup-body__ul-li2__error {
+    padding-left: 28px;
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "BeVietnamPro-Regular";
+    color: #ff5247;
+}
+
+.dcmmanh_popup-body__ul-li3 {
+    text-align: right;
+    margin: 8px 0 16px;
+    font-size: 16px;
+    line-height: 23px;
+    font-family: "BeVietnamPro-Regular";
+    color: #0060af;
+    cursor:pointer;
+}
+
+.dcmmanh_popup-body__ul-li4 {
+    margin-bottom: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #0060AF 2.04%, #00AEEF 97.31%);
+    border-radius: 80px;
+    height: 57px;
+    font-size: 24px;
+    line-height: 35px;
+    font-family: "BeVietnamPro-Regular";
+    color: #fff;
+    cursor: pointer;
+}
+
+.dcmmanh_popup-body__ul-li5 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    font-family: "BeVietnamPro-Regular";
+    color: #828282
+}
+
+    .dcmmanh_popup-body__ul-li5 img {
+        margin: 4px 8px 0 0;
+        flex-shrink: 0;
+        width: 12px;
+        height: 16px
+    }
+
+.dcmmanh_popup-body__ul-li6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -4px;
+    flex-wrap: wrap
+}
+
+.dcmmanh_popup-body__ul-li6__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: ;
+    padding-left: 73px;
+    margin: 0 4px;
+    width: calc(50% - 8px);
+    height: 56px;
+    margin-bottom: 16px;
+    background: #fff;
+    border: 1px solid #0060af;
+    border-radius: 80px;
+    cursor:pointer
+}
+.dcmmanh2_popup-body__ul-li6__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    width: calc(100%/3 - 8px);
+    height: 56px;
+    margin-bottom: 16px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 80px;
+    cursor: pointer
+}
+    .dcmmanh_popup-body__ul-li6__item img {
+        position: absolute;
+        left: 10%
+    }
+
+    .dcmmanh_popup-body__ul-li6__item p {
+        padding-bottom: 4px;
+        font-size: 16px;
+        line-height: 23px;
+        font-family: "BeVietnam-Medium";
+        color: #0060af
+    }
+
+.dcmmanh_popup-body__ul-li7 {
+    font-family: "NotoSans-Regular";
+    margin-top: 38px;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000
+}
+
+    .dcmmanh_popup-body__ul-li7 a {
+        color: #0060af;
+        margin-left: 4px
+    }
+
+.dcmmanh_popup-body__ul-li8 {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.dcmmanh_popup-body__ul-li8__space {
+    margin: 0 4px
+}
+
+.dcmmanh_popup-body__ul-li8 p {
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #828282;
+    font-family: "BeVietnam-Medium";
+    margin: 0 4px;
+}
+
+.dcmmanh_popup-body__ul-li8 a {
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    font-family: "BeVietnam-Medium";
+    color: #0060af
+}
+
+.dcmmanh_popup-body__ul-li9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 140px;
+    margin-top: 8px
+}
+
+    .dcmmanh_popup-body__ul-li9 p {
+        font-size: 16px;
+        line-height: 23px;
+        text-align: center;
+        font-family: "NotoSans-Regular";
+        color: #5b5b5b;
+        margin-right: 8px
+    }
+
+    .dcmmanh_popup-body__ul-li9 span {
+        font-size: 16px;
+        line-height: 23px;
+        text-align: center;
+        font-family: "NotoSans-Regular";
+        color: #ff5247
+    }
+
+.dcmmanh_popup-body__ullg-li1 {
+    margin-bottom: 18px
+}
+
+.dcmmanh_popup-body__ul0, .dcmmanh_popup-body__ul1, .dcmmanh_popup-body__ul2, .dcmmanh_popup-body__ul3, .dcmmanh_popup-body__ul4, .dcmmanh_popup-body__ul5, .dcmmanh_popup-body__ul6, .dcmmanh_popup-body__ul7, .dcmmanh_popup-body__ul8 {
+    display: none
+}
+
+    .dcmmanh_popup-body__ul0.active, .dcmmanh_popup-body__ul1.active, .dcmmanh_popup-body__ul2.active, .dcmmanh_popup-body__ul3.active, .dcmmanh_popup-body__ul4.active, .dcmmanh_popup-body__ul5.active, .dcmmanh_popup-body__ul6.active, .dcmmanh_popup-body__ul7.active, .dcmmanh_popup-body__ul8.active {
+        display: flex
+    }
+
+.dcmmanh_popup-body__ul1-li8 {
+    margin: 20px 0
+}
+
+.dcmmanh_popup-body__ul2 img {
+    width: 15px;
+    height: 16px
+}
+
+.dcmmanh_popup-body__ul2-li8 {
+    margin-bottom: 20px;
+    padding: 0 8px
+}
+
+.dcmmanh_popup-body__ul2-li8__space {
+    margin: 0 4px
+}
+
+.dcmmanh_popup-body__ul2-li8__item {
+    display: none;
+    margin-bottom: 140px;
+    margin-top: 8px
+}
+
+    .dcmmanh_popup-body__ul2-li8__item.active {
+        display: flex
+    }
+
+.dcmmanh_popup-body__ul3-li1 {
+    width: 100%
+}
+
+.dcmmanh_popup-body__ul3-li2 {
+    margin-bottom: 20px
+}
+
+.dcmmanh_popup-body__ul3-li8 {
+    margin-bottom: 50px
+}
+
+.dcmmanh_popup-body__ul4-li2 {
+    margin: 20px 0
+}
+
+.dcmmanh_popup-body__ul4-li8 {
+    margin: 20px 0
+}
+
+.dcmmanh_popup-body__ul5-li1 {
+    margin-bottom: 20px
+}
+
+.dcmmanh_popup-body__ul5-li4 {
+    margin-top: 200px
+}
+
+.dcmmanh_popup-body__ul6-li6__item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 80px
+}
+
+.dcmmanh_popup-body__ul7-li1 {
+    margin-bottom: 200px
+}
+
+.dcmmanh_popupdk-body__ul-li8 p {
+    padding: 0 50px
+}
+
+.dcmmanh_popupsms-body__ul-li5 {
+    margin-top: 50px
+}
+
+@media(min-width: 740px)and (max-width: 1280px) {
+
+    .dcmmanh_popup-container {
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7)
+    }
+}
+
+@media(max-width: 739px) {
+
+    .dcmmanh_popup-container {
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7)
+    }
+
+    .dcmmanh_popup-body__ul {
+        padding: 0 16px
+    }
+
+    .dcmmanh_popup-body__ul-li6 {
+        flex-direction: column
+    }
+
+    .dcmmanh_popup-body__ul-li6__item {
+        padding-left: 30%;
+        width: 100%;
+        justify-content: flex-start
+    }
+}
+
+
+/*Update 22/9*/
+.cg_topbar {
+    width: 100%;
+    height: 30px;
+    background-color: #fafafa;
+    border-bottom: solid 1px #e5e5e5;
+    position: fixed;
+    font-family: 'Roboto',sans-serif;
+    z-index: 9999
+}
+
+.cg_danhsachgame_hotline {
+    display: inline-block;
+    float: left;
+    margin: 0
+}
+
+    .cg_danhsachgame_hotline li {
+        float: left;
+        line-height: 18px
+    }
+
+        .cg_danhsachgame_hotline li:hover .cg_list_danhsachgame {
+            display: block
+        }
+
+        .cg_danhsachgame_hotline li i {
+            float: left;
+            display: inline-block;
+            margin-top: 8px
+        }
+
+.cg_icon_danhsachgame {
+    background: url(../images/cg_icon_danhsachgame.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-top: 1px
+}
+
+.cg_icon_hotline {
+    background: url(../images/cg_icon_hotline.png) no-repeat;
+    width: 17px;
+    height: 17px
+}
+
+.cg_icon_danhsachgame, .cg_icon_hotline {
+    margin-right: 5px
+}
+
+.cg_text_danhsachgame {
+    font-size: 13px;
+    color: #5b5b5b
+}
+
+.cg_text_hotline {
+    font-size: 16px;
+    color: #0287d1;
+    font-weight: 700
+}
+
+.cg_hover_danhsachgame {
+    position: relative;
+    padding: 0 15px 0 3px;
+    box-sizing: border-box;
+    margin-right: 15px
+}
+
+    .cg_hover_danhsachgame:before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        right: 0;
+        width: 1px;
+        border-left: dotted 1px #8e8e8e;
+        height: 16px
+    }
+
+    .cg_hover_danhsachgame:hover {
+        background-color: #fff
+    }
+
+        .cg_hover_danhsachgame:hover:before {
+            border: none
+        }
+
+.cg_padding_list {
+    padding-bottom: 6px
+}
+
+.cg_list_danhsachgame {
+    width: 540px;
+    height: 348px;
+    border: solid 1px #e5e5e5;
+    padding: 0 14px;
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: 31px;
+    background-color: #fff;
+    z-index: 999;
+    left: 0
+}
+
+.cg_tab_content {
+    display: none;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400
+}
+
+#cg_tab_1 {
+    display: block
+}
+
+.cg_tabs_menu {
+    display: table;
+    margin: 0 auto;
+    border-bottom: solid 2px #eaeaea;
+    height: 37px;
+    line-height: 37px;
+    width: 512px
+}
+
+    .cg_tabs_menu li {
+        float: left;
+        position: relative;
+        margin: 0 15px;
+        height: 37px;
+        line-height: 37px
+    }
+
+        .cg_tabs_menu li:first-child {
+            margin-left: 0
+        }
+
+        .cg_tabs_menu li:before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            right: -15px;
+            border-right: dotted 1px #8e8e8e;
+            height: 16px;
+            width: 1px
+        }
+
+        .cg_tabs_menu li:last-child:before {
+            border: none
+        }
+
+        .cg_tabs_menu li a {
+            display: inline-block;
+            color: #2f2f2f;
+            text-transform: uppercase;
+            font-size: 13px;
+            vertical-align: bottom
+        }
+
+        .cg_tabs_menu li:last-child a {
+            border: none
+        }
+
+        .cg_tabs_menu li.cg_current a {
+            color: #03a9f4;
+            border-bottom: solid 2px #03a9f4
+        }
+
+        .cg_tabs_menu li a:hover {
+            color: #03a9f4;
+            border-bottom: solid 2px #03a9f4
+        }
+
+.cg_cacgame_con {
+    display: inline-block;
+    float: left;
+    width: 145px;
+    margin-right: 34px;
+    margin-top: 9px
+}
+
+    .cg_cacgame_con li {
+        height: 37px;
+        line-height: 37px;
+        display: inline-block;
+        width: 145px;
+        margin-bottom: 14px
+    }
+
+        .cg_cacgame_con li a {
+            display: inline-block;
+            position: relative
+        }
+
+            .cg_cacgame_con li a:hover .cg_text_cacgame {
+                color: #03a9f4
+            }
+
+        .cg_cacgame_con li:last-child {
+            margin-bottom: 0
+        }
+
+        .cg_cacgame_con li i {
+            float: left;
+            font-size: 13px;
+            color: #2f2f2f;
+            margin-top: 0 !important
+        }
+
+.cg_icon_cacgame {
+    width: 37px;
+    height: 37px;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 6px
+}
+
+    .cg_icon_cacgame img {
+        width: 37px;
+        height: 37px
+    }
+
+.cg_text_cacgame {
+    width: 102px;
+    line-height: normal;
+    position: absolute;
+    left: 43px;
+    top: 50%;
+    transform: translate(0,-50%)
+}
+
+.cg_xoa_margin20 {
+    margin-right: 0
+}
+
+.cg_text_chay_top:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 1px;
+    height: 16px;
+    border-left: dotted 1px #8e8e8e
+}
+
+.cg_textmau_chuchay_top {
+    color: #f57c00
+}
+
+.cg_link_dangnhap_dangky {
+    display: inline-block;
+    float: right;
+    height: 31px;
+    line-height: 31px
+}
+
+    .cg_link_dangnhap_dangky li {
+        float: left;
+        padding: 0 8px;
+        border-left: solid 1px transparent;
+        border-right: solid 1px transparent;
+        position: relative
+    }
+
+        .cg_link_dangnhap_dangky li:before {
+            width: 1px;
+            height: 16px;
+            border-right: dotted 1px #8e8e8e;
+            content: '';
+            position: absolute;
+            top: 7px;
+            right: -2px;
+        }
+
+    .cg_link_dangnhap_dangky,
+    .cg_link_dangnhap_dangky:before,
+    .cg_link_dangnhap_dangky:after {
+        -webkit-box-sizing: content-box !important;
+        -moz-box-sizing: content-box !important;
+        box-sizing: content-box !important;
+    }
+
+        .cg_link_dangnhap_dangky li,
+        .cg_link_dangnhap_dangky li:before,
+        .cg_link_dangnhap_dangky li:after {
+            -webkit-box-sizing: content-box !important;
+            -moz-box-sizing: content-box !important;
+            box-sizing: content-box !important;
+        }
+
+            .cg_link_dangnhap_dangky li:last-child:before {
+                border: none
+            }
+
+            .cg_link_dangnhap_dangky li:hover {
+                background: #fff;
+                border-left: solid 1px #e5e5e5;
+                border-right: solid 1px #e5e5e5
+            }
+
+                .cg_link_dangnhap_dangky li:hover:before {
+                    border: none
+                }
+
+            .cg_link_dangnhap_dangky li i {
+                float: left;
+                color: #5b5b5b;
+                font-size: 13px
+            }
+
+.cg_icon_tailauncher {
+    background: url(../images/cg_icon_tailauncher.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 8px 7px 0 0
+}
+
+.cg_icon_dangnhap {
+    background: url(../images/cg_icon_dangnhap.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 8px 7px 0 0
+}
+
+.cg_icon_dangky {
+    background: url(../images/cg_icon_dangky.png) no-repeat;
+    width: 19px;
+    height: 17px;
+    margin: 8px 7px 0 0
+}
+
+.cg_icon_tinnhan {
+    background: url(../images/cg_icon_tinnhan.png) no-repeat;
+    width: 17px;
+    height: 11px;
+    margin: 11px 7px 0 0
+}
+
+.cg_icon_game_dachoi {
+    background: url(../images/cg_icon_game_dachoi.png) no-repeat;
+    width: 25px;
+    height: 17px;
+    margin: 8px 7px 0 0
+}
+
+.cg_icon_mui_ten_dangnhap {
+    width: 0;
+    height: 0;
+    margin: 14px 0 0 6px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6c6c6c
+}
+
+.cg_thong_bao_tinnhan {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 16px;
+    display: inline-block;
+    top: 3px;
+    left: 14px;
+    background-color: #ff2f13;
+    color: #fff !important;
+    font-size: 11px !important
+}
+
+.cg_link_dangnhap_dangky li:first-child {
+    background-color: #29b6f6
+}
+
+    .cg_link_dangnhap_dangky li:first-child:hover {
+        background-color: #0287d1
+    }
+
+    .cg_link_dangnhap_dangky li:first-child:before {
+        border: none
+    }
+
+    .cg_link_dangnhap_dangky li:first-child i {
+        color: #fff
+    }
+
+.cg_icon_tailauncher {
+    background: url(../images/cg_icon_tailauncher.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 8px 7px 0 0
+}
+
+.cg_icon_dangnhap {
+    background: url(../images/cg_icon_dangnhap.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 8px 7px 0 0
+}
+
+.cg_icon_dangky {
+    background: url(../images/cg_icon_dangky.png) no-repeat;
+    width: 19px;
+    height: 17px;
+    margin: 8px 7px 0 0
+}
+
+.cg_icon_tinnhan {
+    background: url(../images/cg_icon_tinnhan.png) no-repeat;
+    width: 17px;
+    height: 11px;
+    margin: 11px 7px 0 0
+}
+
+.cg_icon_game_dachoi {
+    background: url(../images/cg_icon_game_dachoi.png) no-repeat;
+    width: 25px;
+    height: 17px;
+    margin: 8px 7px 0 0
+}
+
+.cg_icon_mui_ten_dangnhap {
+    width: 0;
+    height: 0;
+    margin: 14px 0 0 6px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6c6c6c
+}
+
+.cg_thong_bao_tinnhan {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 16px;
+    display: inline-block;
+    top: 3px;
+    left: 14px;
+    background-color: #ff2f13;
+    color: #fff !important;
+    font-size: 11px !important
+}
+
+.cg_cac_link_dangnhap {
+    position: absolute;
+    top: 31px;
+    left: -1px;
+    z-index: 999;
+    border: solid 1px #e5e5e5;
+    background-color: #fff;
+    width: 180px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    display: none
+}
+
+    .cg_cac_link_dangnhap a {
+        padding: 0 0 0 17px;
+        display: block;
+        font-size: 13px;
+        color: #2f2f2f;
+        box-sizing: border-box;
+        border-top: solid 1px #e5e5e5
+    }
+
+        .cg_cac_link_dangnhap a:hover {
+            background-color: #e5e5e5
+        }
+
+        .cg_cac_link_dangnhap a.cg_link_thongtin_dangxuat_dangnhap {
+            border-top: none
+        }
+
+.cg_link_dangnhap_dangky li:nth-child(2):hover .cg_cac_link_dangnhap {
+    display: block
+}
+
+.cg_tab_danhnhap_dangky {
+    display: inline-block;
+    width: 400px;
+    border-radius: 3px;
+    border: solid 1px #e5e5e5;
+    background-color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -177.5px;
+    margin-top: -150px
+}
+
+    .cg_tab_danhnhap_dangky:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 355px;
+        height: 58px;
+        border-bottom: solid 1px #dadada;
+        background-color: #eee
+    }
+
+.cg_tab_content_login {
+    display: none;
+    padding-top: 20px;
+    box-sizing: border-box
+}
+
+#cg_tab1_login {
+    display: block
+}
+
+.cg_tabs_menu_login {
+    display: inline-block;
+    position: relative;
+    margin: 20px 0 0 20px
+}
+
+.cg_tab_login {
+    position: relative;
+    border-radius: 2px
+}
+
+.cg_tabs_menu_login li {
+    float: left;
+    text-align: center;
+    width: 110px;
+    border-top: solid 4px #03b4f5;
+    border-left: none;
+    border-right: none;
+    height: 38px;
+    line-height: 38px
+}
+
+    .cg_tabs_menu_login li a {
+        color: #333;
+        font-size: 16px;
+        font-weight: 300;
+        display: inline-block;
+        width: 100%
+    }
+
+    .cg_tabs_menu_login li.cg_current_login {
+        background-color: #fff;
+        border-top: solid 4px #03b4f5;
+        border-left: none;
+        border-right: none
+    }
+
+.icon_logotab_login {
+    position: absolute;
+    top: 26px;
+    right: 22px
+}
+
+.cg_popup_dangky {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 355px;
+    margin-left: -177.5px;
+    border: solid 1px #e5e5e5;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-top: -225.5px
+}
+
+.cg_tieude_popup_dangky {
+    text-align: center;
+    color: #333;
+    font-weight: 300;
+    font-size: 18px;
+    display: block;
+    border-bottom: solid 1px #e5e5e5;
+    background-color: #eee;
+    height: 57px;
+    line-height: 57px;
+    position: relative;
+    margin-bottom: 28px
+}
+
+.cg_close_popup_dangky {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: url(../images/cg_btn_close_popup.png) no-repeat;
+    width: 14px;
+    height: 14px
+}
+
+    .cg_close_popup_dangky:hover {
+        background: url(../images/cg_btn_close_popup.png) 0 bottom no-repeat
+    }
+
+.cg_css_label_popup_dangky {
+    display: block;
+    font-size: 13px;
+    color: #2f2f2f;
+    margin-bottom: 3px
+}
+
+.cg_css_checkbox_popup_dangky, .cg_css_checkbox_xacnhan_popup_dangky {
+    width: 280px;
+    height: 33px;
+    border: solid 1px #dadada;
+    margin-bottom: 15px;
+    outline: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #333333
+}
+
+    .cg_css_checkbox_popup_dangky::-webkit-input-placeholder {
+        color: #787878
+    }
+
+    .cg_css_checkbox_popup_dangky::-moz-placeholder {
+        color: #787878
+    }
+
+    .cg_css_checkbox_popup_dangky:-ms-input-placeholder {
+        color: #787878
+    }
+
+    .cg_css_checkbox_popup_dangky:-moz-placeholder {
+        color: #787878
+    }
+
+.cg_css_checkbox_xacnhan_popup_dangky {
+    width: 128px;
+    float: left;
+    margin-bottom: 0
+}
+
+.cg_ma_capcha_popup_dangky {
+    position: absolute;
+    right: 50px;
+    margin-top: 6px;
+    border: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2f2f2f;
+    width: 97px;
+    height: 31px;
+    line-height: 31px;
+    float: left;
+    margin-left: 9px
+}
+
+.cg_btn_reload_popup_dangky {
+    float: left;
+    margin: 5px 0 0 20px;
+    right: 35px;
+    position: absolute;
+    margin-top: 13px
+}
+
+.css_label_dongy {
+    font-size: 14px;
+    color: #2f2f2f
+}
+
+.cg_text_mau_dongy, .cg_text_mau_dangky {
+    color: #000
+}
+
+.cg_text_mau_dangky {
+    margin-left: 16px
+}
+
+.cg_btn_popup_dangky {
+    width: 120px;
+    height: 35px;
+    background-color: #03b4f5;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 35px;
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-bottom: 16px
+}
+
+    .cg_btn_popup_dangky:hover {
+        background-color: #0287d1
+    }
+
+.cg_btn_popup_boqua {
+    width: 120px;
+    height: 35px;
+    text-align: center;
+    color: #f57b00;
+    font-size: 14px;
+    line-height: 35px;
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-bottom: 16px
+}
+
+input[type=checkbox].css_checkbox_dongy {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+    input[type=checkbox].css_checkbox_dongy + label.css_label_dongy {
+        padding-left: 16px;
+        height: 12px;
+        display: inline-block;
+        line-height: 12px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        font-size: 13px;
+        vertical-align: middle;
+        cursor: pointer;
+        margin: 19px 0 20px 2px;
+        font-size: 13px;
+        color: #2f2f2f
+    }
+
+    input[type=checkbox].css_checkbox_dongy:checked + label.css_label_dongy {
+        background-position: 0 -12px
+    }
+
+.chrome_style_dongy {
+    background-image: url(../images/icon_checkbox.png)
+}
+
+.cg_all_form_popup_dangky {
+    display: table;
+    margin: 0 auto
+}
+
+.cg_popup_dangnhap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 351px;
+    margin-left: -175.5px;
+    border: solid 1px #e5e5e5;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-top: -186px
+}
+
+.cg_all_form_popup_dangnhap {
+    display: table;
+    margin: 0 auto;
+    width: 280px
+}
+
+.cg_social_popup_dangky {
+    font-size: 13px;
+    color: #2f2f2f;
+    display: inline-block;
+    line-height: 30px;
+    margin-bottom: 30px
+}
+
+.cg_text_social_popup_dangky {
+    float: left
+}
+
+.cg_icon_face_popup_dangnhap {
+    float: left;
+    margin: 0 11px 0 9px
+}
+
+.cg_icon_google_popup_dangnhap {
+    float: left
+}
+
+input[type=checkbox].css_checkbox_dangky {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+    input[type=checkbox].css_checkbox_dangky + label.css_label_dangky {
+        padding-left: 16px;
+        height: 12px;
+        display: inline-block;
+        line-height: 12px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        font-size: 13px;
+        vertical-align: middle;
+        cursor: pointer;
+        margin: 0 0 23px 2px;
+        font-size: 13px;
+        color: #2f2f2f
+    }
+
+    input[type=checkbox].css_checkbox_dangky:checked + label.css_label_dangky {
+        background-position: 0 -12px
+    }
+
+.chrome_style_dangky {
+    background-image: url(../images/icon_checkbox.png)
+}
+
+.cg_tab_danhnhap_dangky {
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn
+}
+
+.cg_nenden_popup, .cg_nenden2_popup {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none
+}
+
+.cg_text_chay_top {
+    position: absolute;
+    top: 9px;
+    left: 275px;
+    font-size: 13px;
+    color: #333;
+    height: 16px;
+    line-height: 16px;
+    width: 555px;
+    white-space: nowrap;
+}
+
+    .cg_text_chay_top:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -12px;
+        width: 1px;
+        height: 16px;
+        border-left: dotted 1px #8e8e8e
+    }
+
+.cg_textmau_chuchay_top {
+    color: #f57c00
+}
+
+@media screen and (max-width: 1200px) {
+    .cg_wrapper {
+        width: 960px
+    }
+
+    .cg_danhsachgame_hotline {
+        margin: 0
+    }
+
+    .cg_link_dangnhap_dangky li:first-child {
+        display: none
+    }
+
+    .cg_text_chay_top {
+        width: 255px
+    }
+}
+
+.cg_danhsach_tinnhan {
+    position: absolute;
+    top: 31px;
+    left: -1px;
+    z-index: 999;
+    border: solid 1px #e5e5e5;
+    width: 244px;
+    background-color: #fff;
+    padding-top: 20px;
+    box-sizing: border-box;
+    display: none
+}
+
+    .cg_danhsach_tinnhan a.cg_link_doc_tinnhan {
+        color: #2f2f2f;
+        font-size: 13px;
+        margin: 0 20px;
+        display: block;
+        line-height: 18px;
+        margin-bottom: 10px
+    }
+
+        .cg_danhsach_tinnhan a.cg_link_doc_tinnhan:hover {
+            color: #03a9f5
+        }
+
+.cg_link_dangnhap_dangky li:nth-child(3):hover .cg_danhsach_tinnhan {
+    display: block
+}
+
+.cg_cac_game_dachoi {
+    border: solid 1px #e5e5e5;
+    position: absolute;
+    top: 31px;
+    left: -1px;
+    z-index: 999;
+    background-color: #fff;
+    display: none
+}
+
+.cg_list_cac_game_dachoi {
+    display: inline-block;
+    width: 200px;
+    margin: 15px 0 5px 10px
+}
+
+.cg_img_cac_game_dachoi {
+    float: left !important
+}
+
+    .cg_img_cac_game_dachoi img {
+        width: 45px;
+        height: 45px
+    }
+
+.cg_tieude_btn_cac_game_dachoi {
+    display: inline-block;
+    float: left;
+    margin-left: 11px
+}
+
+.cg_tieude_cac_game_dachoi {
+    font-size: 13px;
+    color: #2f2f2f;
+    display: block;
+    line-height: normal
+}
+
+.cg_btn_cac_game_dachoi {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    width: 77px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    background-color: #1cb1f5;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 6px
+}
+
+    .cg_btn_cac_game_dachoi:hover {
+        background-color: #0287d1
+    }
+
+.cg_btn_link_xemtatca_cacgame_dachoi {
+    font-size: 13px;
+    text-align: right;
+    border-top: solid 1px #e5e5e5;
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0 0;
+    padding-right: 18px;
+    box-sizing: border-box
+}
+
+    .cg_btn_link_xemtatca_cacgame_dachoi a {
+        color: #3b3b3b
+    }
+
+        .cg_btn_link_xemtatca_cacgame_dachoi a:hover {
+            color: #03a9f5
+        }
+
+.cg_link_dangnhap_dangky li:last-child:hover .cg_cac_game_dachoi {
+    display: block
+}
+
+.cg_tab_danhnhap_dangky:before {
+    border-bottom: none;
+    background-color: transparent
+}
+/*#popRegister{width:393px;border:none;top:30%}*/
+.cg_all_form_popup_dangky {
+    width: 355px
+}
+
+.cg_tabs_menu_login {
+    margin: 0;
+    width: 100%
+}
+
+    .cg_tabs_menu_login li {
+        border: none
+    }
+
+        .cg_tabs_menu_login li a {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 16px;
+            padding: 5px 0
+        }
+
+.disable-linkloginout {
+    color: #333
+}
+
+    .disable-linkloginout:hover {
+        color: #03b4f5;
+    }
+
+.cg_social_popup_dangky {
+    width: 100%;
+    background-color: #CCC;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 10px 0;
+    margin-top: 10px;
+    line-height: 35px
+}
+
+.cg_icon_google_popup_dangnhap {
+    float: none
+}
+
+.cg_icon_face_popup_dangnhap {
+    float: none
+}
+
+.showpass-inclickdk {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    left: 50%;
+    margin-left: 133px;
+    margin-top: 7px
+}
+
+.cg_tab_danhnhap_dangky:before {
+    border-bottom: none;
+    background-color: transparent
+}
+/*#popLogin{width:393px;border:none;top:30%}*/
+.logoandclose {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 60px
+}
+
+.cg_all_form_popup_dangnhap {
+    width: 355px
+}
+
+.cg_tabs_menu_login {
+    margin: 0;
+    width: 100%
+}
+
+    .cg_tabs_menu_login li {
+        border: none
+    }
+
+.disable-linkloginout {
+    color: #333
+}
+
+    .disable-linkloginout:hover {
+        color: #03b4f5
+    }
+
+.cg_css_checkbox_popup_dangky, .cg_css_checkbox_xacnhan_popup_dangky {
+    border: 1px #dadada solid;
+    padding: 12px;
+    width: 100%;
+    height: 41px;
+    text-transform: none;
+}
+
+.cg_btn_popup_dangky {
+    float: none;
+    margin: auto;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #03b4f5;
+    color: #fff;
+    font-weight: 300;
+    line-height: 42px;
+    font-size: 16px;
+    padding: 0;
+    text-transform: uppercase;
+    border-radius: 0;
+    width: 100%;
+    height: 42px
+}
+
+    .cg_btn_popup_dangky:hover {
+        text-decoration: none;
+        color: #03b4f5
+    }
+
+.cg_text_mau_dangky {
+    float: none;
+    margin: 10px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 300;
+    color: #2f2f2f
+}
+
+    .cg_text_mau_dangky a {
+        color: #C00
+    }
+
+        .cg_text_mau_dangky a:hover {
+            text-decoration: underline
+        }
+
+.cg_social_popup_dangky {
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 10px 0;
+    margin-top: 10px;
+    line-height: 35px
+}
+
+.cg_icon_google_popup_dangnhap {
+    float: none
+}
+
+.cg_icon_face_popup_dangnhap {
+    float: none
+}
+
+.ghinho-thongin {
+    font-size: 13px;
+    margin-bottom: 40px;
+    color: #666
+}
+
+.cg_tabs_menu_login {
+    display: inline-flex
+}
+
+.showpass-inclickdn {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    left: 50%;
+    margin-left: 133px;
+    margin-top: -47px;
+}
+
+.all-tt-gach {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    text-align: center;
+    margin-bottom: 25px
+}
+
+    .all-tt-gach span {
+        color: #787878;
+        font-size: 13px;
+        display: inline-block;
+        padding: 0 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background: #fff
+    }
+
+.quenmatkhau {
+    color: #dd4c3b;
+    float: right;
+    line-height: 22px
+}
+
+.cg_tab_login .tt-blue {
+    text-align: center;
+    color: #03b4f5;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    display: none
+}
+
+    .cg_tab_login .tt-blue span {
+        display: block;
+        font-size: 13px;
+        color: #999;
+        margin-top: 15px
+    }
+
+.cg_social_popup_dangky {
+    padding: 13px 0
+}
+
+    .cg_social_popup_dangky img {
+        opacity: 0.9
+    }
+
+        .cg_social_popup_dangky img:hover {
+            cursor: pointer;
+            opacity: 1
+        }
+
+#LogAndReg {
+    font-family: 'Open Sans', sans-serif
+}
+
+.TB_overlayBG {
+    background-color: #333333;
+    display: none;
+    left: 0;
+    opacity: 0.4;
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+}
+
+.fullscreenFF {
+    height: 100%;
+    width: 100%;
+}
+
+.box_dangnhap {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 3px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 200px;
+}
+
+.all-header-pop {
+    overflow: hidden;
+    padding: 15px;
+    border-bottom: 1px solid #03b3f4;
+    text-align: center;
+}
+
+    .all-header-pop a:last-child {
+        float: right;
+        transition: 0.4s ease all;
+    }
+
+        .all-header-pop a:last-child img {
+            transition: 0.4s ease all;
+            opacity: 0.4;
+        }
+
+        .all-header-pop a:last-child:hover img {
+            opacity: 1;
+        }
+
+    .all-header-pop a:first-child {
+        float: left;
+    }
+
+.all-content-tab {
+    padding: 20px 25px;
+}
+
+.all_tieude {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    color: #03b3f4;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sel_mobi {
+    width: 14%;
+    margin: 0;
+    padding: 0;
+    height: 38px;
+    float: left;
+    border: 1px solid #dadada;
+    outline: none;
+}
+
+input.all-input, .list_capcha_t li input {
+    width: 100%;
+    border: 1px solid #dadada;
+    color: #333333;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    margin-bottom: 13px;
+    height: 40px;
+    outline: none;
+    font-weight: 300;
+}
+
+    input.all-input::-webkit-input-placeholder {
+        color: #868585;
+        font-size: 13px;
+    }
+
+    input.all-input::-moz-placeholder {
+        color: #868585;
+        font-size: 13px;
+    }
+
+    input.all-input:-ms-input-placeholder {
+        color: #868585;
+        font-size: 13px;
+    }
+
+    input.all-input:-moz-placeholder {
+        color: #868585;
+        font-size: 13px;
+    }
+
+.all-tt-gach {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background: #eeeeee;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+    .all-tt-gach span {
+        color: #787878;
+        font-size: 13px;
+        display: inline-block;
+        padding: 0 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        white-space: nowrap;
+    }
+
+.all-term label {
+    color: #868585;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.all-login-mxh a {
+    display: block;
+}
+
+    .all-login-mxh a:hover {
+        filter: brightness(110%);
+    }
+
+    .all-login-mxh a:nth-child(1) {
+        float: left;
+    }
+
+    .all-login-mxh a:nth-child(2) {
+        float: right;
+    }
+
+a.all-blue {
+    color: #ffffff;
+    font-size: 17px;
+    background: #03b4f5;
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+    a.all-blue:hover {
+        background: #19bffc;
+    }
+
+.all_text_thongbao {
+    color: #e90000;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 25px;
+    display: block;
+}
+
+.list_capcha_t {
+    display: block;
+}
+
+    .list_capcha_t li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+        .list_capcha_t li:last-child {
+            margin-right: 0;
+        }
+
+        .list_capcha_t li input {
+            max-width: 110px;
+        }
+
+.all_tieude_phu {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #4e4e4e;
+}
+
+.all_text_thongbao_phu {
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #4e4e4e;
+    margin-bottom: 10px;
+}
+
+.all_text_thongbao_phu_otp {
+    display: block;
+    line-height: 25px;
+    font-weight: 300;
+    color: #e90000;
+    font-size: 13px;
+    padding: 5px 10px;
+    background-color: #ededed;
+    margin: 5px 0px;
+    border: 1px solid transparent;
+    -webkit-border-image: url(../images/img_border.png) 1 round;
+    -o-border-image: url(../images/img_border.png) 1 round;
+    border-image: url(../images/img_border.png) 1 round;
+}
+
+.text_ghichu {
+    display: block;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 300;
+    color: #868585;
+    font-size: 13px;
+}
+
+    .text_ghichu em {
+        color: #e90000;
+    }
+
+.img_thum_dangnhap {
+    display: block;
+    text-align: center;
+}
+
+    .img_thum_dangnhap p {
+        display: block;
+        margin: 10px 0px;
+        font-size: 13px;
+        color: #868585;
+    }
+
+.box_dangnhap_sms {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 3px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+    .box_dangnhap_sms .all_text_thongbao_phu {
+        font-size: 14px;
+        text-align: center;
+    }
+
+        .box_dangnhap_sms .all_text_thongbao_phu b {
+            font-size: 18px;
+            color: #e90000;
+        }
+
+        .box_dangnhap_sms .all_text_thongbao_phu a {
+            color: #e90000;
+        }
+
+            .box_dangnhap_sms .all_text_thongbao_phu a:hover {
+                text-decoration: underline;
+            }
+
+.bang_noidung_sms {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+    .bang_noidung_sms tr td {
+        vertical-align: middle;
+        font-size: 13px;
+        color: #868585;
+        padding: 5px 10px;
+    }
+
+        .bang_noidung_sms tr td input {
+            margin-bottom: 0;
+            width: 330px;
+        }
+
+        .bang_noidung_sms tr td:first-child {
+            text-align: right;
+        }
+
+.list_all_btn_sms {
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+}
+
+    .list_all_btn_sms li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+        .list_all_btn_sms li a {
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 300;
+            font-size: 17px;
+            background-color: #03b3f4;
+            padding: 10px 25px;
+            min-width: 155px;
+        }
+
+        .list_all_btn_sms li:last-child {
+            margin-right: 0;
+        }
+
+        .list_all_btn_sms li a:hover {
+            background: #19bffc;
+        }
+
+.box_dangnhap_sms .all_text_thongbao {
+    text-align: center;
+}
+
+.bang_noidung_sms tr td input:disabled {
+    background-color: transparent;
+    border: none;
+    padding-left: 0;
+}
+
+.bang_noidung_sms tr td input.input_xo:disabled {
+    border: 1px solid #dadada;
+    background-color: #f0f0f0;
+    padding-left: 10px;
+}
+/*all css media*/
+@media (max-width:1200px) {
+}
+
+@media (max-width:1024px) {
+}
+
+@media (max-width:991px) {
+}
+
+@media (max-width:768px) {
+}
+
+@media (max-width:600px) {
+    .all-content-tab {
+        padding: 15px;
+    }
+
+    .all-login-mxh a img {
+        max-width: 145px;
+    }
+
+    .bang_noidung_sms {
+        width: 100%;
+    }
+
+        .bang_noidung_sms tr td {
+            display: block;
+            padding: 5px 0px;
+        }
+
+            .bang_noidung_sms tr td:first-child {
+                text-align: left;
+            }
+
+    .list_all_btn_sms li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+        .list_all_btn_sms li a {
+            font-size: 14px;
+            padding: 10px 15px;
+            display: block;
+        }
+
+    .box_dangnhap_sms .all_text_thongbao_phu b {
+        font-size: 14px;
+    }
+
+    .bang_noidung_sms tr td input {
+        display: block;
+        width: 100%;
+    }
+
+    .cg_tab_danhnhap_dangky {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        left: 0%;
+        margin-left: auto;
+    }
+}
+
+@media (max-width:360px) {
+    .all-login-mxh a img {
+        max-width: 125px;
+    }
+}
+.dcmmanh_popup-body__ul-li4 {
+    color: #fff !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+.header_link_href_action {
+    cursor: pointer;
+}
+.cg_wrapper {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.qrimg {
+    padding: 20px;
+    margin: auto;
+}
+
+.qrimg  img{
+    width: 100%;
+    height: 100%;
+}

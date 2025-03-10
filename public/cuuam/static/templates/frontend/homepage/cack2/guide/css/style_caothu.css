@@ -1,0 +1,125 @@
+body {
+    background:#111a22;
+}
+.bg1{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/guide/images/bg2_1.jpg) no-repeat left top;
+	height:475px;
+	width:100%;
+}
+.bg2{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/guide/images/bg2_2.jpg) no-repeat left top;
+	height:452px;
+	width:100%;
+}
+.bg3{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/guide/images/bg2_3.jpg) no-repeat left top;
+	height:395px;
+	width:100%;
+}
+#wraper #container #main .left .categoy.caothu{
+	background: url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/guide/images/c.png) no-repeat center 11px ;
+}
+#wraper #container #main .left .list-news{
+	width: 100%;
+/*	min-height:200px;
+	overflow:hidden;*/
+}
+#wraper #container #main .left .list-news .news{
+	width: 100%;
+	/*min-height:200px;*/
+}
+#wraper #container #main .left .list-news .news .category-news{
+	width: 100%;
+	height : 120px;
+}
+#wraper #container #main .left .list-news .news .category-news.bontaugiangho{
+	background : url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/guide/images/ml2_1.png) no-repeat 0 0;
+}
+#wraper #container #main .left .list-news .news .category-news.bontaugiangho:hover,
+#wraper #container #main .left .list-news .news .category-news.bontaugiangho.active{
+	background : url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/guide/images/ml2_1.png) no-repeat 0 -137px;
+	cursor:pointer;
+}
+#wraper #container #main .left .list-news .news .category-news.camdia{
+	background : url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/guide/images/ml2_2.png) no-repeat 0 -36px #172b3b;
+	height : 86px;
+}
+#wraper #container #main .left .list-news .news .category-news.camdia:hover,
+#wraper #container #main .left .list-news .news .category-news.camdia.active{
+	background : url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/guide/images/ml2_2.png) no-repeat 0 -173px #172b3b;
+	cursor:pointer;
+}
+#wraper #container #main .left .list-news .news .category-news.kinhnghiem{
+	background : url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/guide/images/ml2_3.png) no-repeat 0 -36px #172b3b;
+	height : 86px;
+}
+#wraper #container #main .left .list-news .news .category-news.kinhnghiem:hover,
+#wraper #container #main .left .list-news .news .category-news.kinhnghiem.active{
+	background : url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/guide/images/ml2_3.png) no-repeat 0 -173px #172b3b;
+	cursor:pointer;
+}
+#wraper #container #main .left .list-news .news .menu-ul{
+	width: 100%;
+	min-height: 40px;
+	list-style: none;
+	background: #172b3b;
+	display: none;
+	padding-top: 5px;
+}
+#wraper #container #main .left .list-news .news .menu-ul .menu-li{
+	width: 94%;
+	overflow: hidden;
+	height:24px;
+	padding-left:15px;
+	line-height:24px;
+}
+#wraper #container #main .left .list-news .news .menu-ul .menu-li:hover,#wraper #container #main .left .list-news .news .menu-ul .menu-li.active{
+	background:#efede1;
+}
+#wraper #container #main .left .list-news .news .menu-ul .menu-li a{
+	color: #efede1;
+	width : inherit;
+	height : inherit;
+	display: block;
+}
+#wraper #container #main .left .list-news .news .menu-ul .menu-li:hover a,#wraper #container #main .left .list-news .news .menu-ul .menu-li.active a{
+	color:#a94701;
+	font-weight:bold;
+}
+
+#wraper #container #main .right .content .content-title {
+	width: inherit;
+}
+
+.line-bottom{
+	border-top:1px solid #ba6b2e;
+	padding-bottom:5px;
+}
+
+#wraper #container #main .right .content{
+	width: 90%;
+	/*font-family:Tahoma;
+	font-size: 10px;*/
+	font: normal normal 13px/22px Tahoma, Geneva, sans-serif;
+	color: #220101;
+}
+
+#wraper #container #main .right .content .content-title h2 {
+	border-width: 1px;
+	/*border-bottom-style: solid;*/
+}
+
+.btn-top {
+	width:40px;
+	height:100px;
+	cursor:pointer;
+	background: url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/guide/images/top.png) no-repeat 0 0;
+	position: absolute;
+	z-index: 9999;
+	left: 734px;
+	bottom: 5px;
+}
+
+.btn-top a {
+	display: block;
+}

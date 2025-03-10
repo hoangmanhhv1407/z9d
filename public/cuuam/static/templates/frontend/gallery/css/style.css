@@ -1,0 +1,543 @@
+@import url('http://cuuam.gosu.vn/home/static/templates/frontend/gallery/css/reset.css'); 
+
+@font-face {
+  font-family: 'UVNThanhPho_R';
+  font-style: normal;
+  src: url('http://cuuam.gosu.vn/home/static/templates/frontend/gallery/fonts/UVNThanhPho_R.eot?#iefix') format('embedded-opentype'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/gallery/fonts/UVNThanhPho_R.woff') format('woff'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/gallery/fonts/UVNThanhPho_R.ttf') format('truetype'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/gallery/fonts/UVNThanhPho_R.svg#UVNThanhPho_R') format('svg');
+}
+
+@font-face {
+  font-family: 'UTMGodsWordR';
+  font-style: normal;
+  src: url('http://cuuam.gosu.vn/home/static/templates/frontend/gallery/fonts/UTMGodsWordR.eot?#iefix') format('embedded-opentype'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/gallery/fonts/UTMGodsWordR.woff') format('woff'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/gallery/fonts/UTMGodsWordR.ttf') format('truetype'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/gallery/fonts/UTMGodsWordR.svg#UTMGodsWordR') format('svg');
+}
+
+
+body {
+	font:12px/1.5 Tahoma, Geneva, sans-serif;
+	padding:0px;
+	color:#777986;
+	min-width:1000px;
+	margin:0px auto;
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/bgd_footer.jpg) no-repeat bottom center #f2f2f2;
+}
+li {
+	list-style:none;
+}
+em, i {
+	font-style:normal;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+img {
+	border:0;
+	vertical-align:top;
+}
+a {
+	color:#777986;
+	text-decoration:none;
+	outline:none;
+}
+a:hover {
+	color:#ee0000;
+}
+.clearfix:after {
+	visibility:hidden;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+	height:0;
+}
+.clearfix {
+*zoom:1;
+}
+.pr {
+	position:relative;
+}
+.pa {
+	position:absolute;
+}
+.ti {
+	text-indent:-999em;
+}
+.hid {
+	display:none;
+}
+.underline {
+	text-decoration:underline;
+}/*Content*//*Bg Reset*/
+
+ 
+.wrap-bg {
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/bgd_header.jpg) no-repeat top center;
+}/*Transition Reset*/
+
+#header{
+	margin:0px auto;
+	width:100%;
+	height:478px;	
+}
+
+ 
+/*Main Content*/
+ 
+/*Basic Mod Class*/
+.container {
+	width:1077px;
+	margin-bottom:2px;
+	overflow:hidden;
+	margin:0px auto;
+}
+
+.content {
+	width:1150px;
+	min-height:600px;
+	padding-bottom:20px;
+	z-index:1;
+	top:500px;
+	overflow:hidden;
+	margin:0px auto;
+}
+
+.flash{
+	position:relative;
+	width:1100px;
+	margin:0px auto;	
+}
+
+ 
+.flash-link{
+	left: 180px;
+	position: absolute;
+	top: 220px;
+}
+
+.details-link a{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/detail-link.png) no-repeat left top;
+	width:73px;
+	height:35px;
+	position:absolute; 
+	top:420px; 
+	left:245px;
+	z-index:3;	
+}
+
+.details-link a:hover, .details-link a.active{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/detail-link.png) no-repeat left -40px;
+}
+
+.features-link a{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/features-link.png) no-repeat left top;
+	width:73px;
+	height:35px;
+	position:absolute; 
+	top:420px; 
+	left:330px;
+	z-index:3;	
+}
+
+.features-link a:hover, .features-link a.active{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/features-link.png) no-repeat left -40px;
+}
+
+/*- Button-link -*/
+
+.button_link{
+	height: 82px;
+	left: 210px;
+	margin: 0 auto;
+	position: absolute;
+	top: 29px;
+	width: 370px;	
+}
+
+.download a{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/navi.png) no-repeat left top;
+	height: 81px;
+	left: 0px;
+	position: absolute;
+	text-indent: -9999px;
+	top: 0px;
+	width: 236px;
+}
+
+.download a:hover{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/navi-hover.png) no-repeat left top; 
+}
+
+
+.resgiter a{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/navi.png) no-repeat -241px top;
+	position:absolute;
+	top:0px;
+	left:236px;
+	width:115px;
+	height:42px;
+	text-indent:-9999px;
+}
+
+.resgiter a:hover, .resgiter a.active{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/navi-hover.png) no-repeat -241px top;
+}
+
+.card a{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/navi.png) no-repeat -241px -42px;
+	position:absolute;
+	top:42px;
+	left:236px;
+	width:115px;
+	height:42px;
+	text-indent:-9999px;
+}
+
+.card a:hover, .card a.active{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/navi-hover.png) no-repeat -241px -42px;
+}
+
+ 
+/*-- session-1 close--*/
+ 
+#sessions-2{
+	background: none;
+	min-height: 600px;
+	margin: 0 auto;
+	position: relative;
+	top:10px;
+	width: 994px;
+}
+
+.menu-home{
+	width:965px;
+	height:79px;
+	margin:0px auto;
+	padding:0px;
+}
+
+.menu-home li{
+	float:left;	
+}
+
+.menu-home li a{
+	color: #6890e0;
+	display: block;
+	font-family: "UVNThanhPho_R";
+	font-size: 25px;
+	height: 79px;
+	line-height: 80px;
+	margin: 0px auto;
+	padding-left: 59px;
+	text-transform: uppercase;
+	width: 180px;
+	position: absolute;
+}
+
+.menu-home li.wallpaper a{
+	color: #6890e0;
+	display: block;
+	font-family: "UVNThanhPho_R";
+	font-size: 25px;
+	height: 79px;
+	line-height: 80px;
+	margin: 0px auto;
+	padding-left: 59px;
+	text-transform: uppercase;
+	width: 180px;
+	position: absolute;
+}
+
+.menu-home li.wallpaper a:hover, .menu-home li.wallpaper a.active{
+	background:#b70f0b;
+	color:#FFF;	
+	width: 186px;
+	height: 79px;
+	position: absolute;
+}
+
+.menu-home li.artwork a{
+	color: #6890e0;
+	display: block;
+	font-family: "UVNThanhPho_R";
+	font-size: 25px;
+	height: 79px;
+	line-height: 80px;
+	margin: 0px auto;
+	padding-left: 59px;
+	text-transform: uppercase;
+	width: 180px;
+	position: absolute;
+	left: 259px;
+}
+
+.menu-home li.artwork a:hover, .menu-home li.artwork a.active{
+	background:#b70f0b;
+	color:#FFF;	
+	width: 190px;
+	height: 79px;
+	position: absolute;
+	left: 256px;
+}
+
+.menu-home li.screen a{
+	color: #6890e0;
+	display: block;
+	font-family: "UVNThanhPho_R";
+	font-size: 25px;
+	height: 79px;
+	line-height: 80px;
+	margin: 0px auto;
+	padding-left: 59px;
+	text-transform: uppercase;
+	width: 180px;
+	position: absolute;
+	left: 499px;
+}
+
+.menu-home li.screen a:hover, .menu-home li.screen a.active{
+	background:#b70f0b;
+	color:#FFF;	
+	width: 192px;
+	height: 79px;
+	position: absolute;
+	left: 502px;
+}
+
+.menu-home li.video a{
+	color: #6890e0;
+	display: block;
+	font-family: "UVNThanhPho_R";
+	font-size: 25px;
+	height: 79px;
+	line-height: 80px;
+	margin: 0px auto;
+	padding-left: 59px;
+	text-transform: uppercase;
+	width: 180px;
+	position: absolute;
+	left: 740px;
+}
+
+.menu-home li.video a:hover, .menu-home li.video a.active{
+	background:#b70f0b;
+	color:#FFF;	
+	width: 186px;
+	height: 79px;
+	position: absolute;
+	left: 740px;
+}
+
+.icon-menu-wallpaper{
+	width:3px;
+	height:30px;
+	background:#b70f0b;
+	display:block;
+	margin-top:25px;
+	position: relative;
+	left: 242px;	
+}
+
+.icon-menu-artwork{
+	width:3px;
+	height:30px;
+	background:#b70f0b;
+	display:block;
+	margin-top:25px;
+	position: relative;	
+	left: 485px;
+}
+
+.icon-menu-screen{
+	width:3px;
+	height:30px;
+	background:#b70f0b;
+	display:block;
+	margin-top:25px;
+	position: relative;	
+	left: 730px;
+}
+
+.content-media{
+	width:1000px;
+	min-height:500px;
+	margin:0px auto;	
+	margin-top:50px;
+} 
+
+.wrapper-video{
+	width: 970px;
+}
+
+.video-thume{
+	width:330px;
+	background:#282828;
+	float:right;	
+}
+
+.video-view{
+	width:622px;
+	height:385px;
+	margin:0px auto;
+	float:left;
+}
+/**********************list detail event**********************/
+
+.breadcrumb{
+	clear:both;	
+}
+
+.breadcrumb li{
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+	color:#1e1212;
+}
+
+.breadcrumb li a{
+	color:#1e1212;
+	font-size:13px;
+}
+
+.breadcrumb li a:hover, .breadcrumb li a.active{
+	color:#c02f2b;
+	font-size:13px;
+}
+
+ 
+
+.content-news{
+	width:100%;
+	margin:0px auto;
+	padding-top:20px;
+	padding-bottom:50px;
+	color:#1e1212;
+	font-size:13px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+.content-news img{
+	max-width:90%;	
+}
+
+
+/*============ Wallpaper ============*/
+
+.bgr-download{
+	background:#ffffff;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin::0px auto;
+	text-align:center;
+}
+
+.icon-like{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/icon-like.png) no-repeat left center;
+	padding:5px 10px;
+	display: none;
+}
+
+.icon-download{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/icon-download.png) no-repeat left center;
+	padding:5px;
+}
+
+.bgr-download span{
+	margin-left:0px;
+	margin-right:10px;	
+}
+
+.page{
+	height: 50px;
+	margin-bottom: 20px;
+	margin-left: 374px;
+	margin-top: 20px;
+	width: 250px;
+	clear:both;	
+}
+
+.page a{
+	background:#112141;
+	border:3px solid #bfbfbf;
+	padding:5px 8px;
+	text-transform:uppercase;
+	font-family: 'UVNThanhPho_R';
+	font-size:16px;
+	float:left;
+	margin-left:2px;
+}
+
+.page strong{
+	background:#b70f0b;
+	border:3px solid #112141;
+	padding:5px 8px;
+	text-transform:uppercase;
+	font-family: 'UVNThanhPho_R';
+	font-size:16px;
+	float:left;
+	margin-left:2px;
+	color:#112141;
+}
+
+
+.top a{
+	background: none repeat scroll 0 0 #112141;
+	border: 3px solid #bfbfbf;
+	float: left;
+	font-family: "UVNThanhPho_R";
+	font-size: 14px;
+	padding: 10px;
+	text-transform: uppercase;	
+}
+
+.details a{
+	background: none repeat scroll 0 0 #112141;
+	border: 3px solid #bfbfbf;
+	float: left;
+	font-family: "UVNThanhPho_R";
+	font-size: 14px;
+	margin-left: 10px;
+	padding: 10px;
+	text-transform: uppercase;	
+}
+/*=== Right ====*/
+.wrapper-top{
+	width:1000px;
+	position:relative;
+	margin:0px auto;	
+}
+ 
+.logo a{
+	background:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/logo.png) no-repeat;
+	width:200px;
+	height:150px;
+	position:absolute;
+	left:5px;
+	top:5px;
+}
+  
+/*-- session-2 close--*/
+
+/*Footer*/
+.footer {width:100%; height:144px; clear:both; padding:20px 0;}
+.footer-main {width:900px; margin:0px auto; top:50px; position:relative;}
+
+.footer-link {height:30px; left:190px; position:absolute; top:0; width:520px;} 
+.footer-link ul {list-style:none;} 
+.footer-link li {float:left; margin-left:5px; color:#000;} 
+.footer-link li a {color:#2e2e2e; font-size:12px; font-family:Tahoma;} 
+.footer-link li a:hover {color:#E80812;}
+
+.content-footer {left:175px; position:absolute; text-align:center; top:21px; width:500px; color:#2e2e2e;}
+
+.content-footer p, 
+.content-footer a {color:#2e2e2e;}
+
+#logo-gosu {background:url("http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/logo-gosu.png") no-repeat; height:43px; left:0px; position:absolute; top:15px; width:163px; z-index:990;}
+#logo-cubinet {background:url("http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/logo-cubinet.png") no-repeat; height:43px; left:670px; position:absolute; top:20px; width:263px;}

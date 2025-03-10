@@ -1,0 +1,212 @@
+.ls-container {
+  @apply space-y-6;
+}
+
+/* Card chung */
+.ls-card {
+  @apply bg-gradient-to-br from-gray-900/90 to-gray-800/90 rounded-2xl p-6 
+         shadow-xl border border-gray-700/50 backdrop-blur-xl;
+}
+
+/* Phần tải game */
+.ls-download-section {
+  @apply relative overflow-hidden;
+}
+
+.ls-download-button, .ls-activation-button {
+  @apply w-full font-bold py-3 px-6 rounded-xl transition-all duration-300 
+         transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2;
+}
+
+.ls-download-button {
+  @apply bg-gradient-to-r from-yellow-500 to-amber-500 text-gray-900
+         hover:from-yellow-400 hover:to-amber-400;
+}
+
+.ls-activation-button {
+  @apply bg-gradient-to-r from-red-500 to-red-600 text-white
+         hover:from-red-600 hover:to-red-700;
+}
+
+/* Thông tin người dùng */
+.ls-user-info {
+  @apply space-y-4;
+}
+
+.ls-user-profile {
+  @apply flex items-center justify-between p-3 bg-gray-800/50 rounded-xl
+         hover:bg-gray-700/50 transition-all duration-300 cursor-pointer;
+}
+
+.ls-avatar {
+  @apply w-12 h-12 rounded-full ring-2 ring-yellow-500 bg-gray-700 
+         flex items-center justify-center;
+}
+
+.ls-avatar-icon {
+  @apply w-6 h-6 text-yellow-500;
+}
+
+.ls-user-details {
+  @apply flex-1 ml-3;
+}
+
+.ls-user-details h3 {
+  @apply text-white font-bold;
+}
+
+.ls-user-details span {
+  @apply text-yellow-500 text-sm;
+}
+
+.ls-logout-btn {
+  @apply text-gray-400 hover:text-red-500 transition-colors;
+}
+
+.ls-user-stats {
+  @apply space-y-3;
+}
+
+.ls-stat-item {
+  @apply bg-gray-800/30 p-3 rounded-xl flex justify-between items-center;
+}
+
+.ls-stat-item.clickable {
+  @apply hover:bg-gray-700/30 transition-colors cursor-pointer;
+}
+
+.ls-stat-label {
+  @apply text-white;
+}
+
+.ls-coin-display {
+  @apply flex items-center space-x-2;
+}
+
+.ls-coin-display span {
+  @apply text-yellow-400 font-bold;
+}
+
+.ls-coin-display img {
+  @apply w-5 h-5 object-contain;
+}
+
+/* Thông tin Server */
+.ls-server-info {
+  @apply space-y-4;
+}
+
+.ls-card-header {
+  @apply flex items-center space-x-2 mb-4;
+}
+
+.ls-header-icon {
+  @apply w-6 h-6 text-yellow-500;
+}
+
+.ls-card-header h3 {
+  @apply text-lg font-bold text-white;
+}
+
+.ls-server-status {
+  @apply rounded-lg p-3 flex items-center justify-between;
+}
+
+.ls-server-status.online {
+  @apply bg-green-900/30 border border-green-500/30;
+}
+
+.ls-server-status:not(.online) {
+  @apply bg-red-900/30 border border-red-500/30;
+}
+
+.ls-status-indicator {
+  @apply flex items-center space-x-2;
+}
+
+.ls-status-indicator svg {
+  @apply w-5 h-5;
+}
+
+.ls-online .ls-status-indicator svg {
+  @apply text-green-400;
+}
+
+.ls-status-text {
+  @apply font-bold;
+}
+
+.ls-online .ls-status-text {
+  @apply text-green-400;
+}
+
+/* Sự kiện hàng ngày */
+.ls-daily-events {
+  @apply rounded-lg bg-gradient-to-r from-indigo-900/30 to-blue-900/30 
+         border border-blue-500/30;
+}
+
+.ls-events-header {
+  @apply border-b border-blue-500/30 p-3;
+}
+
+.ls-events-header span {
+  @apply text-blue-400 font-medium text-sm;
+}
+
+.ls-events-list {
+  @apply p-3 space-y-3;
+}
+
+.ls-event-item {
+  @apply flex justify-between items-center;
+}
+
+.ls-event-name {
+  @apply flex items-center space-x-2;
+}
+
+.ls-event-icon {
+  @apply w-4 h-4 text-blue-400;
+}
+
+.ls-event-name span {
+  @apply text-sm text-gray-300;
+}
+
+.ls-event-time {
+  @apply text-yellow-400 font-medium text-sm;
+}
+
+/* Thống kê server */
+.ls-server-stats {
+  @apply grid grid-cols-1 gap-3;
+}
+
+.ls-stat-group {
+  @apply bg-gray-800/30 rounded-lg;
+}
+
+.ls-stat-row {
+  @apply flex items-center justify-between p-3;
+}
+
+.ls-stat-row:not(:last-child) {
+  @apply border-b border-gray-700/50;
+}
+
+.ls-stat-label {
+  @apply flex items-center space-x-2;
+}
+
+.ls-stat-icon {
+  @apply w-4 h-4 text-yellow-500;
+}
+
+.ls-stat-label span {
+  @apply text-sm text-gray-300;
+}
+
+.ls-stat-value {
+  @apply text-white font-bold text-sm;
+}

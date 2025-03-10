@@ -1,0 +1,128 @@
+@charset "utf-8";
+@font-face {
+    font-family:'UVNThanhPhoNang'; font-style:normal;
+    src:url('http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/fonts/UVNThanhPhoNang.eot?#iefix') format('embedded-opentype'),
+    	url('http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/fonts/UVNThanhPhoNang.woff') format('woff'),
+    	url('http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/fonts/UVNThanhPhoNang.ttf') format('truetype'),
+    	url('http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/fonts/UVNThanhPhoNang.svg#UVNThanhPhoNang') format('svg');
+}
+
+@font-face {
+    font-family:'UTMGodsWordR'; font-style:normal;
+    src:url('http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/fonts/UTMGodsWordR.ttf') format('truetype');
+}
+
+* {margin:0; padding:0;}
+a {text-decoration:none; color:#fff3c9; outline:none; font-family:'UVNThanhPhoNang';}
+a:hover {color:#c23d02;}
+
+ul {list-style:none;}
+img {vertical-align:middle; border:0;}
+body, input {font-size:14px; line-height:1.42857143; color:#fff3c9; font-family:'Tahoma';}
+html, body, header, section, footer {width:100%; float:left; border:none;}
+body {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/bg.jpg) no-repeat left top; background-attachment:fixed; background-color:#f2ebe2; font-family:Tahoma, Arial; line-height:1.4; position:relative;}
+
+.hide {display:none !important;}
+.clearfix {clear:both;}
+.container {width:1020px; margin:0 auto;}
+.label_18plus {width:150px; height:80px; float:left; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/label_18plus.jpg) no-repeat center top; position:fixed; top:0px; left:0px; z-index:100000;}
+
+/***** Section *****/
+	section .container {float:left;}
+	section .menu {width:236px; float:left; background-color:#1f1f1f; margin-left:110px;}
+	section .menu .logo {width:100%; float:left; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/logo.png) no-repeat center top; height:119px; cursor:pointer; margin:10px 0;}
+	section .menu .link {width:100%; float:left; text-align:center; margin-bottom:10px;}
+	section .menu .link a {text-transform:uppercase; font-size:11px; font-family:'UTMGodsWordR'; color:#fff;}
+	section .menu .link a:hover {color:#d3b673;}
+	section .menu .link span {padding:0 2px; color:#fff;}
+
+	section .menu .btn_drpg {width:100%; height:183px; float:left;}
+	section .menu .btn_drpg .btn {width:100%; height:81px; float:left; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/btn_drpg.jpg) no-repeat left top; cursor:pointer;}
+	section .menu .btn_drpg .btn.dl {width:100%; height:82px; background-position:left top;}
+	section .menu .btn_drpg .btn.rgs {width:118px; height:42px; background-position:left -82px;}
+	section .menu .btn_drpg .btn.pay {width:118px; height:42px; background-position:-118px -82px;}
+	section .menu .btn_drpg .btn.gc {width:100%; height:59px; background-position:left bottom;}
+
+	section .menu .btn_drpg .btn:hover {background-position:-236px top;}
+	section .menu .btn_drpg .btn.dl:hover {background-position:-236px top;}
+	section .menu .btn_drpg .btn.rgs:hover {background-position:-236px -82px;}
+	section .menu .btn_drpg .btn.pay:hover {background-position:right -82px;}
+	section .menu .btn_drpg .btn.gc:hover {background-position:-236px bottom;}
+
+	section .menu .nav {width:100%; float:left; margin:10px 0;}
+	section .menu .nav a {width:100%; float:left; cursor:pointer; color:#fff; font-size:14px; font-family:Tahoma; padding:10px 0; font-weight:bold; position:relative; overflow:hidden; line-height:1.4;}
+	section .menu .nav a:hover,
+	section .menu .nav a.active {background-color:#781a08;}
+
+	section .menu .nav a .img {
+		float:left; width:25px; height:25px; position:absolute; top:10px; left:-30px;
+		-webkit-transition:left 500ms ease;
+	       -moz-transition:left 500ms ease;
+	      	-ms-transition:left 500ms ease;
+	       	 -o-transition:left 500ms ease;
+	          	transition:left 500ms ease;
+	}
+	section .menu .nav a .img.img_act {left:-30px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/h1.png) no-repeat center center;}
+	section .menu .nav a .img.img_off {left:5px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/h1_off.png) no-repeat center center;}
+
+	section .menu .nav a:hover .img_act,
+	section .menu .nav a.active .img_act {left:5px;}
+	section .menu .nav a:hover .img_off,
+	section .menu .nav a.active .img_off {left:-30px;}
+
+	section .menu .nav a span {float:left; margin:2px 0 0 35px;}
+
+	section .content {width:610px; background-color:#fff; float:left; margin-left:15px; border-top:5px solid #4a4a4a; margin-top:245px; padding:20px; color:#191919; font-family:Tahoma;}
+	section .content .title {color:#000; font-weight:normal; margin-bottom:20px; text-align:center; font-family:'UVNThanhPhoNang'; text-transform:uppercase; font-size:30px; width:100%; float:left;}
+	section .content .content_detail {width:100%; float:left; margin-bottom:126px;}
+/***** End Section *****/
+
+/***** Footer *****/
+	footer {background-color:#1f1f1f; color:#fff; height:96px; padding:15px 0; position:absolute; bottom:0; left:0;}
+	footer .logo_gosu {width:163px; height:48px; float:left; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/logo_gosu.png) no-repeat center center; margin:24px 0 0 30px;}
+	footer .logo_cubinet {width:258px; height:53px; float:left; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/logo_cubinet.png) no-repeat center center; margin-top:21px;}
+	footer .address {width:559px; height:53px; float:left;}
+	footer .address p {width:100%; text-align:center; color:#fff; margin-top:5px;}
+	footer .address p a {color:#fff; font-family:Tahoma; padding:0 5px 0 8px; border-left:1px solid #fff; line-height:1;}
+	footer .address p a:hover {color:#d3b673;}
+	footer .address p a:first-child {border-left:none;}
+/***** End Footer *****/
+
+/***** Button Go Top *****/
+	.go_top {width:64px; height:64px; float:left; position:fixed; bottom:126px; left:1030px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/btn_gotop.png) no-repeat center center; cursor:pointer; display:none;}
+	.go_top.active {display:block; opacity:0.87;}
+	.go_top.active:hover {opacity:1;}
+/***** End Button Go Top *****/
+
+/***** Typo *****/
+	section .content .content_detail {font-size:14px; font-family:Tahoma;}
+	section .content .content_detail iframe,
+	section .content .content_detail img {max-width:100%; margin:0 auto; display:block;}
+
+	section .content .content_detail .content-event-first {font-size:36px; line-height:1;}
+	section .content .content_detail .content-event-h1 {font-size:20px; color:#d04907; font-weight:bold; text-indent:30px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/h1.png) no-repeat left 3px; float:left; width:610px; margin:10px 0px 5px;}
+	section .content .content_detail .content-event-h2 {font-size:16px; font-weight:bold; text-indent:25px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/h2.png) no-repeat 13px 8px; float:left; width:610px; margin-top:7px;}
+	section .content .content_detail p {padding:5px 0 5px 15px; float:left; width:595px;}
+	section .content .content_detail ul {padding:0 0 0 15px; float:left; width:595px; margin-bottom:5px;}
+	section .content .content_detail ul li {padding:5px 0 5px 15px; float:left; width:580px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/event/img/i_li.png) no-repeat 3px 11px;}
+
+	section .content .content_detail table {font-family:Tahoma; font-size:13px; text-align:center; background-color:#fffdf6; margin-bottom:10px; margin-top:10px; border-collapse:collapse; margin:0 auto;} 
+	section .content .content_detail table tr {border:1px solid #000; color:#000;}
+	section .content .content_detail table tr:nth-child(2n+1) {background:#f1f1f1;}
+	section .content .content_detail table tr:nth-child(2n) {background:#ddddbf;}
+	section .content .content_detail table tr:first-child {background:#781a08; color:#fff; font-weight:bold;}
+	section .content .content_detail table tr td {margin:0; padding:5px 10px; border:1px solid #000;}
+	section .content .content_detail table tr td ul {width:100%; padding:0;}
+	section .content .content_detail table tr td ul li {width:100%; padding-left:0; padding-right:0; text-indent:10px;}
+
+	section .content .content_detail table p {width:100%; padding:5px 0; text-align:center;}
+
+	section .content .content_detail a {color:#d04907; font-family:Tahoma;}
+	section .content .content_detail a:hover {text-decoration:underline;}
+/***** End Typo *****/
+
+body.move section .menu {position:fixed; left:0; top:-169px;}
+body.move section .content {margin-left:361px;}
+
+body.move2 section .menu {position:fixed; left:0; top:-600px;}
+body.move2 section .content {margin-left:361px;}

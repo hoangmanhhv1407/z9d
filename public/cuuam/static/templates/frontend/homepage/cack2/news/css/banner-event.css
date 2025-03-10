@@ -1,0 +1,102 @@
+#boxEvent {
+	width:245px; 
+	height:336px;
+	position: relative;
+	margin: 0px auto;
+	overflow: hidden;
+	padding: 0px;
+}
+
+#img {
+	width:245px; 
+	height:336px;
+	margin:0px auto;
+	padding:0px;
+}
+#img li {
+	position: absolute;
+	z-index: 1;
+	display: block;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+}
+#img li.ActiveBanner {
+	z-index: 5;
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
+}
+#img li a {
+	width: 245px;
+	height: 336px;
+	padding: 0;
+	position: relative;
+	display: block;
+	cursor: pointer;
+}
+#imgControl {
+	overflow: hidden;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 5;
+	padding: 0px;	
+}
+
+#imgControl li {	
+	position: relative;
+	float: left;
+	list-style: none;
+	padding: 0;
+}
+
+#imgControl li a {		
+	padding: 0px 8px;
+	margin-right:5px;
+	text-indent:-9999px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	background:  right center no-repeat #112141;
+}
+#imgControl li a:hover, #imgControl li.ActiveBanner a {
+	padding: 0px 12px;
+	text-decoration: none;	
+	background:  right center no-repeat #f9c568;
+}
+#imgControl li.Last a  {
+	background-image: none; 
+}
+
+.news-req{
+	color: #ccc;
+	font-weight: bold;
+	height: 40px !important;
+	line-height: 42px;
+	margin-left: -18px !important;
+	padding-left: 20px !important;
+	width: 713px !important;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-top: 40px !important;
+	background: url("http://cuuam.gosu.vn/home/static/templates/frontend/homepage/cack2/news/images/news-tab.png") no-repeat scroll center -10px !important; 
+}
+
+.btn-share{
+	clear: both;
+	margin-top: 30px; 
+}
+
+.fb-comments, .fb-comments span, .fb-comments iframe[style] {
+    width: 100% !important;
+}
+
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+  min-width: 100% !important;
+  width: 100% !important;
+}
+

@@ -1,0 +1,369 @@
+@charset "utf-8";
+
+@font-face {
+	font-family:'UTM_FacebookR'; 
+	src:url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UTM_FacebookR.TTF'); 
+	src:local('☺'), url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UTM_FacebookR.TTF') format('woff'), 
+	url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UTM_FacebookR_K&amp;T.TTF') format('truetype'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+@font-face {
+	font-family:'UTM_FacebookB'; 
+	src:url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UTM_FacebookB.TTF'); 
+	src:local('☺'), url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UTM_FacebookB.TTF') format('woff'), 
+	url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UTM_FacebookB.TTF') format('truetype'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+
+@font-face {
+	font-family:'THANHPHO_R'; 
+	src:url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UVN_THANHPHO_R.TTF'); 
+	src:local('☺'), url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UVN_THANHPHO_R.TTF') format('woff'), 
+	url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UVN_THANHPHO_R.TTF') format('truetype'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+@font-face {
+	font-family:'THANHPHO_B'; 
+	src:url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UVN_THANHPHO_B.TTF'); 
+	src:local('☺'), url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UVN_THANHPHO_B.TTF') format('woff'), 
+	url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UVN_THANHPHO_B.TTF') format('truetype'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+@font-face {
+	font-family:'SIGNWRITER'; 
+	src:url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UTM_A&amp;S_SIGNWRITER.TTF'); 
+	src:local('☺'), url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UTM_A&amp;S_SIGNWRITER.TTF') format('woff'), 
+	url('http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/fonts/UTM_A&amp;S_SIGNWRITER.TTF') format('truetype'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+* {margin:0; padding:0;}
+a {text-decoration:none; color:#000; outline:none; font-family:'THANHPHO_R';}
+a:hover {color:#871d00;}
+
+ul {list-style:none;}
+img {vertical-align:middle; border:0;}
+body,input {font-size:14px; line-height:1.42857143; color:#2d2d2d; font-family:Arial;}
+html, body, header, footer, section {width:100%; float:left; border:none;}
+
+.hide {display:none !important;}
+.clearfix {clear:both;}
+.container {width:1024px; margin:0 auto; position:relative;}
+
+body {position:relative; font-family:'Tahoma'; font-size:15px; background: #ffeab6 url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/bg.jpg) no-repeat center top;}
+body.login {background:#000 url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/bg2.jpg) no-repeat center top;}
+
+@keyframes showBG {
+	  0% {background-position:calc(50% - 1279px) -123px, center top;}
+	 50% {background-position:calc(50% - 1279px) -123px, center top;}
+	100% {background-position:calc(50% -  279px) -123px, center top;}
+	
+}
+@keyframes moveBg {
+	 0% {background-position:calc(50% - 279px) -123px, center top;}
+	50% {background-position:calc(50% - 279px) -119px, center top;}
+}
+
+section {
+	-webkit-animation:showSection 0.8s ease-in-out forwards;
+			animation:showSection 0.8s ease-in-out forwards;
+}
+@keyframes showSection {
+	  0% {background-color:rgba(255,255,255,0.8);}
+	 33% {background-color:rgba(255,255,255,0.8);}
+	100% {background-color:rgba(255,255,255,  0);}
+}
+
+/*** Frame 0 ***/
+	.f0 {height:637px; overflow:hidden;}
+	.f0 .container .menu_top {float:left; position:absolute; top:11px; left:598px; z-index:4;}
+	.f0 .container .menu_top a {padding:0 4px 0 10px; line-height:1; font-family:"Tahoma"; float:left; font-size:14px; color:#000; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/i_menu.png) no-repeat left center;}
+	.f0 .container .menu_top a:first-child {padding-left:0; background:none;}
+	.f0 .container .menu_top a:last-child {padding-left:9px;}
+	.f0 .container .menu_top a:hover {color:#fa7000;}
+
+	.f0 .container .logo {width:207px; height:115px; position:absolute; top:20px; left:22px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/logo.png) no-repeat left top; opacity:0.93; z-index:2;}
+	.f0 .container .logo:hover {opacity:1;}
+	.f0 .container .name_event {width:248px; height:381px; display: none; position:absolute; top:82px; left:596px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/slogan.png) no-repeat left top; z-index:1; transform:scale(1); opacity:0;}
+	
+	.f0 .container .menu_top {
+		-webkit-animation:showMenutop 2.8s ease-in-out forwards;
+				animation:showMenutop 2.8s ease-in-out forwards;
+	}
+	@keyframes showMenutop {
+		  0% {opacity:0; top:-99px;}
+		 33% {opacity:0; top:-99px;}
+		100% {opacity:1; top: 11px;}
+	}
+
+	.f0 .container .logo {
+		-webkit-animation:showLogo 2.8s ease-in-out forwards;
+				animation:showLogo 2.8s ease-in-out forwards;
+	}
+	@keyframes showLogo {
+		  0% {opacity:0; left:-232px;}
+		 33% {opacity:0; left:-232px;}
+		100% {opacity:1; left:  22px;}
+	}
+
+	.f0 .container .name_event {
+		-webkit-animation:showSlogan 1.4s ease-in-out 1.4s forwards;
+				animation:showSlogan 1.4s ease-in-out 1.4s forwards;
+	}
+	@keyframes showSlogan {
+		  0% {opacity:0; transform:scale(  3);}
+		 50% {opacity:0; transform:scale(  2);}
+		 90% {opacity:1; transform:scale(0.9);}
+		100% {opacity:1; transform:scale(  1);}
+	}
+/*** End Frame 0 ***/
+
+/*** Frame 1 ***/
+	.f1 {background:#261717; height:86px; border-bottom:5px solid rgb(151, 151, 151); position:relative;}
+	.f1:before {content:''; height:85px; width:100%; background:#261717; position:absolute; top:0; left:0;}
+	.f1:after {content:''; height:1px; width:100%; border-top:1px solid #323232; background:#2e0002; position:absolute; bottom:0; left:0;}
+
+	.f1 .container {width:1069px; height:85px;}
+	.f1 .container:before {content:''; width:100%; height:100%; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/menu.jpg) no-repeat center bottom; position:absolute; top:0; left:0;}
+	.f1.login .container:before {background-position:center top;}
+	
+	.f1 .container.the-le:before 	  {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_the-le.png) 	   no-repeat   0px 0px, url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/menu.jpg) no-repeat center bottom;}
+	.f1 .container.phan-thuong:before {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_phan-thuong.png) no-repeat 204px 0px, url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/menu.jpg) no-repeat center bottom;}
+	.f1 .container.tham-gia:before 	  {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_tham-gia.png)    no-repeat 411px 0px, url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/menu.jpg) no-repeat center bottom;}
+	.f1 .container.dang-nhap:before   {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_dang-nhap.png)   no-repeat 647px 0px, url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/menu.jpg) no-repeat center bottom;}
+	.f1 .container.lich-su:before 	  {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_lich-su.png) 	   no-repeat 647px 0px, url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/menu.jpg) no-repeat center bottom;}
+	.f1 .container.tich-luy:before 	  {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_tich-luy.png)    no-repeat 853px 0px, url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/menu.jpg) no-repeat center bottom;}
+
+	.f1.login .container.the-le:before 		{background-position:  0px 0px, center top;}
+	.f1.login .container.phan-thuong:before {background-position:204px 0px, center top;}
+	.f1.login .container.tham-gia:before 	{background-position:411px 0px, center top;}
+	.f1.login .container.dang-nhap:before 	{background-position:647px 0px, center top;}
+	.f1.login .container.lich-su:before 	{background-position:647px 0px, center top;}
+	.f1.login .container.tich-luy:before 	{background-position:853px 0px, center top;}
+
+	.f1 .container .map {}
+	.f1 .container map area {cursor:pointer;}
+	.f1 .container .img {width:1069px; height:85px; float:left; position:relative;}
+	.f1 .container .img.the-le {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_the-le.png) no-repeat 0px 0px;}
+	.f1 .container .img.phan-thuong {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_phan-thuong.png) no-repeat 204px 0px;}
+	.f1 .container .img.tham-gia {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_tham-gia.png) no-repeat 411px 0px;}
+	.f1 .container .img.dang-nhap {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_dang-nhap.png) no-repeat 647px 0px;}
+	.f1 .container .img.lich-su {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_lich-su.png) no-repeat 647px 0px;}
+	.f1 .container .img.tich-luy {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_menu_tich-luy.png) no-repeat 853px 0px;}
+
+	.f1 .container .img img {width:1069px; height:85px; position:absolute; top:0; left:0; z-index:2;}
+/*** End Frame 1 ***/
+
+/*** Frame 2 ***/
+	.f2 {}
+	.f2 .container {}
+	.f2 .container marquee {width:410px; height:20px; margin:45px 0 0 330px; font-family:Tahoma; font-size:14px; color:#fed5b4; position:absolute; top:0; left:0;}
+	.f2 .container marquee span {margin-right:100px;}
+
+	.f2 .container .content {width:974px; float:left; padding:122px 21px 21px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/line.png) no-repeat center 101px, url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/bg_thongbao.png) no-repeat center 15px, #fff url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/bg_content.jpg) no-repeat center top;}
+	.f2 .container .content .block {width:100%; float:left; position:relative;}
+
+	/*Block Tham Gia*/
+		/*Box Flash*/
+		.f2 .container .content .block .flash {width:575px; height:619px; margin:43px 0 0 3px; position:relative;}
+		/*.f2 .container .content .block .flash:before {content:''; width:204px; height:367px; background:url(../img/quay_btn.png) no-repeat left top; position:absolute; top:23px; left:186px; cursor:pointer; opacity:0.87;}
+		.f2 .container .content .block .flash:after {content:''; width:108px; height:148px; background:url(../img/quay_char.png) no-repeat left top; position:absolute; top:214px; left:238px; cursor:pointer; opacity:0.87;}
+		.f2 .container .content .block .flash:hover:before,
+		.f2 .container .content .block .flash:hover:after {opacity:1;}*/
+		.f2 .container .content .block .flash #canvas {margin:-35px 0 0 -35px; float:left;}
+
+		/*Box User*/
+		.f2 .container .content .block .infor_user {width:370px; height:205px; background:#ffe4a3; position:absolute; top:44px; right:0px;}
+		.f2 .container .content .block .infor_user .box {width:328px; height:163px; float:left; border:1px solid #993a00; margin:20px; position:relative;}
+		.f2 .container .content .block .infor_user .box:before {content:'Tài khoản'; font-family:'UTM_FacebookR'; font-size:15px; text-transform:uppercase; text-shadow:0px 1px 2px rgba(0, 0, 0, 0.5); color:#fff; padding:2px 12px; background:#993a00; position:absolute; left:16px; top:-14px;}
+		.f2 .container .content .block .infor_user .box p {width:290px; float:left; margin:10px 11px 0 27px; line-height:1.3;}
+		.f2 .container .content .block .infor_user .box p span {float:left; max-width:245px; height:18px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; text-align:left;}
+		.f2 .container .content .block .infor_user .box p span b {margin-left:5px; color:#8a0f00;}
+
+		.f2 .container .content .block .infor_user .box p:first-child {margin-top:29px;}
+		.f2 .container .content .block .infor_user .box p:first-child a {float:left; text-transform:inherit; margin-left:5px;}
+
+		.f2 .container .content .block .infor_user .box p:last-child span {width:auto;}
+		.f2 .container .content .block .infor_user .box p:last-child select {float:left; text-transform:inherit; margin:2px 0 0 9px; border:1px solid #000; outline:none;}
+
+		/*Box Buy & Rank*/
+		.f2 .container .content .block .buy_rank {width:330px; background:#ffe4a3; position:absolute; top:270px; right:0px; padding:20px;}
+		.f2 .container .content .block .buy_rank .box {width:100%; float:left; position:relative;}
+		.f2 .container .content .block .buy_rank .box .tit {width:100%; float:left; position:absolute; top:-12px; left:27px; z-index:5;}
+		.f2 .container .content .block .buy_rank .box .tit span {font-family:'UTM_FacebookR'; font-size:15px; text-transform:uppercase; text-shadow:0px 1px 2px rgba(0, 0, 0, 0.5); color:#fff; padding:3px 10px; background:#993a00; margin-right:6px; cursor:pointer; position:relative;}
+		.f2 .container .content .block .buy_rank .box .tit span:before {content:''; width:100%; height:100%; position:absolute; top:0; left:0; background:#fff; opacity:0.3;}
+		.f2 .container .content .block .buy_rank .box .tit span.active:before,
+		.f2 .container .content .block .buy_rank .box .tit span:hover:before {opacity:0;}
+
+		.f2 .container .content .block .buy_rank .box .ctn {width:100%; float:left;}
+		.f2 .container .content .block .buy_rank .box .ctn .tab {width:100%; float:left;}
+		.f2 .container .content .block .buy_rank .box .ctn .tab.buy {width:328px; border:1px solid #993a00; float:left; padding:20px 0;}
+		.f2 .container .content .block .buy_rank .box .ctn .tab .item {width:100%; float:left; margin-top:10px;}
+		.f2 .container .content .block .buy_rank .box .ctn .tab .item span {width:148px; height:27px; padding-top:5px; background:#fff; font-size:13px; font-family:Tahoma; color:#993a00;  border:1px solid #993a00; text-align:center; float:left; margin-left:18px;}
+		.f2 .container .content .block .buy_rank .box .ctn .tab .item span b {vertical-align: middle;}
+		.f2 .container .content .block .buy_rank .box .ctn .tab .item span i {width:17px; height:17px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/i_gosu.png) no-repeat center center; display:inline-block; vertical-align:middle; margin-left:3px;}
+		.f2 .container .content .block .buy_rank .box .ctn .tab .item .btn {width:120px; height:34px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/f2_btn_buy.jpg) no-repeat center top; float:left; margin-left:28px; cursor:pointer;}
+		.f2 .container .content .block .buy_rank .box .ctn .tab .item .btn:hover {background-position:center bottom;}
+
+		.f2 .container .content .block .buy_rank .box .ctn .wrap {width:328px; height:281px; float:left; overflow:hidden; position:relative; border:1px solid #993a00; padding-top:20px;}
+		.f2 .container .content .block .buy_rank .box .ctn .wrap table {
+			font-family:"Tahoma"; font-size:13px; text-align:center; border-collapse:collapse; width:100%; height:283px; position:absolute; top:20px; left:330px; color:#261717; border:1px solid #993a00; border-left:none; border-right:none;
+			-webkit-transition:left 300ms ease;
+			   -moz-transition:left 300ms ease;
+				-ms-transition:left 300ms ease;
+				 -o-transition:left 300ms ease;
+					transition:left 300ms ease;
+		} 
+		.f2 .container .content .block .buy_rank .box .ctn .wrap table.active {left:0;} 
+		.f2 .container .content .block .buy_rank .box .ctn .wrap table thead tr {border-bottom:1px solid #993a00; color:#fff; background:#d66018; text-transform:uppercase;}
+		.f2 .container .content .block .buy_rank .box .ctn .wrap table:nth-child(1) tbody tr:nth-child(1),
+		.f2 .container .content .block .buy_rank .box .ctn .wrap table:nth-child(1) tbody tr:nth-child(2),
+		.f2 .container .content .block .buy_rank .box .ctn .wrap table:nth-child(1) tbody tr:nth-child(3) {font-weight:bold; color:#993a00;}
+		.f2 .container .content .block .buy_rank .box .ctn .wrap table tr th,
+		.f2 .container .content .block .buy_rank .box .ctn .wrap table tr td {padding:2px 0; border-right:1px solid #993a00;}
+
+		.f2 .container .content .block .buy_rank .box .ctn .wrap table tr th:last-child,
+		.f2 .container .content .block .buy_rank .box .ctn .wrap table tr td:last-child {border-right:none;}
+
+		.f2 .container .content .block .buy_rank .box .ctn .pagination {width:100%; float:left; text-align:center; font-size:15px; font-family:Tahoma; margin-top:10px;}
+		.f2 .container .content .block .buy_rank .box .ctn .pagination span {cursor:pointer; margin-left:5px;}
+		.f2 .container .content .block .buy_rank .box .ctn .pagination span:hover,
+		.f2 .container .content .block .buy_rank .box .ctn .pagination span.active {font-size:18px; color:#993a00;}
+
+	/*Block Nhận Quà Tích Lũy*/
+		.f2 .container .content .tich-luy .tit {width:100%; float:left; text-align:center; font-size:24px; font-family:"UTM_FacebookB"; text-transform:uppercase;  color:#993a00;}
+		.f2 .container .content .tich-luy .item {width:166px; float:left; padding-top:156px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/qtl_gift.png) no-repeat center top; margin-bottom:20px; margin-left:40px;}
+		.f2 .container .content .tich-luy .item:nth-child(2),
+		.f2 .container .content .tich-luy .item:nth-child(6),
+		.f2 .container .content .tich-luy .item:nth-child(10),
+		.f2 .container .content .tich-luy .item:nth-child(14) {margin-left:75px;}
+		.f2 .container .content .tich-luy .item .point {width:100%; float:left; text-align:center; font-family:Tahoma; font-size:15px; font-weight:bold; color:#a72523;}
+		.f2 .container .content .tich-luy .item .btn {width:100%; height:45px; float:left; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/qtl_btn.png) no-repeat center top; cursor:default;}
+		.f2 .container .content .tich-luy .item.chuanhan .btn {background-position:center -45px; cursor:pointer;}
+		.f2 .container .content .tich-luy .item.chuanhan .btn:hover {background-position:center -90px;}
+		.f2 .container .content .tich-luy .item.chuadcnhan .btn {background-position:center bottom;}
+
+	/***** Typo *****/
+		.f2 .container .content .block.content-display .detail {font-size:20px; font-family:"Tahoma"; color:#261717; font-size:15px; float:left; width:800px; margin-left:87px;}
+		.f2 .container .content .block.content-display .detail iframe,
+		.f2 .container .content .block.content-display .detail img {max-width:100%; margin:0 auto; display:block;}
+
+		.f2 .container .content .block.content-display .detail .content-event-first {font-size:36px; line-height:1;}
+		.f2 .container .content .block.content-display .detail .content-event-h1 {font-size:20px; color:#d04907; font-weight:bold; text-indent:30px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/h1.png) no-repeat 6px 0; background-size:19px; float:left; width:710px; margin-top:10px;}
+		.f2 .container .content .block.content-display .detail .content-event-h2 {font-size:16px; font-weight:bold; text-indent:35px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/h2.png) no-repeat 10px 3px; background-size:24px; float:left; width:710px; margin-top:7px;}
+		.f2 .container .content .block.content-display .detail p {padding:5px 0 5px 15px; float:left; width:785px;}
+		.f2 .container .content .block.content-display .detail ul {padding:0 0 0 15px; float:left; width:785px; margin-bottom:5px;}
+		.f2 .container .content .block.content-display .detail ul li {padding:5px 0 5px 15px; float:left; width:770px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/i_li.png) no-repeat 3px 11px;}
+
+		.f2 .container .content .block.content-display .detail table {font-family:"Tahoma"; font-size:15px; text-align:center; margin-bottom:10px; margin-top:10px; border-collapse:collapse; margin:0 auto;} 
+		.f2 .container .content .block.content-display .detail table tr {border:1px solid #993a00;}
+		.f2 .container .content .block.content-display .detail table tr:first-child {color:#fff; background:#d66018; font-size:15px; text-transform:uppercase; font-weight:bold;}
+		.f2 .container .content .block.content-display .detail table tr td {margin:0; padding:5px 10px; border:1px solid #993a00;}
+		.f2 .container .content .block.content-display .detail table tr td ul {width:100%; padding:0;}
+		.f2 .container .content .block.content-display .detail table tr td ul li {width:100%; padding-left:0; padding-right:0; text-indent:10px;}
+
+		.f2 .container .content .block.content-display .detail table p {width:100%; padding:5px 0; text-align:center;}
+
+		.f2 .container .content .block.content-display .detail a {color:#d04907; font-family:"Tahoma";}
+		.f2 .container .content .block.content-display .detail a:hover {text-decoration:underline;}
+	/***** End Typo *****/
+
+	.f2 .container .content .block .detail .notif {width:100%; float:left; text-align:center; margin:3px 0 22px 0; padding:0;}
+/*** End Frame 2 ***/
+
+/***** Footer *****/
+	footer {width:100%; height:81px; padding:20px 0; float:left; background-color:#261717;}
+	footer .container {text-align:center;}
+	footer .container .logo {display:block; height:39px; float:left; margin-top:18px;}
+	footer .container .logo.gosu {width:162px; height:42px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/logo_gosu.png) no-repeat center center; background-size:cover; margin-left:20px;}
+	footer .container .logo.cubinet {width:238px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/logo_cubinet.png) no-repeat center center; background-size:cover;}
+	footer .container .address {width:550px; height:81px; float:left; padding-top:0px;}
+	footer .container .address p {text-align:center; width:100%; font-size:16px; font-family:Tahoma; float:left; color:#fff; margin-top:5px;}
+	footer .container .address a {color:#fff; font-size:14px; font-family:Tahoma; padding:0 2px 0 5px; border-left:1px solid #fff; line-height:1;}
+	footer .container .address a:first-child {border-left:none;}
+	footer .container .address a:hover {color:#ff9427;}
+/***** End Footer *****/
+
+/***** Menuleft *****/
+	.menuright {width:140px; height:219px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/menuright.png) no-repeat left top; position:fixed; top:calc(50% - 133px); right:5px; z-index:10; padding-top:140px; opacity:0;}
+	.menuright .btn {width:100%; float:left; height:50px; cursor:pointer; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/menuright.png) no-repeat left top;}
+	.menuright .btn:nth-child(1) {background-position:left -140px;}
+	.menuright .btn:nth-child(2) {background-position:left -190px;}
+	.menuright .btn:nth-child(3) {background-position:left -240px;}
+	.menuright .btn:nth-child(4) {background-position:left bottom; height:69px;}
+
+	.menuright .btn:nth-child(1):hover {background-position:-140px -140px;}
+	.menuright .btn:nth-child(2):hover {background-position:-140px -190px;}
+	.menuright .btn:nth-child(3):hover {background-position:-140px -240px;}
+	.menuright .btn:nth-child(4):hover {background-position:-140px bottom;}
+	
+	.menuright {
+		-webkit-animation:showMenuright 1.4s ease-in-out 2s forwards;
+				animation:showMenuright 1.4s ease-in-out 2s forwards;
+	}
+	
+	@keyframes showMenuright {
+		  0% {opacity:0; right:-100px;}
+		 50% {opacity:0; right:-100px;}
+		100% {opacity:1; right:   5px;}
+	}
+/***** End Menuleft *****/
+
+/*** Popup ***/
+	.popup {width:100%; height:100%; position:fixed; top:0; left:0; background:rgba(0,0,0,0.83); z-index:10;}
+	.popup .wrap {width:100%; height:100%; float:left; position:relative;}
+	.popup .wrap .bg_close {width:100%; height:100%; float:left;}
+	.popup .wrap .box {width:527px; height:362px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/bg_popup.png) no-repeat center center; position:absolute; top:calc(50% - 181px); left:calc(50% - 268px);}
+	.popup .wrap .box .wrap_box {width:100%; height:100%; float:left; position:relative;}
+	.popup .wrap .box .wrap_box .btn_close {width:35px; height:35px; position:absolute; top:159px; left:565px; background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/f1_btn_closepopup.png) no-repeat center center; cursor:pointer; opacity:0.87;}
+	.popup .wrap .box .wrap_box .btn_close:hover {opacity:1;}
+	.popup .wrap .box .wrap_box .content {width:450px; margin:150px 0 0 38px; font-size:18px; font-family:Tahoma; font-weight:bold; color:#993a00; text-transform:uppercase; text-align:center;}
+	.popup .wrap .box .wrap_box .content p {text-align:center;}
+/*** End Popup ***/
+
+
+/* Pagination */
+	section .lich-su .pagination {width:800px; height:25px; margin:30px 0; float:left; text-align:center; position:relative;}
+	section .lich-su .pagination div { 
+		position:absolute; height:25px; top:0; left:50%; 
+		-webkit-transform: translateX(-50%);
+		   -moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+				transform: translateX(-50%);
+	}
+	section .lich-su .pagination strong,
+	section .lich-su .pagination a {float:left; width:24px; height:24px; margin-left:5px;}
+	section .lich-su .pagination strong,
+	section .lich-su .pagination a:hover {width:23px; height:22px; color:#fff !important; background:#993a00; font-size:14px; padding:2px 1px 0 0; font-weight:bold;}
+
+	section .lich-su .pagination a {width:23px; height:22px; float:left; color:#993a00 !important; background:transparent; font-size:14px; padding:2px 1px 0 0; cursor:pointer;} 
+	section .lich-su .pagination a.first,
+	section .lich-su .pagination a.last,
+	section .lich-su .pagination a.previous,
+	section .lich-su .pagination a.next {background:url(http://cuuam.gosu.vn/home/static/templates/frontend/event/2018/01/ruoclocdonxuan/img/btn_pag.png) no-repeat left bottom; font-size:0px; line-height:0; opacity:0.87; width:24px; height:24px; padding:0;}
+	
+	section .lich-su .pagination a.first {background-position:left top;}
+	section .lich-su .pagination a.last {background-position:left bottom;}
+	section .lich-su .pagination a.previous {background-position:left -24px;}
+	section .lich-su .pagination a.next {background-position:left -48px;}
+
+
+	section .lich-su .pagination a.off {cursor:default; visibility:hidden;}
+	section .lich-su .pagination a.first.off {background-position:right top;}
+	section .lich-su .pagination a.last.off {background-position:right bottom;}
+	section .lich-su .pagination a.previous.off {background-position:right -24px;}
+	section .lich-su .pagination a.next.off {background-position:right -48px;}
+
+	section .lich-su .pagination a.first:hover,
+	section .lich-su .pagination a.last:hover,
+	section .lich-su .pagination a.previous:hover,
+	section .lich-su .pagination a.next:hover {opacity:1; width:24px; height:24px;}

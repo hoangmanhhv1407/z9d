@@ -1,0 +1,280 @@
+/* LoginPopup.css */
+.lgn-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    animation: lgn-fadeIn 0.3s ease;
+}
+
+.lgn-container {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    background: linear-gradient(135deg, #1a1c2e 0%, #2a2c3e 100%);
+    border: 2px solid #4a5568;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 0 30px rgba(66, 153, 225, 0.2);
+    animation: lgn-slideUp 0.4s ease;
+}
+
+/* Header styles */
+.lgn-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.lgn-title-container {
+    width: 100%;
+    text-align: center;
+}
+
+.lgn-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(66, 153, 225, 0.5);
+    animation: lgn-glowText 2s infinite;
+}
+
+.lgn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #a0aec0;
+    transition: color 0.3s;
+}
+
+.lgn-close:hover {
+    color: #fff;
+}
+
+/* Logo styles */
+.lgn-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 2rem;
+    width: 100%;
+    height: 120px;
+}
+
+.lgn-logo-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.lgn-logo-img:hover {
+    transform: scale(1.1);
+}
+
+/* Form styles */
+.lgn-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.lgn-input-group {
+    position: relative;
+}
+
+.lgn-input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #718096;
+}
+
+.lgn-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #4a5568;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.lgn-input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
+}
+
+.lgn-input::placeholder {
+    color: #718096;
+}
+
+.lgn-password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #718096;
+    transition: color 0.3s;
+}
+
+.lgn-password-toggle:hover {
+    color: #fff;
+}
+
+/* Forgot password styles */
+.lgn-forgot-password {
+    text-align: right;
+}
+
+.lgn-forgot-password-link {
+    color: #4299e1;
+    font-size: 0.875rem;
+    transition: color 0.3s;
+}
+
+.lgn-forgot-password-link:hover {
+    color: #63b3ed;
+    text-decoration: underline;
+}
+
+/* Error message styles */
+.lgn-error-message {
+    background: rgba(245, 101, 101, 0.1);
+    border-left: 4px solid #f56565;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #fff;
+    animation: lgn-shake 0.5s ease;
+}
+
+/* Button styles */
+.lgn-button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.lgn-button:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(66, 153, 225, 0.4);
+}
+
+.lgn-button:not(:disabled):active {
+    transform: translateY(0);
+}
+
+.lgn-button.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.lgn-loading-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.lgn-loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: lgn-spin 1s linear infinite;
+}
+
+/* Register prompt styles */
+.lgn-register-prompt {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #a0aec0;
+}
+
+.lgn-register-link {
+    color: #4299e1;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.lgn-register-link:hover {
+    color: #63b3ed;
+    text-decoration: underline;
+}
+
+/* Notice styles */
+.lgn-notice {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(66, 153, 225, 0.1);
+    border-radius: 8px;
+}
+
+.lgn-notice h5 {
+    color: #63b3ed;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.lgn-notice ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #a0aec0;
+    font-size: 0.875rem;
+}
+
+.lgn-notice li {
+    margin-bottom: 0.25rem;
+}
+
+/* Animations */
+@keyframes lgn-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes lgn-slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lgn-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+@keyframes lgn-spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes lgn-glowText {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(66, 153, 225, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(66, 153, 225, 0.8);
+    }
+}

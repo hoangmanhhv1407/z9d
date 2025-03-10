@@ -1,0 +1,17 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/react', function () {
+    return view('react');
+})->name('react.index');
+
+// Thêm các routes khác cho React components ở đây
+// Ví dụ:
+// Route::get('/react/users', function () {
+//     return view('react');
+// })->name('react.users');
+
+// Route::get('/react/products', function () {
+//     return view('react');
+// })->name('react.products');

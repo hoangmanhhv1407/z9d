@@ -1,0 +1,143 @@
+ 
+.rightneite {
+	height:40px;
+	margin-left: 45px;
+	float:right;
+}
+.rightneite .more a{
+	color : #ede2ca;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 50px;
+	background: url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/more.png) no-repeat 5px 13px;
+	width: 55px;
+	height: 40px;
+	float: left;
+}
+.rightneite .more a:hover{
+	background: url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/more-h.png) no-repeat 5px 13px;
+}
+.rightneite span a {
+	display:block;
+	color:#faff6f;
+	text-decoration:none;
+	width:50px;
+	height:20px;
+	height:20px;
+	margin-left:70px;
+	padding-top:25px;
+}
+.rightneitian {
+	overflow-y:auto;
+	height:395px;
+	overflow-x:hidden;
+	margin-bottom:10px;
+	position:relative;
+	width:312px;
+	left:10px;
+	background:#282828;
+}
+.rightneitian p {
+	line-height:20px;
+}
+.public_content {
+	width:320px;
+	text-align:justify;
+}
+
+.public_content li{
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+}
+
+.public_content li a img:hover{
+	opacity:0.7;
+}
+/*a url style*/
+.dumascroll a:hover {
+	text-decoration:underline;
+}
+.dumascroll a {
+	color:#fff;
+	font-style:normal;
+}
+.dumascroll a, .left li i a, .left li i a:hover {
+	text-decoration: none;
+	cursor:pointer;
+	line-height:20px;
+}
+.dumascroll a:hover {
+	text-decoration:underline;
+}
+/*custom scroll*/
+.dumascroll {
+	overflow:hidden;
+}
+.dumascroll_area {
+	height:100%;
+	overflow:hidden;
+	/*padding-right:12px;*/
+}
+.dumascroll_arrow_up, .dumascroll_arrow_up_a, .dumascroll_arrow_down, .dumascroll_arrow_down_a { /*background-image:url(http://xy.ixinyou.com/web/images/un_bg_bar-01.gif);*/
+}
+.dumascroll_bar {
+	background:#4d4d4d;
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:9;
+	width:6px;
+	height:100%;
+	cursor:default;
+	-moz-user-select:none;
+	-khtml-user-select:none;
+	user-select:none;
+	background-repeat:none;
+	background-position: center center;
+	float:left;
+}
+.dumascroll_arrow_up, .dumascroll_arrow_up_a, .dumascroll_handle, .dumascroll_handle_a, .dumascroll_arrow_down, .dumascroll_arrow_down_a {
+	position:absolute;
+	left:0;
+}
+.dumascroll_arrow_up, .dumascroll_arrow_up_a, .dumascroll_arrow_down, .dumascroll_arrow_down_a {
+	width:100%;
+	height:14px;
+	color:#fff;
+	text-align:center;
+}
+.dumascroll_arrow_up, .dumascroll_arrow_up_a {
+	top:0;
+}
+.dumascroll_arrow_down, .dumascroll_arrow_down_a {
+	bottom:0;
+}
+.dumascroll_handle, .dumascroll_handle_a {
+	width:100%;
+	height:40px;
+	overflow:hidden;
+}
+.dumascroll_arrow_up {
+	background-position:0 0;
+}
+.dumascroll_arrow_up_a {
+	background-position:-14px 0;
+}
+.dumascroll_handle {
+	background-image:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/130401-scroll-01.png);
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+.dumascroll_handle_a {
+	background-image:url(http://cuuam.gosu.vn/home/static/templates/frontend/gallery/images/130401-scroll-01.png);
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+.dumascroll_arrow_down {
+	background-position:-70px 0;
+}
+.dumascroll_arrow_down_a {
+	background-position:-84px 0;
+}
+ 

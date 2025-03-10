@@ -1,0 +1,181 @@
+/* DanhSachVatPham.css */
+
+/* Container và Background */
+.dsvp-container {
+    @apply flex flex-col min-h-screen;
+  }
+  
+  .dsvp-background {
+    @apply w-screen bg-cover bg-center relative -mt-10;
+    background-image: url('/frontend/images/bg-tin-tuc-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 2056px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+  
+  .dsvp-wrapper {
+    @apply max-w-screen-2xl mx-auto px-4 py-8 relative;
+  }
+  
+  .dsvp-layout {
+    @apply flex flex-col lg:flex-row gap-8;
+  }
+  
+  /* Sidebar */
+  .dsvp-sidebar {
+    @apply w-full lg:w-[320px] flex-shrink-0;
+  }
+  
+  .dsvp-sidebar__sticky {
+    @apply sticky top-24;
+  }
+  
+  /* Profile */
+  .dsvp-profile {
+    @apply bg-gradient-to-br from-[#e0d0b6] to-[#d0c0a0] rounded-2xl shadow-lg p-8 flex flex-col;
+  }
+  
+  .dsvp-profile__info {
+    @apply text-center mb-8;
+  }
+  
+  .dsvp-profile__avatar {
+    @apply bg-gradient-to-r from-[#8B4513] to-[#A0522D] rounded-full p-6 inline-block mb-6 shadow-lg;
+  }
+  
+  .dsvp-profile__icon {
+    @apply text-white;
+  }
+  
+  .dsvp-profile__name {
+    @apply text-3xl font-bold truncate bg-gradient-to-r from-[#8B4513] to-[#A0522D] text-transparent bg-clip-text;
+  }
+  
+  /* Stats */
+  .dsvp-stats {
+    @apply space-y-6 flex-grow;
+  }
+  
+  .dsvp-stats__item {
+    @apply flex items-center justify-between bg-gradient-to-r from-[#d0c0a0] to-[#c0b090] p-4 rounded-xl;
+  }
+  
+  .dsvp-stats__label {
+    @apply flex items-center text-xl text-[#4A3728];
+  }
+  
+  .dsvp-stats__icon {
+    @apply w-7 h-7 mr-3;
+  }
+  
+  .dsvp-stats__value {
+    @apply font-bold text-xl text-[#8B4513];
+  }
+  
+  /* Navigation */
+  .dsvp-nav {
+    @apply mt-8 space-y-4;
+  }
+  
+  .dsvp-nav__button {
+    @apply w-full py-2 px-4 rounded-lg flex items-center bg-[#d0c0a0] text-[#4A3728] transition-all duration-300;
+  }
+  
+  .dsvp-nav__button:hover {
+    @apply bg-gradient-to-r from-[#A0522D] to-[#8B4513] text-white;
+  }
+  
+  .dsvp-nav__button--active {
+    @apply bg-gradient-to-r from-[#8B4513] to-[#A0522D] text-white;
+  }
+  
+  .dsvp-nav__icon {
+    @apply w-5 h-5 mr-2;
+  }
+  
+  /* Main Content */
+  .dsvp-main {
+    @apply flex-grow lg:min-w-0;
+  }
+  
+  .dsvp-main__content {
+    @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl border-2 border-gray-300 min-h-[1000px] overflow-hidden;
+    box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Content */
+  .dsvp-content {
+    @apply w-full;
+  }
+  
+  .dsvp-content__shop {
+    @apply hidden;
+  }
+  
+  .dsvp-content__shop--active {
+    @apply block;
+  }
+  
+  /* Loading */
+  .dsvp-loading {
+    @apply fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm;
+  }
+  
+  .dsvp-loading__container {
+    @apply relative z-10 flex flex-col items-center;
+  }
+  
+  .dsvp-loading__spinner-container {
+    @apply w-16 h-16 relative;
+  }
+  
+  .dsvp-loading__spinner-outer {
+    @apply absolute inset-0 border-4 border-yellow-500/30 rounded-full;
+  }
+  
+  .dsvp-loading__spinner-inner {
+    @apply absolute inset-0 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin;
+  }
+  
+  .dsvp-loading__text {
+    @apply mt-4 text-yellow-500 font-medium;
+  }
+  
+  .dsvp-loading__text-animation {
+    @apply flex items-center space-x-1;
+  }
+  
+  .dsvp-loading__text-dot {
+    @apply animate-bounce;
+    animation-delay: calc(var(--dot-index) * 0.1s);
+  }
+  
+  /* Loader */
+  .dsvp-loader {
+    @apply w-full h-full min-h-[500px] flex items-center justify-center;
+  }
+  
+  .dsvp-loader__container {
+    @apply flex flex-col items-center space-y-4;
+  }
+  
+  .dsvp-loader__spinner {
+    @apply w-12 h-12 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin;
+  }
+  
+  .dsvp-loader__text {
+    @apply text-yellow-500 text-lg font-medium;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .dsvp-sidebar {
+      @apply w-full;
+    }
+  
+    .dsvp-main {
+      @apply w-full;
+    }
+  }

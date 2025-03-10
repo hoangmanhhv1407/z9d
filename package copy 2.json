@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@babel/preset-react": "^7.25.7",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.79.5",
+    "tailwindcss": "^3.4.14"
+  }
+}

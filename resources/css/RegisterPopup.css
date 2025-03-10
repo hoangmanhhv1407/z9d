@@ -1,0 +1,146 @@
+/* RegisterPopup.css */
+.rdp-overlay {
+    @apply fixed inset-0 bg-black/80 flex items-center justify-center z-50;
+    animation: rdp-fadeIn 0.3s ease;
+}
+
+.rdp-container {
+    @apply relative w-full max-w-lg bg-gradient-to-br from-gray-900/90 to-gray-800/90 rounded-2xl p-8 shadow-xl border border-gray-700/50;
+    animation: rdp-slideUp 0.4s ease;
+}
+
+/* Header styles */
+.rdp-header {
+    @apply flex justify-between items-center mb-6;
+}
+
+.rdp-title-container {
+    @apply w-full text-center;
+}
+
+.rdp-title {
+    @apply text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600;
+    animation: rdp-glowText 2s infinite;
+}
+
+.rdp-close {
+    @apply absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-300;
+}
+
+/* Logo styles */
+.rdp-logo-wrapper {
+    @apply flex justify-center items-center my-6;
+}
+
+.rdp-logo-img {
+    @apply w-32 h-32 object-contain transition-transform duration-500 hover:scale-110;
+    animation: rdp-float 6s ease-in-out infinite;
+}
+
+/* Form styles */
+.rdp-form {
+    @apply space-y-4;
+}
+
+.rdp-input-group {
+    @apply relative;
+}
+
+.rdp-input-icon {
+    @apply absolute left-4 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.rdp-input {
+    @apply w-full py-3 px-12 bg-gray-800/50 border border-gray-600 rounded-xl text-white placeholder-gray-400
+           focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300;
+}
+
+.rdp-password-toggle {
+    @apply absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors duration-300;
+}
+
+/* Error message styles */
+.rdp-error-message {
+    @apply bg-red-900/20 border-l-4 border-red-500 p-4 rounded-lg;
+}
+
+.rdp-error-text {
+    @apply text-red-400 text-sm;
+}
+
+/* Register button styles */
+.rdp-button {
+    @apply w-full bg-gradient-to-r from-yellow-500 to-amber-500 text-gray-900 font-bold py-3 px-6 rounded-xl
+         hover:from-yellow-400 hover:to-amber-400 transition-all duration-300 transform hover:scale-105 shadow-lg
+         hover:shadow-yellow-500/20;
+}
+
+.rdp-button-loading {
+    @apply opacity-70 cursor-not-allowed;
+}
+
+.rdp-loading-content {
+    @apply flex items-center justify-center space-x-2;
+}
+
+.rdp-loading-spinner {
+    @apply w-5 h-5 border border-gray-900 border-t-transparent rounded-full;
+    animation: rdp-spin 1s linear infinite;
+}
+
+/* Login prompt styles */
+.rdp-login-prompt {
+    @apply mt-6 text-center text-gray-400;
+}
+
+.rdp-login-link {
+    @apply text-yellow-400 hover:text-yellow-300 hover:underline transition-colors duration-300;
+}
+
+/* reCAPTCHA notice */
+.rdp-recaptcha-notice {
+    @apply mt-6 text-xs text-gray-500 text-center;
+}
+
+.rdp-recaptcha-link {
+    @apply text-yellow-400 hover:text-yellow-300 hover:underline transition-colors duration-300;
+}
+
+/* Animations */
+@keyframes rdp-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes rdp-slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rdp-glowText {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+}
+
+@keyframes rdp-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rdp-spin {
+    to { transform: rotate(360deg); }
+}

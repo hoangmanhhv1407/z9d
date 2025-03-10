@@ -1,0 +1,399 @@
+/* AccumulateShop.css */
+
+/* Container */
+.ashop-container {
+    @apply p-6 bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen;
+  }
+  
+  /* Loading */
+  .ashop-loading {
+    @apply flex justify-center items-center h-64;
+  }
+  
+  .ashop-loading__spinner {
+    @apply animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500;
+  }
+  
+  /* Grid Layout */
+  .ashop-grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5;
+  }
+  
+  /* Item Card */
+  .ashop-item {
+    @apply bg-white rounded-lg p-3 border border-gray-200 hover:shadow-lg 
+           transform hover:scale-105 transition-all duration-300 
+           flex flex-col items-center cursor-pointer;
+  }
+  
+  .ashop-item__image-container {
+    @apply aspect-square overflow-hidden mb-2;
+  }
+  
+  .ashop-item__image {
+    @apply w-full h-full object-cover hover:scale-110 transition-transform duration-300;
+  }
+  
+  .ashop-item__content {
+    @apply min-h-[48px] flex flex-col items-center;
+  }
+  
+  .ashop-item__title {
+    @apply font-medium text-gray-800 text-center line-clamp-2;
+  }
+  
+  .ashop-item__price {
+    @apply flex items-center text-yellow-600 mb-2;
+  }
+  
+  .ashop-item__price-icon {
+    @apply w-5 h-5 mr-1;
+  }
+  
+  .ashop-item__price-value {
+    @apply font-bold;
+  }
+  
+  .ashop-item__buy-button {
+    @apply px-3 py-1 bg-gradient-to-r from-indigo-500 to-purple-600 
+           text-white text-sm rounded-full hover:from-purple-600 
+           hover:to-indigo-500 transition-colors duration-200;
+  }
+  
+  /* Popup */
+  .ashop-popup {
+    @apply fixed inset-0 flex justify-center items-center bg-black/50 z-50;
+  }
+  
+  .ashop-popup__container {
+    @apply bg-gradient-to-br from-purple-400 to-indigo-600 rounded-xl 
+           p-6 w-96 relative z-50 shadow-2xl border border-gray-200;
+  }
+  
+  .ashop-popup__close {
+    @apply absolute top-3 right-3 text-gray-100 hover:text-gray-300 transition-colors;
+  }
+  
+  .ashop-popup__content {
+    @apply flex flex-col items-center text-white;
+  }
+  
+  .ashop-popup__image-wrapper {
+    @apply w-24 h-24 rounded-lg overflow-hidden mb-4 shadow-lg;
+  }
+  
+  .ashop-popup__image {
+    @apply w-full h-full object-cover;
+  }
+  
+  .ashop-popup__title {
+    @apply text-2xl font-semibold mb-2;
+  }
+  
+  .ashop-popup__description {
+    @apply text-center mb-6 text-gray-100;
+  }
+  
+  .ashop-popup__details {
+    @apply w-full mt-4 mb-6;
+  }
+  
+  .ashop-popup__subtitle {
+    @apply text-lg font-semibold mb-2;
+  }
+  
+  .ashop-popup__price-info {
+    @apply bg-white w-full rounded-lg p-4 mb-6;
+  }
+  
+  .ashop-popup__price {
+    @apply flex items-center justify-between;
+  }
+  
+  .ashop-popup__price-header {
+    @apply flex items-center;
+  }
+  
+  .ashop-popup__price-icon {
+    @apply w-5 h-5 text-yellow-500 mr-2;
+  }
+  
+  .ashop-popup__price-label {
+    @apply text-lg font-medium text-gray-700;
+  }
+  
+  .ashop-popup__price-value {
+    @apply text-xl font-bold text-blue-600;
+  }
+  
+  .ashop-popup__balance {
+    @apply mt-2 pt-2 border-t border-blue-100 flex items-center justify-between;
+  }
+  
+  .ashop-popup__balance-label {
+    @apply text-gray-600;
+  }
+  
+  .ashop-popup__balance-value {
+    @apply font-medium text-gray-800;
+  }
+  
+  .ashop-popup__buy-button {
+    @apply w-full py-3 px-4 rounded-lg font-medium transition-all duration-300
+           bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-blue-500/25;
+  }
+  
+  .ashop-popup__buy-button--disabled {
+    @apply bg-red-500 cursor-not-allowed;
+  }
+  
+  /* Pagination */
+  .ashop-pagination {
+    @apply flex justify-center items-center space-x-2 mt-8;
+  }
+  
+  .ashop-pagination__button {
+    @apply p-2 rounded-lg border border-gray-200 disabled:opacity-50 
+           disabled:cursor-not-allowed hover:bg-gray-100;
+  }
+  
+  .ashop-pagination__number {
+    @apply w-10 h-10 rounded-lg font-medium transition-colors duration-200
+           bg-white text-gray-700 border border-gray-200 hover:bg-gray-100;
+  }
+  
+  .ashop-pagination__number--active {
+    @apply bg-indigo-500 text-white;
+  }
+  
+  /* Rich Text Content Styles */
+  .ashop-popup__description,
+  .ashop-popup__details {
+    @apply space-y-2;
+  }
+  
+  .ashop-popup__description p,
+  .ashop-popup__details p {
+    @apply text-sm leading-relaxed;
+  }
+  
+  .ashop-popup__details ul {
+    @apply list-disc list-inside text-sm space-y-1;
+  }
+  
+  .ashop-popup__details ol {
+    @apply list-decimal list-inside text-sm space-y-1;
+  }
+  
+  .ashop-popup__details a {
+    @apply text-blue-200 hover:text-blue-100 underline;
+  }
+  
+  .ashop-popup__details strong,
+  .ashop-popup__details b {
+    @apply font-semibold;
+  }
+  
+  .ashop-popup__details em,
+  .ashop-popup__details i {
+    @apply italic;
+  }
+  
+/* AccumulateShop.css (tiếp theo) */
+
+/* Responsive Design (tiếp) */
+@media (max-width: 1024px) {
+    .ashop-grid {
+      @apply grid-cols-2 sm:grid-cols-3;
+    }
+  
+    .ashop-popup__container {
+      @apply max-w-[90%] w-[450px];
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .ashop-grid {
+      @apply grid-cols-2;
+    }
+  
+    .ashop-popup__container {
+      @apply w-[95%] mx-4;
+    }
+  
+    .ashop-pagination {
+      @apply flex-wrap gap-2;
+    }
+  
+    .ashop-item__title {
+      @apply text-sm;
+    }
+  
+    .ashop-item__price-value {
+      @apply text-sm;
+    }
+  
+    .ashop-popup__title {
+      @apply text-xl;
+    }
+  }
+  
+  /* Custom Scrollbar */
+  .ashop-popup__container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+  }
+  
+  .ashop-popup__container::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  .ashop-popup__container::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  .ashop-popup__container::-webkit-scrollbar-thumb {
+    @apply bg-gray-400/50 rounded-full;
+  }
+  
+  .ashop-popup__container::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+  }
+  
+  /* Animations */
+  @keyframes ashopFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes ashopSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .ashop-popup {
+    animation: ashopFadeIn 0.3s ease-out;
+  }
+  
+  .ashop-popup__container {
+    animation: ashopSlideUp 0.3s ease-out;
+  }
+  
+  /* Interactive States */
+  .ashop-item:hover .ashop-item__image {
+    @apply scale-110;
+  }
+  
+  .ashop-item:hover .ashop-item__buy-button {
+    @apply shadow-lg;
+  }
+  
+  .ashop-item:active {
+    @apply scale-95;
+  }
+  
+  /* Focus States */
+  .ashop-item__buy-button:focus,
+  .ashop-popup__buy-button:focus,
+  .ashop-pagination__button:focus,
+  .ashop-pagination__number:focus {
+    @apply outline-none ring-2 ring-offset-2 ring-indigo-500/50;
+  }
+  
+  /* Loading States */
+  .ashop-item__buy-button[disabled] {
+    @apply opacity-50 cursor-not-allowed;
+  }
+  
+  .ashop-popup__buy-button[disabled] {
+    @apply cursor-not-allowed;
+  }
+  
+  /* Error States */
+  .ashop-error {
+    @apply text-center text-red-500 py-8;
+  }
+  
+  .ashop-error__message {
+    @apply text-lg font-medium mb-4;
+  }
+  
+  .ashop-error__button {
+    @apply px-4 py-2 bg-red-500 text-white rounded-lg 
+           hover:bg-red-600 transition-colors duration-200;
+  }
+  
+  /* Empty State */
+  .ashop-empty {
+    @apply text-center py-12 text-gray-500;
+  }
+  
+  .ashop-empty__message {
+    @apply text-lg font-medium mb-4;
+  }
+  
+  .ashop-empty__icon {
+    @apply w-16 h-16 mx-auto mb-4 text-gray-400;
+  }
+  
+  /* Tooltip */
+  .ashop-tooltip {
+    @apply absolute invisible group-hover:visible 
+           bg-gray-900 text-white text-xs py-1 px-2 rounded 
+           -translate-y-full -translate-x-1/2 left-1/2 
+           mt-[-8px] whitespace-nowrap z-10;
+  }
+  
+  .ashop-tooltip::after {
+    content: '';
+    @apply absolute left-1/2 top-full -translate-x-1/2 
+           border-4 border-transparent border-t-gray-900;
+  }
+  
+  /* Badge */
+  .ashop-badge {
+    @apply absolute -top-2 -right-2 w-6 h-6 
+           flex items-center justify-center 
+           bg-red-500 text-white text-xs font-bold 
+           rounded-full shadow-lg;
+  }
+  
+  /* Additional Utilities */
+  .ashop-truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .ashop-glass-effect {
+    @apply backdrop-blur-sm bg-white/10;
+  }
+  
+  .ashop-gradient-text {
+    @apply bg-clip-text text-transparent 
+           bg-gradient-to-r from-indigo-500 to-purple-600;
+  }
+  
+  /* Print Styles */
+  @media print {
+    .ashop-container {
+      @apply bg-white;
+    }
+  
+    .ashop-item__buy-button,
+    .ashop-pagination,
+    .ashop-popup {
+      @apply hidden;
+    }
+  
+    .ashop-item {
+      @apply border-none shadow-none;
+    }
+  }

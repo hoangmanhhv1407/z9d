@@ -1,0 +1,33 @@
+@font-face {
+	font-family: 'myriadproregular';
+	src: url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/myriadproregular.eot');
+	src: url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/myriadproregular.eot?#iefix') format('embedded-opentype'),
+		url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/myriadproregular.woff') format('woff'),
+		url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/myriadproregular.ttf') format('truetype'),
+		url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/myriadproregular.svg#myriadproregular') format('svg')
+}
+@font-face {
+  font-family: 'UTMBienvenue';
+  font-style: normal;
+  src: url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UTMBienvenue.eot?#iefix') format('embedded-opentype'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UTMBienvenue.woff') format('woff'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UTMBienvenue.ttf') format('truetype'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UTMBienvenue.svg#UTMBienvenue') format('svg');
+}
+@font-face {
+  font-family: 'UTMAptimaBold';
+  font-style: normal;
+  src: url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UTMAptimaBold.eot?#iefix') format('embedded-opentype'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UTMAptimaBold.woff') format('woff'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UTMAptimaBold.ttf') format('truetype'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UTMAptimaBold.svg#UTMAptimaBold') format('svg');
+}
+@font-face {
+  font-family: 'UVNThanhPho';
+  font-style: normal;
+  src: url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UVNThanhPho.eot?#iefix') format('embedded-opentype'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UVNThanhPho.woff') format('woff'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UVNThanhPho.ttf') format('truetype'),
+       url('http://cuuam.gosu.vn/home/static/templates/frontend/event/tinhnangmoi/fonts/UVNThanhPho.svg#UVNThanhPho') format('svg');
+}
+

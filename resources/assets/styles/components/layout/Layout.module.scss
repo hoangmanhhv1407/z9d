@@ -1,0 +1,181 @@
+/* layout.css */
+.layout-container {
+    @apply w-full flex flex-col min-h-screen;
+  }
+  
+  /* Header Styles */
+  .main-header {
+    @apply w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300;
+    background-image: url('/frontend/images/bg-top.png');
+    background-size: cover;
+    background-position: center;
+    height: 102px;
+  }
+  
+  .header-content {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full;
+  }
+  
+  .main-nav {
+    @apply flex items-center justify-between py-4 h-full;
+    transform: translate(100px, -12px);
+  }
+  
+  /* Logo Styles */
+  .logo-container {
+    @apply relative z-50;
+  }
+  
+  .logo-link {
+    @apply absolute block transition-transform duration-300 hover:scale-105;
+    top: -40px;
+    left: -40px;
+  }
+  
+  .logo-container .logo-wrapper {
+    @apply w-40 h-40 flex items-center justify-center;
+  }
+  
+  .logo-image {
+    @apply w-full h-full object-contain transition-all duration-300 hover:scale-105;
+  }
+  
+  /* Navigation Menu */
+  .nav-menu {
+    @apply flex-1 flex justify-center ml-32;
+  }
+  
+  .nav-list {
+    @apply hidden md:flex items-center space-x-8 text-lg;
+  }
+  
+  .nav-item {
+    @apply relative;
+  }
+  
+  .nav-link {
+    @apply flex items-center text-white font-medium text-lg transition-all duration-300;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  .nav-link:hover {
+    @apply text-yellow-300;
+    transform: translateY(-2px);
+  }
+  
+  .nav-icon {
+    @apply w-5 h-5 mr-2;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    @apply absolute left-0 top-full mt-2 w-48 rounded-lg shadow-xl opacity-0 invisible transition-all duration-300;
+    background: rgba(45, 26, 10, 0.95);
+    backdrop-filter: blur(5px);
+    transform: translateY(10px);
+  }
+  
+  .nav-item:hover .dropdown-menu {
+    @apply opacity-100 visible;
+    transform: translateY(0);
+  }
+  
+  .dropdown-menu li a {
+    @apply block px-4 py-3 text-white hover:bg-yellow-900/50 transition-colors duration-200 rounded-md;
+  }
+  
+  /* Auth Buttons */
+  .user-profile-container {
+    @apply flex items-center bg-gradient-to-r from-gray-800 to-gray-700 py-2 px-4 rounded-full hover:from-gray-700 hover:to-gray-600 transition-all duration-300;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+  }
+  
+  .user-name {
+    @apply font-bold text-white;
+  }
+  
+  .logout-button {
+    @apply bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 hover:from-red-700 hover:to-red-800;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+  }
+  
+  .login-button {
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold py-2 px-6 rounded-full transition-all duration-300 hover:from-yellow-500 hover:to-yellow-600 transform hover:scale-105 text-lg;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  }
+  
+  /* Main Content */
+  .main-content {
+    @apply flex-grow pt-24;
+  }
+  
+  .content-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6;
+  }
+  
+  /* Footer Styles */
+  .main-footer {
+    @apply w-full py-12 -mt-6 text-white bg-cover bg-center;
+    background-image: url('/frontend/images/bg-footer.png');
+    position: relative;
+  }
+  
+  .main-footer::before {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgb(0 0 0 / 0.1))
+  }
+  
+  .footer-content {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10;
+  }
+  
+  .footer-brand {
+    @apply text-2xl md:text-3xl font-bold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  .footer-links {
+    @apply flex flex-wrap justify-center mt-8 space-x-8;
+  }
+  
+  .footer-links a {
+    @apply text-gray-300 hover:text-white transition-colors duration-300;
+  }
+  
+  .footer-copyright {
+    @apply mt-8 pt-8 border-t border-yellow-700/50;
+  }
+  
+  /* Animations */
+  @keyframes glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+    }
+    50% {
+      filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+    }
+  }
+  
+  .animate-glow {
+    animation: glow 2s infinite;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-menu {
+      @apply hidden;
+    }
+    
+    .main-header {
+      height: 70px;
+    }
+    
+    .logo-image {
+      @apply w-16 h-16;
+    }
+    
+    .footer-links {
+      @apply flex-col space-x-0 space-y-4;
+    }
+  }

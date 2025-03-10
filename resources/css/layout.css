@@ -1,0 +1,277 @@
+/* layout.css */
+.ly-container {
+  @apply w-full flex flex-col min-h-screen;
+}
+
+/* Header Styles */
+.ly-header {
+  @apply w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300;
+  background-image: url('/frontend/images/bg-top.png');
+  background-size: cover;
+  background-position: center;
+  height: 102px;
+}
+
+.ly-header-content {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full;
+}
+
+.ly-nav {
+  @apply flex items-center justify-between py-4 h-full;
+  transform: translate(100px, -12px);
+}
+
+/* Logo Styles */
+.ly-logo-container {
+  @apply relative z-50;
+}
+
+.ly-logo-link {
+  @apply absolute block transition-transform duration-300 hover:scale-105;
+  top: -40px;
+  left: -40px;
+}
+
+.ly-logo-wrapper {
+  @apply w-40 h-40 flex items-center justify-center;
+}
+
+.ly-logo-image {
+  @apply w-full h-full object-contain transition-all duration-300 hover:scale-105;
+}
+
+/* Navigation Menu */
+.ly-nav-menu {
+  @apply flex-1 flex justify-center ml-32;
+}
+
+.ly-nav-list {
+  @apply hidden md:flex items-center space-x-8 text-lg;
+}
+
+.ly-nav-item {
+  @apply relative;
+}
+
+.ly-nav-link {
+  @apply flex items-center text-white font-medium text-lg transition-all duration-300;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.ly-nav-link:hover {
+  @apply text-yellow-300;
+  transform: translateY(-2px);
+}
+
+.ly-nav-icon {
+  @apply w-5 h-5 mr-2;
+}
+
+/* Dropdown Menu */
+.ly-dropdown-menu {
+  @apply absolute left-0 top-full mt-2 w-48 rounded-lg shadow-xl opacity-0 invisible transition-all duration-300;
+  background: rgba(45, 26, 10, 0.95);
+  backdrop-filter: blur(5px);
+  transform: translateY(10px);
+}
+
+.ly-nav-item:hover .ly-dropdown-menu {
+  @apply opacity-100 visible;
+  transform: translateY(0);
+}
+
+.ly-dropdown-menu li a {
+  @apply block px-4 py-3 text-white hover:bg-yellow-900/50 transition-colors duration-200 rounded-md;
+}
+
+/* Auth Buttons */
+.ly-user-profile {
+  @apply flex items-center bg-gradient-to-r from-gray-800 to-gray-700 py-2 px-4 rounded-full hover:from-gray-700 hover:to-gray-600 transition-all duration-300;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.ly-user-name {
+  @apply font-bold text-white;
+}
+
+.ly-logout-button {
+  @apply bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 hover:from-red-700 hover:to-red-800;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.ly-login-button {
+  @apply bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold py-2 px-6 rounded-full transition-all duration-300 hover:from-yellow-500 hover:to-yellow-600 transform hover:scale-105 text-lg;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Main Content */
+.ly-content {
+  @apply flex-grow pt-24;
+}
+
+.ly-content-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6;
+}
+
+/* Footer Styles */
+.ly-footer {
+  @apply w-full py-12 -mt-6 text-white bg-cover bg-center;
+  background-image: url('/frontend/images/bg-footer.png');
+  position: relative;
+}
+
+.ly-footer::before {
+  content: '';
+  @apply absolute inset-0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgb(0 0 0 / 0.1))
+}
+
+.ly-footer-content {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10;
+}
+
+.ly-footer-brand {
+  @apply text-2xl md:text-3xl font-bold;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.ly-footer-links {
+  @apply flex flex-wrap justify-center mt-8 space-x-8;
+}
+
+.ly-footer-links a {
+  @apply text-gray-300 hover:text-white transition-colors duration-300;
+}
+
+.ly-footer-copyright {
+  @apply mt-8 pt-8 border-t border-yellow-700/50;
+}
+
+/* Animations */
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+  }
+}
+
+.ly-animate-glow {
+  animation: glow 2s infinite;
+}
+
+/* Responsive Design */
+/* Mobile Styles Mới (max-width: 768px) */
+@media (max-width: 768px) {
+    .ly-header {
+        @apply bg-gray-900;
+        height: 60px;
+        background-image: none;
+    }
+
+    .ly-header-content {
+        @apply px-4;
+    }
+
+    .ly-nav {
+        transform: none;
+        @apply justify-between;
+    }
+
+    .ly-logo-container {
+        position: static;
+    }
+
+    .ly-logo-link {
+        position: static;
+    }
+
+    .ly-logo-wrapper {
+        @apply w-10 h-10;
+    }
+
+    .ly-logo-image {
+        @apply w-10 h-10;
+    }
+
+    /* Ẩn menu desktop trên mobile */
+    .ly-nav-menu {
+        @apply hidden;
+    }
+}
+
+/* Mobile Menu Mới */
+.ly-mobile-menu-button {
+    @apply md:hidden text-white p-2;
+}
+
+.ly-mobile-menu {
+    @apply fixed inset-0 bg-gray-900/95 z-50 md:hidden;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.ly-mobile-menu.open {
+    transform: translateX(0);
+}
+
+.ly-mobile-nav {
+    @apply flex flex-col h-full p-6 pt-20;
+}
+
+.ly-mobile-nav-list {
+    @apply space-y-6;
+}
+
+.ly-mobile-nav-item {
+    @apply border-b border-gray-800 pb-4;
+}
+
+.ly-mobile-nav-link {
+    @apply flex items-center text-white text-lg font-medium;
+}
+
+.ly-mobile-dropdown {
+    @apply mt-4 ml-4 space-y-4 hidden;
+}
+
+.ly-mobile-dropdown.open {
+    @apply block;
+}
+
+.ly-mobile-dropdown a {
+    @apply block text-gray-300 py-2 hover:text-white transition-colors;
+}
+
+/* Mobile Auth Container */
+.ly-mobile-auth {
+    @apply mt-auto pt-6;
+}
+
+.ly-mobile-profile {
+    @apply bg-gray-800 p-4 rounded-lg mb-4;
+}
+
+.ly-mobile-username {
+    @apply text-white font-bold text-lg;
+}
+
+/* Mobile Footer */
+@media (max-width: 768px) {
+    .ly-footer {
+        @apply py-6;
+    }
+
+    .ly-footer-brand {
+        @apply text-xl;
+    }
+
+    .ly-footer-links {
+        @apply flex-col space-y-4 space-x-0;
+    }
+
+    .ly-footer-links a {
+        @apply block py-2;
+    }
+}

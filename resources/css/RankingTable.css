@@ -1,0 +1,252 @@
+/* RankingTable.css */
+.ranking-section {
+    @apply relative w-full py-6 md:py-12;
+  }
+  
+  .ranking-container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+  
+  .ranking-card {
+    @apply bg-gradient-to-br from-gray-900/90 to-gray-800/90 rounded-2xl 
+           border border-gray-700/50 shadow-2xl backdrop-blur-sm;
+  }
+  
+  .ranking-header {
+    @apply flex flex-col items-center p-4 md:p-6 
+           border-b border-gray-700/50 bg-gradient-to-b from-gray-800/50 to-transparent;
+  }
+  
+  .ranking-title {
+    @apply text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text 
+           bg-gradient-to-r from-yellow-400 to-yellow-600;
+    text-shadow: 0 0 30px rgba(234, 179, 8, 0.3);
+    animation: titlePulse 2s infinite;
+  }
+  
+  .ranking-divider {
+    @apply w-full border-t border-gray-600/50 my-4;
+  }
+  
+  .ranking-tabs {
+    @apply flex flex-wrap justify-center gap-2 md:gap-4 mt-4;
+  }
+  
+  .ranking-reward-button {
+    @apply flex items-center px-3 md:px-6 py-2 md:py-3 rounded-xl font-medium 
+           bg-gradient-to-r from-yellow-500 to-amber-500 text-gray-900 
+           transition-all duration-300 transform hover:scale-105 shadow-lg 
+           hover:shadow-yellow-500/20;
+  }
+  
+  .ranking-tab {
+    @apply flex items-center px-3 md:px-6 py-2 md:py-3 rounded-xl font-medium 
+           transition-all duration-300 relative overflow-hidden;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .ranking-tab-active {
+    @apply text-white font-semibold;
+    background-image: url('/frontend/images/k9.png');
+  }
+  
+  .ranking-tab-inactive {
+    @apply text-gray-300 hover:text-white;
+    background-image: url('/frontend/images/k8.png');
+  }
+  
+  .ranking-tab-inactive:hover {
+    @apply transform scale-105;
+    filter: brightness(1.2);
+  }
+
+  .ranking-event-badge {
+    @apply absolute -top-1 -right-1 px-2 py-0.5 text-xs font-bold rounded-full
+           bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg;
+    animation: pulse 2s infinite;
+  }
+  
+  .ranking-content {
+    @apply p-4 md:p-6;
+  }
+  
+  /* Mobile Card Styles */
+  .ranking-mobile-card {
+    @apply bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl p-4 mb-4
+           border border-gray-600/30 backdrop-blur-sm hover:from-gray-700/50 
+           hover:to-gray-600/50 transition-all duration-300;
+  }
+  
+  .ranking-mobile-header {
+    @apply flex items-center justify-between mb-4;
+  }
+  
+  .ranking-position {
+    @apply text-lg md:text-xl font-bold;
+  }
+  
+  .ranking-stats-grid {
+    @apply grid grid-cols-2 gap-3;
+  }
+  
+  .ranking-stat-box {
+    @apply bg-gray-800/30 p-3 rounded-lg border border-gray-700/30
+           hover:bg-gray-700/30 transition-colors duration-300;
+  }
+  
+  .ranking-stat-label {
+    @apply text-gray-400 text-sm;
+  }
+  
+  .ranking-stat-value {
+    @apply text-gray-200 font-medium ml-2;
+  }
+  
+  /* Table Styles */
+  .ranking-table {
+    @apply w-full border-collapse;
+  }
+  
+  .ranking-table-header {
+    @apply px-4 py-3 text-xs font-semibold text-gray-300 uppercase tracking-wider
+           bg-gradient-to-r from-gray-800 to-gray-900 first:rounded-tl-lg last:rounded-tr-lg;
+  }
+  
+  .ranking-table-cell {
+    @apply px-4 py-3 text-center border-b border-gray-700/30;
+  }
+  
+  .ranking-table-row {
+    @apply hover:bg-gray-800/50 transition-colors duration-300;
+  }
+  
+  .ranking-player-name {
+    @apply font-medium text-gray-200;
+  }
+  
+  .ranking-party-name, .ranking-class-name {
+    @apply text-gray-300;
+  }
+  
+  .ranking-level-rate {
+    @apply text-blue-400;
+  }
+  
+  .ranking-levelup-time {
+    @apply text-gray-300 block;
+  }
+  
+  .ranking-levelup-time-absolute {
+    @apply text-gray-500 text-xs block mt-1;
+  }
+  
+  /* Pagination */
+  .ranking-pagination {
+    @apply flex flex-wrap justify-center items-center gap-2 mt-6;
+  }
+  
+  .ranking-page-button {
+    @apply min-w-[40px] h-10 rounded-lg text-sm font-medium 
+           transition-all duration-300 flex items-center justify-center;
+  }
+  
+  .ranking-page-button-active {
+    @apply bg-gradient-to-r from-yellow-500 to-amber-500 text-gray-900;
+  }
+  
+  .ranking-page-button:not(.ranking-page-button-active):not(.ranking-page-button-disabled) {
+    @apply bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 
+           border border-gray-700/50 hover:border-gray-600/50;
+  }
+  
+  .ranking-page-button-disabled {
+    @apply bg-gray-800/30 text-gray-600 cursor-not-allowed border border-gray-700/30;
+  }
+  
+  .ranking-ellipsis {
+    @apply px-4 py-2 text-gray-400;
+  }
+  
+  /* Loading State */
+  .ranking-loading {
+    @apply flex flex-col items-center justify-center py-12;
+  }
+  
+  .ranking-spinner {
+    @apply w-12 h-12 border-4 border-yellow-500/30 border-t-yellow-500 rounded-full;
+    animation: spin 1s linear infinite;
+  }
+  
+  .ranking-error {
+    @apply text-center py-12 text-red-400;
+  }
+  
+  .ranking-empty {
+    @apply text-center py-12 text-gray-400;
+  }
+  
+  /* Animations */
+  @keyframes titlePulse {
+    0%, 100% {
+      text-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
+    }
+    50% {
+      text-shadow: 0 0 30px rgba(234, 179, 8, 0.5);
+    }
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ranking-tab {
+      @apply px-2 py-2 text-sm;
+    }
+    
+    .ranking-title {
+      @apply text-3xl;
+    }
+    
+    .ranking-table-cell {
+      @apply px-2 py-2;
+    }
+  
+    .ranking-reward-button {
+      @apply text-sm px-3 py-2;
+    }
+  }
+  
+  /* Custom Scrollbar */
+  .ranking-table-wrapper {
+    @apply overflow-x-auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(234, 179, 8, 0.3) transparent;
+  }
+  
+  .ranking-table-wrapper::-webkit-scrollbar {
+    @apply h-2 w-2;
+  }
+  
+  .ranking-table-wrapper::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  .ranking-table-wrapper::-webkit-scrollbar-thumb {
+    @apply bg-yellow-500/30 rounded-full hover:bg-yellow-500/50;
+  }

@@ -1,0 +1,206 @@
+/* Container */
+.up-container {
+    @apply flex flex-col min-h-screen;
+  }
+  
+  .up-background {
+    @apply w-screen bg-cover bg-center relative -mt-10;
+    background-image: url('/frontend/images/bg-tin-tuc-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 2056px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+  
+  .up-content {
+    @apply relative z-10 w-full max-w-[1600px] mx-auto py-8 flex justify-center;
+  }
+  
+  .up-card {
+    @apply w-full bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl 
+           border-2 border-gray-300 overflow-hidden;
+  }
+  
+  /* Header */
+  .up-header {
+    @apply relative h-64 bg-gradient-to-r from-gray-500/90 to-gray-700/90 backdrop-blur-sm;
+  }
+  
+  .up-header__content {
+    @apply h-full flex items-center justify-between px-8;
+  }
+  
+  /* Profile */
+  .up-profile {
+    @apply flex items-center space-x-6;
+  }
+  
+  .up-profile__avatar-wrapper {
+    @apply bg-white p-2 rounded-2xl shadow-xl;
+  }
+  
+  .up-profile__avatar {
+    @apply w-32 h-32 rounded-xl flex items-center justify-center shadow-inner;
+  }
+  
+  /* VIP Avatar Variations */
+  .up-profile__avatar--vip-0 { @apply bg-gradient-to-br from-gray-400 to-gray-600; }
+  .up-profile__avatar--vip-1 { @apply bg-gradient-to-br from-blue-400 to-blue-600; }
+  .up-profile__avatar--vip-2 { @apply bg-gradient-to-br from-green-400 to-green-600; }
+  .up-profile__avatar--vip-3 { @apply bg-gradient-to-br from-yellow-400 to-yellow-600; }
+  .up-profile__avatar--vip-4 { @apply bg-gradient-to-br from-orange-400 to-orange-600; }
+  .up-profile__avatar--vip-5 { @apply bg-gradient-to-br from-red-400 to-red-600; }
+  .up-profile__avatar--vip-6 { @apply bg-gradient-to-br from-purple-400 to-purple-600; }
+  .up-profile__avatar--vip-7 { @apply bg-gradient-to-br from-pink-400 to-pink-600; }
+  
+  .up-profile__crown {
+    @apply text-white animate-pulse;
+  }
+  
+  .up-profile__user {
+    @apply text-white;
+  }
+  
+  .up-profile__info {
+    @apply text-white;
+  }
+  
+  .up-profile__name {
+    @apply text-4xl font-extrabold tracking-wide drop-shadow-lg flex items-center;
+  }
+  
+  .up-profile__vip-badge {
+    @apply ml-3 px-3 py-1 bg-yellow-500 text-lg rounded-full shadow-lg flex items-center gap-1;
+  }
+  
+  .up-profile__status {
+    @apply flex items-center space-x-4 mt-2;
+  }
+  
+  .up-profile__member-status {
+    @apply text-xl opacity-90;
+  }
+  
+  .up-profile__vip-progress {
+    @apply text-sm bg-white/20 px-3 py-1 rounded-full;
+  }
+  
+  /* Stats */
+  .up-stats {
+    @apply flex space-x-6;
+  }
+  
+  .up-stats__card {
+    @apply bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20;
+  }
+  
+  .up-stats__header {
+    @apply flex items-center mb-2 font-semibold;
+  }
+  
+  .up-stats__header--coin {
+    @apply text-yellow-400;
+  }
+  
+  .up-stats__header--deposit {
+    @apply text-emerald-400;
+  }
+  
+  .up-stats__icon {
+    @apply w-5 h-5 mr-2;
+  }
+  
+  .up-stats__value {
+    @apply text-2xl font-bold text-white;
+  }
+  
+  /* VIP Progress */
+  .up-vip-progress {
+    @apply absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-sm px-8 py-4;
+  }
+  
+  .up-vip-progress__header {
+    @apply flex justify-between text-sm text-white/90 mb-2;
+  }
+  
+  .up-vip-progress__bar {
+    @apply w-full h-2 bg-black/20 rounded-full overflow-hidden;
+  }
+  
+  .up-vip-progress__fill {
+    @apply h-full rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 transition-all duration-300;
+  }
+  
+  /* Main Content */
+  .up-main {
+    @apply pt-6 px-8;
+  }
+  
+  .up-layout {
+    @apply flex h-[1600px] overflow-hidden w-full;
+  }
+  
+  /* Tabs */
+  .up-tabs {
+    @apply w-full sm:w-1/4 pr-4 h-full overflow-y-auto;
+  }
+  
+  .up-tabs__list {
+    @apply flex flex-col border-r-2 border-gray-300 h-full bg-gray-50 shadow-inner;
+  }
+  
+  .up-tabs__button {
+    @apply flex items-center px-6 py-4 font-bold text-2xl transition-all duration-200 
+           text-gray-700 hover:text-blue-700 hover:bg-gray-100;
+  }
+  
+  .up-tabs__button--active {
+    @apply text-blue-700 border-l-4 border-blue-700 bg-white shadow-md;
+  }
+  
+  .up-tabs__icon {
+    @apply w-10 h-10 mr-4;
+  }
+  
+  /* Content Area */
+  .up-content__inner {
+    @apply py-6 px-6 relative; /* Thêm position relative */
+    width: 100%; /* Đảm bảo chiều rộng 100% */
+}
+
+.up-content {
+    @apply w-full sm:w-3/4 h-full overflow-y-auto overflow-x-hidden; /* Thêm overflow-x-hidden */
+}
+  
+  /* Loading State */
+  .up-loading {
+    @apply flex justify-center items-center py-20 text-gray-900;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .up-header {
+      @apply h-auto py-6;
+    }
+  
+    .up-header__content {
+      @apply flex-col gap-6;
+    }
+  
+    .up-stats {
+      @apply w-full justify-between;
+    }
+  
+    .up-layout {
+      @apply flex-col h-auto;
+    }
+  
+    .up-tabs {
+      @apply w-full pr-0;
+    }
+  
+    .up-content {
+      @apply w-full pl-0 mt-6;
+    }
+  }

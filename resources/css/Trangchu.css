@@ -1,0 +1,150 @@
+/* Hero Section */
+.tc-hero-section {
+    @apply relative w-full h-screen -mt-16;
+}
+
+.tc-hero-decor {
+    @apply absolute bottom-0 left-0 right-0 h-[276px] bg-no-repeat bg-bottom bg-contain;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    z-index: 20;
+    pointer-events: none;
+}
+
+/* Main Content Section */
+.tc-main-section {
+    @apply relative bg-gray-100 py-8 lg:h-[3000px] min-h-screen;
+}
+
+.tc-main-section.mobile {
+    @apply py-4 min-h-screen h-auto;
+    padding-bottom: 80px; /* Để tránh content bị che bởi nút toggle */
+}
+
+.tc-main-background {
+    @apply absolute inset-0 h-full bg-cover bg-no-repeat;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    pointer-events: none;
+    z-index: 20;
+}
+
+.tc-content-wrapper {
+    @apply relative z-20 max-w-screen-xl mx-auto px-4 pb-12;
+}
+
+/* Sidebar Toggle Button - Mobile optimized */
+.tc-sidebar-toggle {
+    @apply flex flex-col justify-center items-center w-12 h-12 rounded-full 
+           shadow-lg transition-all duration-300;
+    @apply bg-yellow-500/90 backdrop-blur-sm hover:bg-yellow-400;
+}
+
+.tc-toggle-line {
+    @apply block w-5 h-0.5 bg-white mb-1 transition-all duration-300;
+}
+
+.tc-toggle-line.tc-active {
+    @apply rotate-45 translate-y-1.5;
+}
+
+.tc-toggle-line.tc-middle.tc-active {
+    @apply opacity-0;
+}
+
+.tc-toggle-line.tc-bottom.tc-active {
+    @apply -rotate-45 -translate-y-1.5;
+}
+
+/* Grid Layout */
+/* Grid Layout */
+.tc-content-grid {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-6;
+}
+
+/* Sidebar Column */
+.tc-sidebar-column {
+    @apply lg:col-span-3 transition-all duration-300 ease-in-out;
+}
+
+/* Sticky Sidebar */
+.tc-sidebar-sticky {
+    @apply sticky;
+    top: 102px; /* Chiều cao của header */
+}
+
+/* Main Column */
+.tc-main-column {
+    @apply lg:col-span-9;
+}
+
+/* Mobile Optimization */
+@media (max-width: 1024px) {
+    .tc-sidebar-column {
+        @apply fixed bottom-20 left-4 right-4 z-40 bg-gray-900/95 
+               rounded-xl backdrop-blur-sm p-4 shadow-xl border border-gray-700/50
+               transform translate-y-full opacity-0 transition-all duration-300;
+    }
+    
+    .tc-sidebar-column.tc-active {
+        @apply transform translate-y-0 opacity-100;
+    }
+    
+    .tc-sidebar-sticky {
+        position: relative;
+        top: 0;
+    }
+}
+
+/* Loading styles remain the same */
+.tc-loading-overlay {
+    @apply fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm;
+}
+
+/* Skeleton styles for mobile */
+@media (max-width: 768px) {
+    .tc-skeleton-sidebar {
+        @apply h-20;
+    }
+    
+    .tc-skeleton-content {
+        @apply h-40;
+    }
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 768px) {
+    .tc-content-wrapper {
+        @apply px-2 pb-6;
+    }
+    
+    .tc-main-column {
+        @apply p-2;
+    }
+    
+    /* Ẩn các animation và decoration không cần thiết trên mobile */
+    .tc-hero-section,
+    .tc-hero-decor,
+    .character-decoration {
+        @apply hidden;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes tcFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes tcSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
