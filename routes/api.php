@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Frontend\Api\RechargeEventsController;
 use App\Http\Controllers\Frontend\Api\RechargeEventGiftController;
 use App\Http\Controllers\Frontend\Api\RankingEventGiftController;
+use App\Http\Controllers\Frontend\Api\WeaponController;
 
 
 
@@ -130,3 +131,12 @@ Route::prefix('admin')->group(function() {
     Route::get('product/daily-gift-type/{id}/{type}', [ProductController::class, 'dailyGiftType'])
         ->name('admin.product.dailyGiftType');
 });
+// Weapon routes
+Route::middleware('auth:api')->group(function() {
+    Route::get('/user-characters', 'Frontend\Api\WeaponController@getUserCharacters');
+    Route::get('/character-weapons/{characterId}', 'Frontend\Api\WeaponController@getCharacterWeapons');
+    Route::post('/change-weapon', 'Frontend\Api\WeaponController@changeWeapon');
+    
+});
+// Route test
+Route::middleware('auth:api')->get('/test-weapon-tables/{characterId}', 'Frontend\Api\WeaponController@testWeaponTables');

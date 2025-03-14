@@ -31,6 +31,12 @@
                     </li>
                 </ul>
             </li>
+            <li class="start {{ Request::segment(2) == 'weapon' ? 'open' : '' }}">
+            <a href="{{ route('admin.weapon.index') }}">
+                            <i class="icon-grid"></i>
+                            <span class="title">Quản lý vũ khí</span>
+                        </a>
+            </li>
             <li class="start {{ Request::segment(2) == 'recharge-events' ? 'open' : '' }}">
                 <a href="{{ route('admin.rechargeEvents.index') }}">
                     <i class="icon-trophy"></i>
@@ -115,36 +121,6 @@
                     <span class="title">Cài đặt</span>
                 </a>
             </li>
-            {{-- <li class="start {{Request::segment(2) == 'help-list' ? 'open' : ''}}"> --}}
-            {{-- <a href=""> --}}
-            {{-- <i class="icon-info"></i> --}}
-            {{-- <span class="title">Hỗ trợ</span> --}}
-            {{-- </a> --}}
-            {{-- <ul class="sub-menu" style="{{Request::segment(2) == 'help-list' ? 'display: block' : ''}}"> --}}
-            {{-- <li class="nav-item start {{Request::segment(3) == 'category-help' ? 'active open' : ''}}"> --}}
-            {{-- <a href="{{route('admin.cateHelp.index')}}" class="nav-link "> --}}
-            {{-- <span class="title">Danh mục hỗ trợ</span> --}}
-            {{-- </a> --}}
-            {{-- </li> --}}
-            {{-- <li class="nav-item start {{Request::segment(3) == 'help' ? 'active open' : ''}}"> --}}
-            {{-- <a href="{{route('admin.help.index')}}" class="nav-link "> --}}
-            {{-- <span class="title">Hỗ trợ</span> --}}
-            {{-- </a> --}}
-            {{-- </li> --}}
-            {{-- </ul> --}}
-            {{-- </li> --}}
-            {{-- <li class="start {{Request::segment(2) == 'client-says' ? 'open' : ''}}"> --}}
-            {{-- <a href="{{route('admin.clientSays.index')}}"> --}}
-            {{-- <i class="icon-bulb"></i> --}}
-            {{-- <span class="title">Ý kiến khách hàng</span> --}}
-            {{-- </a> --}}
-            {{-- </li> --}}
-            {{-- <li class="start {{Request::segment(2) == 'contact' ? 'open' : ''}}"> --}}
-            {{-- <a href="{{route('admin.contact.index')}}"> --}}
-            {{-- <i class="icon-paper-plane"></i> --}}
-            {{-- <span class="title">Tin nhắn liên hệ</span> --}}
-            {{-- </a> --}}
-            {{-- </li> --}}
         </ul>
     </div>
 </div>

@@ -147,4 +147,14 @@ export const shopApi = {
     getAccumulateItems: () => api.get('/shop/accumulate-items'),
     buyAccumulateItem: (data) => api.post('/shop/buy-accumulate', data)
   };
+  // API endpoints cho Weapon
+export const weaponApi = {
+    getUserCharacters: () => api.get('/user-characters'),
+    getCharacterWeapons: (characterId) => api.get(`/character-weapons/${characterId}`),
+    changeWeapon: (data) => api.post('/change-weapon', data)
+    
+};
+
+
+
 export default api;

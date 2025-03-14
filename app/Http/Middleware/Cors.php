@@ -17,8 +17,8 @@ class Cors
             'http://localhost:5173',
             'http://127.0.0.1:5173',
             'http://localhost:3000',
-            'https://zplay9d.net',
-            'http://zplay9d.net'
+            'https://s29d.com',
+            'http://s29d.com'
         ];
 
         $origin = $request->headers->get('Origin');

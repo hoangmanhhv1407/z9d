@@ -1,7 +1,7 @@
 import React, { useState, useContext, Suspense, useEffect } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import {
-  User, Shield, History, CreditCard, Gift, Crown, Coins, TrendingUp
+  User, Shield, History, CreditCard, Gift, Crown, Coins, TrendingUp, Swords
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { dailyGiftApi } from '../../api';
@@ -14,6 +14,7 @@ const TransactionHistory = React.lazy(() => import('./TransactionHistory'));
 const Recharge = React.lazy(() => import('./Recharge'));
 const DailyGift = React.lazy(() => import('./DailyGift'));
 const GiftCode = React.lazy(() => import('./GiftCode'));
+const ChangeWeapon = React.lazy(() => import('./ChangeWeapon'));
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
@@ -42,6 +43,7 @@ const UserProfile = () => {
     { id: 'transactionHistory', label: 'Lịch sử giao dịch', icon: History },
     { id: 'recharge', label: 'Nạp Xu', icon: CreditCard },
     { id: 'giftcode', label: 'Nhận Gift Code', icon: Gift },
+    { id: 'changeWeapon', label: 'Thay Đổi Vũ Khí', icon: Swords },
     { id: 'kyTranCac', label: 'Kỳ Trân Các', icon: Crown }
   ];
 
@@ -156,6 +158,7 @@ const UserProfile = () => {
                       {activeTab === 'recharge' && <Recharge setActiveTab={setActiveTab} />}
                       {activeTab === 'dailyGift' && <DailyGift user={user} />}
                       {activeTab === 'giftcode' && <GiftCode user={user} />}
+                      {activeTab === 'changeWeapon' && <ChangeWeapon />}
                     </Suspense>
                   </div>
                 </div>

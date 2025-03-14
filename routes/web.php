@@ -75,6 +75,24 @@ Route::group(['prefix' => 'admins', 'namespace' => 'Admin', 'middleware' => 'log
         Route::get('/edit/{id}', 'TimeSettingController@edit')->name('admin.timeSetting.edit');
         Route::post('/edit/{id}', 'TimeSettingController@update')->name('admin.timeSetting.update');
     });
+    // Thêm vào routes/web.php trong group admin
+
+    // Routes cho quản lý thay đổi vũ khí
+    // Sửa phần định nghĩa route cho weapon
+    Route::prefix('weapon')->name('admin.weapon.')->group(function () {
+        Route::get('/', [App\Http\Controllers\Admin\ItemChangeController::class, 'index'])->name('index');
+        
+        Route::prefix('config')->name('config.')->group(function () {
+            Route::post('/update-general', [App\Http\Controllers\Admin\ItemChangeController::class, 'updateGeneral'])->name('updateGeneral');
+            Route::post('/add-type', [App\Http\Controllers\Admin\ItemChangeController::class, 'addType'])->name('addType');
+            Route::post('/update-type', [App\Http\Controllers\Admin\ItemChangeController::class, 'updateType'])->name('updateType');
+            Route::post('/delete-type', [App\Http\Controllers\Admin\ItemChangeController::class, 'deleteType'])->name('deleteType');
+            Route::post('/add-image', [App\Http\Controllers\Admin\ItemChangeController::class, 'addImage'])->name('addImage');
+            Route::post('/update-image', [App\Http\Controllers\Admin\ItemChangeController::class, 'updateImage'])->name('updateImage');
+            Route::post('/delete-image', [App\Http\Controllers\Admin\ItemChangeController::class, 'deleteImage'])->name('deleteImage');
+            Route::get('/logs', [App\Http\Controllers\Admin\ItemChangeController::class, 'getLogs'])->name('logs');
+        });
+    });
 
     Route::group(['prefix' => 'gift'], function () {
         Route::group(['prefix' => 'gift-code'], function () {
@@ -186,6 +204,9 @@ Route::group(['prefix' => 'admins', 'namespace' => 'Admin', 'middleware' => 'log
     Route::get('/edit', 'TransactionHistoryController@edit')->name('admin.transactionHistory.edit');
     Route::post('/edit', 'TransactionHistoryController@storeMinus')->name('admin.transactionHistory.storeMinus');
 
+
+
+
     Route::group(['prefix' => 'relog-momo'], function () {
         Route::get('/', 'RelogMomoController@index')->name('admin.relogMomo.index');
         Route::get('/check', 'RelogMomoController@check')->name('admin.relogMomo.check');
@@ -276,6 +297,8 @@ Broadcast::routes(['middleware' => ['auth:api']]);  // Thay đổi từ auth:san
 Route::get('/{path?}', function () {
     return view('kytrancac');
 })->where('path', '.*');
+
+
 
 
 
